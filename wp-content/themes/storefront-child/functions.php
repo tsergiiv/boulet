@@ -3,14 +3,13 @@
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 add_action('wp_footer', 'enqueue_scripts');
 
-function enqueue_styles()
-{
-    wp_enqueue_style('child-style', get_stylesheet_uri(), array(), date("h:i:s"));
-}
+//function enqueue_styles()
+//{
+//    wp_enqueue_style('child-style', get_stylesheet_uri(), array(), date("h:i:s"));
+//}
 
 function enqueue_scripts()
 {
-
     //jquery 1.9.1
     wp_register_script('jquery-v-191', get_stylesheet_directory_uri() . '/assets/js/jquery-1-9-1.js', array(), date("h:i:s"));
     wp_enqueue_script('jquery-v-191');
@@ -212,4 +211,14 @@ function storefront_cart_link() {
         <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) );?></span>
     </a>
     <?php
+}
+
+add_action( 'wp_enqueue_scripts', 'sf_child_theme_dequeue_style', 999 );
+
+/**
+ * Dequeue the Storefront Parent theme core CSS
+ */
+function sf_child_theme_dequeue_style() {
+    wp_dequeue_style( 'storefront-style' );
+    wp_dequeue_style( 'storefront-woocommerce-style' );
 }

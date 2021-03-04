@@ -16,9 +16,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add cart file">
+    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add cart link function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/cart/mini-cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/cart/mini-cart.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614867091357</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add cart link function">
+      <created>1614867809304</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614867809304</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +124,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="add cart file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cart file" />
+    <MESSAGE value="add cart link function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cart link function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1614858479675">
@@ -139,11 +148,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="600" y="368" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858116918" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1614867092700">
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1614867810579">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1614863088987" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1614867092700" />
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1614867810579" />
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1614857989547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
