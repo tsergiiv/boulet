@@ -11,6 +11,7 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -50,7 +51,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -120,10 +121,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="228" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858347363" />
-    <state x="229" y="86" key="SettingsEditor" timestamp="1614843589169">
+    <state x="-12" y="78" key="SettingsEditor" timestamp="1614865847108">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1614843589169" />
+    <state x="-12" y="78" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1614865847108" />
     <state x="600" y="368" key="VCS.EditChangelistDialog" timestamp="1614858116918">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
