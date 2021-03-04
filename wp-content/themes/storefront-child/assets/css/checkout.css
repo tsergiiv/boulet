@@ -1,0 +1,1059 @@
+/* SEOshop Checkout Styles */
+
+/* General styles */
+.gui-form .gui-radio label {
+    padding-right: 0;
+    width: auto;
+}
+
+.gui-form .gui-field > label {
+    box-sizing: border-box;
+    height: 24px;
+    padding-right: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.gui-cart-sum .gui-item .gui-desc {
+    word-break: break-word;
+}
+
+.gui-checkout .gui-checkout-disabled .gui-block-subcontent {
+    opacity: 0.3;
+}
+
+.gui-cart-sum .gui-taxes.gui-taxes-group .gui-taxes-details,
+.gui-cart-sum .gui-taxes .gui-taxes-link {
+    display: none;
+}
+
+.gui-cart-sum .gui-taxes.gui-taxes-visible .gui-taxes-details {
+    display: block;
+}
+
+.gui-cart-sum .gui-taxes.gui-taxes-group .gui-taxes-link {
+    cursor: pointer;
+    display: block;
+}
+
+.gui-cart-sum .gui-taxes .gui-taxes-arrow {
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #666666;
+    width: 0;
+    height: 0;
+}
+
+.gui-cart-sum .gui-taxes.gui-taxes-visible .gui-taxes-arrow {
+    border-top: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #666666;
+    margin-bottom: 2px;
+    width: 0;
+    height: 0;
+}
+
+/* Utilities */
+.gui-checkout .gui-relative {
+    position: relative !important;
+}
+.gui-checkout .gui-fixed {
+    position: fixed !important;
+}
+.gui-checkout .gui-absolute {
+    position: absolute !important;
+}
+.gui-checkout .gui-position-bottom {
+    bottom: 0;
+    position: absolute;
+}
+
+.gui-checkout .gui-separator {
+    background-color: #8D8D8D;
+    height: 1px;
+    margin: 8px 0 10px 0;
+    text-align: center;
+}
+.gui-checkout .gui-separator span {
+    background-color: #FFF;
+    color: #666;
+    font-size: 11px;
+    padding: 0 10px;
+    position: relative;
+    text-transform: uppercase;
+    top: -9px;
+}
+
+/* Review table */
+.gui-block .gui-table {
+    border: 0;
+}
+
+.gui-table thead tr th {
+    font-size: 10px;
+}
+
+.gui-table tbody tr td {
+    font-size: 12px;
+}
+
+/* Input styles */
+.gui-form .gui-field.gui-error .gui-input {
+    border-color: #C80805;
+}
+
+.gui-checkout .gui-form .gui-input--with-icon {
+    width: calc(100% - 30px);
+}
+
+.gui-checkout .gui-form .gui-input--icon {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+input:-webkit-autofill {
+    background-color: #FFF;
+    -webkit-box-shadow: 0 0 0 1000px #FFF inset;
+}
+
+/* Messages */
+.gui-checkout .gui-messages, .gui-checkout .messages {
+    width: auto;
+}
+
+.gui-section > .gui-message {
+    background-color: #FFE7E7;
+    background-position: 5px center;
+    border: 1px solid #C80805;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.gui-checkout .gui-form .gui-message {
+    white-space: normal;
+    height: auto;
+    min-height: 20px;
+}
+
+/* Method */
+#gui-block-method .gui-section {
+    min-height: 150px;
+}
+
+/* Confirm */
+.gui-confirm .gui-confirm-input {
+    margin-bottom: 10px;
+}
+
+.gui-confirm .gui-field .gui-checkbox label {
+    line-height: 1.4;
+    margin-top: 4px;
+    padding-right: 0;
+    overflow: visible;
+    width: 88%;
+    white-space: normal;
+}
+
+/* Confirm fixed */
+.gui-form .gui-confirm.gui-fixed .gui-confirm-input {
+    margin: 0;
+    width: 80%;
+}
+
+.gui-form .gui-confirm.gui-fixed .gui-confirm-input, .gui-form .gui-confirm.gui-fixed .gui-confirm-buttons {
+    display: inline-block;
+}
+
+.gui-form .gui-confirm.gui-fixed {
+    border-top: 1px solid #C4CACC;
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: right;
+}
+
+.gui-form .gui-confirm.gui-fixed .gui-field {
+    display: inline-block;
+    margin: 6px 40px 0 0;
+}
+
+.gui-form .gui-confirm.gui-fixed .gui-field label {
+    font-weight: normal;
+    line-height: 1.2;
+    padding: 0;
+    text-align: left;
+    width: auto;
+    word-break: break-word;
+}
+
+.gui-form .gui-confirm.gui-fixed .gui-field.gui-error label {
+    color: #C80805
+}
+
+.gui-form .gui-confirm.gui-fixed .gui-field.gui-error .gui-message {
+    display: none;
+}
+
+.gui-form .gui-confirm.gui-fixed .gui-confirm-container {
+    margin: 0 auto;
+    width: auto;
+}
+
+.gui-form .gui-confirm.gui-fixed {
+    background-color: #FFF;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    width: 100%;
+    z-index: 200;
+}
+
+/* Block options */
+.gui-block-option-block .gui-field {
+    margin-bottom: 10px;
+}
+
+.gui-checkout-one-step .gui-block-option {
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.gui-checkout-one-step .gui-block-highlight
+{
+    border-radius: 5px;
+    border: #76C61B solid 2px;
+    padding: 5px 0 0 0;
+}
+
+
+.gui-checkout-one-step .gui-block-option .gui-field .gui-radio > label {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 25px;
+    padding: 0;
+}
+
+.gui-checkout-one-step .step-shipment .gui-block-option .gui-field .gui-radio > label {
+    width: 80%;
+    white-space: normal;
+}
+
+.gui-checkout-one-step .gui-block-option .gui-field .gui-radio > input {
+    height: auto;
+    margin: 6px 6px 6px 0;
+    width: auto;
+}
+
+.gui-checkout-one-step .gui-block-option .gui-field .gui-price {
+    margin-top: 6px;
+}
+
+    .gui-block-option-block {
+        border: 0;
+        margin: 0 0 0 20px;
+        padding: 0;
+    }
+
+    .gui-checkout-one-step .gui-block-option-block {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+        .gui-checkout-one-step .gui-block-option-block label {
+            font-size: 12px;
+            font-weight: normal;
+            padding-right: 0;
+            overflow: visible;
+            width: 85%;
+            white-space: normal;
+        }
+
+.gui-block-option img {
+    display: inline-block;
+}
+
+.gui-block-option .gui-field .gui-radio > input {
+    width: 26px;
+}
+
+/* Modal */
+.gui-checkout .gui-modal {
+    background: #FFF;
+    border: 1px solid #CCC;
+    left: 50%;
+    margin-left: -350px;
+    padding: 20px;
+    position: absolute;
+    width: 700px;
+    top: 0%;
+    z-index: 1000;
+}
+
+    .gui-checkout .gui-modal .gui-close {
+        color: #999;
+        font-size: 20px;
+        position: absolute;
+        right: 8px;
+        top: 6px;
+    }
+
+        .gui-checkout .gui-modal .gui-close:hover {
+            color: #333;
+            text-decoration: none;
+        }
+
+    .gui-modal-shadow {
+        background-color: #333;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        opacity: 0.6;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+/* Breathing space */
+.gui-form .gui-checkout-steps.gui-col3-equal > .gui-col3-equal-col1 {
+    float: left;
+    margin-right: 7%;
+    width: 29%;
+}
+
+.gui-form .gui-checkout-steps.gui-col3-equal > .gui-col3-equal-col2 {
+    float: left;
+    margin-right: 7%;
+    width: 30%
+}
+
+.gui-form .gui-checkout-steps.gui-col3-equal > .gui-col3-equal-col3 {
+    float: left;
+    width: 27%;
+}
+
+/* Responsive fixes */
+.gui-checkout .gui-form .gui-right {
+    float: right;
+    width: auto;
+}
+
+.gui-checkout .gui-form .gui-left {
+    float: left;
+    width: auto;
+}
+
+.gui-checkout .gui-form a.gui-button-small {
+    float: none;
+}
+/*
+.gui-checkout .gui-form a.gui-button-action {
+    height: inherit;
+    left: auto;
+    font-size: inherit;
+    width: auto;
+}
+*/
+
+.gui-checkout a.gui-button-block {
+    display: block;
+}
+
+.gui-checkout a.gui-button-social {
+    height: 21px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 3px 0;
+}
+.gui-checkout .gui-form a.gui-button-social {
+    border-radius: 2px;
+    border: 1px solid transparent;
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.20);
+    box-sizing: content-box;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.30);
+}
+.gui-checkout .gui-form a.gui-button-social span {
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-right: 1px solid transparent;
+    -moz-box-shadow: 1px 0px 0px 0px rgba(255,255,255,0.10);
+    box-shadow: 1px 0px 0px 0px rgba(255,255,255,0.10);
+    display: inline-block;
+    height: 28px;
+    left: 0;
+    position: absolute;
+    width: 28px;
+    top: 0;
+}
+.gui-checkout .gui-form a.gui-button-social:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+.gui-checkout .gui-form a.gui-button-fb {
+    background-color: #3B5998;
+    border-color: #3B5998;
+    color: #FFFFFF;
+}
+.gui-checkout .gui-form a.gui-button-fb span {
+    background-image: url('../social/fb.png?1');
+    border-color: #294275;
+}
+.gui-checkout .gui-form a.gui-button-mp {
+    color: #FFF;
+    border-color: #ee8000;
+
+    /* Gradient */
+    background: #ee8000; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ee8000 0%, #f24200 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ee8000), color-stop(100%,#f24200)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ee8000 0%,#f24200 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ee8000 0%,#f24200 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ee8000 0%,#f24200 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ee8000 0%,#f24200 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee8000', endColorstr='#f24200',GradientType=0 ); /* IE6-9 */
+}
+.gui-checkout .gui-form a.gui-button-mp span {
+    background-color: #FFF;
+    background-image: url('social/postnl.png');
+}
+
+.gui-checkout .gui-buttons.gui-buttons-large, .gui-checkout .gui-buttons {
+    height: auto;
+}
+
+.gui-checkout .gui-form a.gui-button-primary, .gui-checkout .gui-form a.gui-button-action {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .gui-form .gui-confirm.gui-fixed .gui-confirm-container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .gui-form .gui-confirm.gui-fixed .gui-confirm-container {
+        width: 940px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gui-form .gui-confirm.gui-fixed .gui-confirm-container {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 979px) {
+    .gui-checkout .gui-form .gui-col2-right-col2.gui-checkout-progress {
+        display: none;
+    }
+
+    .gui-checkout .gui-col2-right .gui-col2-right-col1 {
+        width: 100%;
+    }
+
+    .gui-checkout .gui-modal {
+        left: auto;
+        top: auto;
+        margin: 0;
+        width: 100%;
+    }
+
+        .gui-checkout .gui-modal .gui-position-bottom {
+            bottom: auto;
+            position: relative;
+        }
+}
+
+@media (max-width: 767px) {
+    .gui-checkout-one-step .gui-form .gui-col3-equal > div {
+        margin-bottom: 25px;
+        width: 100% !important;
+    }
+
+    .gui-checkout-one-step .gui-form .gui-col3-equal > div > .gui-spacer {
+        height: 25px;
+    }
+
+    .gui-progressbar ul li a {
+        position: relative;
+    }
+
+    .gui-progressbar ul li a span {
+        left: 50%;
+        position: absolute;
+        margin-left: -9px;
+    }
+}
+
+@media (max-width: 640px) {
+    .gui-checkout .gui-col2-equal .gui-col2-equal-col1 {
+        margin-bottom: 20px;
+    }
+
+    .gui-checkout .gui-col2-equal .gui-col2-equal-col1, .gui-checkout .gui-col2-equal .gui-col2-equal-col2 {
+        width: 100%;
+    }
+
+    .gui-checkout .gui-position-bottom {
+        bottom: auto;
+        position: relative;
+    }
+}
+
+/* One step checkout */
+.gui-checkout-one-step .gui-block {
+    border: 0;
+}
+
+.gui-checkout-one-step .gui-checkout-steps {
+    width: 100%;
+}
+
+.gui-checkout-one-step .gui-form .step-review .gui-field .gui-checkbox label {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.gui-checkout-one-step .gui-product-image {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.gui-inactive {
+    opacity: 0.3;
+}
+
+.gui-checkout-hide-steps .gui-inactive {
+    opacity: 1;
+}
+
+/* Shipment methods */
+.gui-checkout .gui-shipment-method-form {
+    display: none;
+}
+
+/* Payment methods */
+.gui-payment-provider-method {
+    display: none;
+}
+
+.gui-payment-method .gui-payment-method-form {
+  display: none;
+  margin: 10px 0 20px 20px;
+}
+
+.gui-payment-method-service > label {
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: block;
+    height: auto;
+    line-height: 1;
+    margin: 0 0 0 -2px;
+    padding: 6px 0;
+    position: relative;
+    width: auto;
+}
+
+.gui-payment-method-service.gui-payment-method-service-last > label {
+    border-color: transparent;
+}
+
+.gui-payment-method-service > label > input {
+    margin: 12px 10px 0 0;
+}
+
+.gui-payment-method-service.gui-payment-method-service-collection > label > input {
+    margin-top: 0;
+    margin-right: 6px;
+}
+
+.gui-payment-method-service.gui-payment-method-service-collection .gui-payment-method-name {
+    height: 26px;
+}
+
+.gui-payment-method-service .gui-payment-method-icon {
+    float: left;
+    margin-right: 10px;
+}
+
+.gui-payment-method-service .gui-payment-method-icons {
+    display: block;
+    margin-left: 20px;
+    margin-top: 3px;
+}
+
+.gui-payment-method-service .gui-payment-method-icons img {
+    float: left;
+    margin: 0 6px 6px 0;
+}
+
+.gui-checkout .gui-creditcard-payment-method-icons,
+.gui-checkout .gui-creditcard-payment-method-icons .gui-payment-method-icon {
+  margin-bottom: 5px;
+}
+
+.gui-payment-method-service .gui-payment-method-name {
+    display: table-cell;
+    height: 32px;
+    line-height: 1.2;
+    margin: 0;
+    max-width: 60%;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.gui-payment-method-service .gui-payment-method-price {
+    margin-top: 10px;
+}
+
+.gui-payment-method-form .gui-block-option-block .gui-field {
+    margin: 3px 0 12px 0;
+}
+
+.gui-checkout-one-step .gui-payment-provider-pickup {
+  margin-bottom: 5px;
+}
+
+.gui-checkout-one-step .gui-payment-provider-pickup .gui-payment-methods {
+  margin-left: 20px;
+}
+
+/* Compact payment methods */
+.gui-payment-method-compact .gui-payment-method-service input {
+    margin: 3px 8px 0 0;
+}
+
+.gui-payment-method-compact .gui-payment-method-service label {
+    padding: 2px 0;
+}
+
+.gui-payment-method-compact .gui-payment-method-service .gui-payment-method-icon {
+    height: auto;
+    width: 30px;
+}
+
+.gui-payment-method-compact .gui-payment-method-service .gui-payment-method-name {
+    height: 22px;
+}
+
+.gui-payment-method-compact .gui-payment-method-service .gui-payment-method-price {
+    margin-top: 5px;
+}
+
+/* Selected payment methods */
+.gui-payment-method.gui-is-selected .gui-payment-method-form {
+  display: block;
+}
+
+.gui-checkout-one-step .gui-payment-provider-title {
+    font-weight: normal;
+}
+
+.gui-checkout-one-step .gui-payment-method-service label {
+    border-color: transparent;
+}
+
+.gui-checkout-one-step .gui-payment-method-form {
+    margin-left: 20px;
+}
+
+/* One page checkout */
+.gui-checkout-one-page .gui-step {
+    margin-bottom: 40px;
+}
+
+.gui-checkout-one-page .gui-step-last {
+    margin-bottom: 0;
+}
+
+.gui-checkout-one-page #gui-block-review {
+    margin-top: 40px;
+}
+
+/* Progressbar */
+.gui-checkout .gui-progressbar {
+    background-image: none;
+    margin: 0 0 20px 0;
+}
+
+.gui-checkout .gui-progressbar .gui-indicator {
+    display: none;
+}
+
+.gui-checkout .gui-progressbar ul {
+    background: transparent;
+    margin-left: 10px;
+}
+
+.gui-checkout .gui-progressbar ul li {
+    background: #FFF;
+    margin: 0 10px 0 -10px;
+    padding-left: 0;
+}
+
+.gui-checkout .gui-progressbar ul li a {
+    color: #ABB3B3;
+}
+
+.gui-checkout .gui-progressbar ul li.step-review {
+    margin-right: 0;
+    padding-right: 10px;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-active, .gui-checkout .gui-progressbar ul li.gui-invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAAmCAYAAAAcEkiIAAAD5UlEQVR4Ae3dv2sTYRzH8TyXu1wu1ybpL1roDyw0XRxddOxf4OKik4ObuDqVDgUXoX+Aq5OTiPgftAiFQp1c0howoQ5K2jRp0jT3w7tIA7W5dCjfLs87SyAk3y/Piwc+fJPcc+qw9mt7bmriUS5rp1M8EEAAAQQQQEBcwPeDlOH3/Fe/jxvHYRiKN6QBAggggAACCPwTMFaXF775Ybh91ulegIIAAggggAACdyNgxG3CoPf6z0mjxRR8N+h0QQABBBBAoB/AK4uLB6EKvzTbnS4kCCCAAAIIICAv0A/guE3QDtbrjVabKVgenQ4IIIAAAggMAnhlZb4axfCnZvRjMCwIIIAAAgggICswCOC4jdf2N+qnzQ5TsCw61RFAAAEEELgSwKXSQi0K38/RFNyDBgEEEEAAAQTkBK4EcNzGD3qb9dPWGVOwHDqVEUAAAQQQuBbApaWlwzAMds7OuwE8CCCAAAIIICAjcC2A4za+F2zUG82GTEuqIoAAAggggMDQAC7dm9+PzqmscjgWGwQBBBBAAAEZgaEBHLfyfe/NSbN1ItOWqggggAACCOgtkBjAtR/lj+fdi8Dzfb2FWD0CCCCAAAICAokBvLa25kX3R/rQap97An0piQACCCCAgNYCiQEcq/g97310TfCp1kIsHgEEEEAAAQGBkQG8ury46/le6Hl8DS1gT0kEEEAAAY0FRgZw30Wpnc4FtwrWeI+wdAQQQAABAYEbAzg6lKMSXZIk0JqSCCCAAAII6CtwYwArZdy3zLS+QqwcAQQQQAABAYEbAzgVBg9syxJoTUkEEEAAAQT0FRgZwOVK7aFpWcpkAtZ3h7ByBBBAAAERgZEBnM6YL/I5pyDSmaIIIIAAAghoLJAYwF+rVSe6JeGTMcdJfI/GbiwdAQQQQACBWwkkhuusMp+POVkznU58y60a82EEEEAAAQR0FkhKV6VSar04PubqjMPaEUAAAQQQkBIYGsAHP48eZ23LzVimVF/qIoAAAgggoLXAsABWhqG2JvPj/PlK663B4hFAAAEEJAWuBXA8/dp2ZtLOcO2vJDy1EUAAAQT0Fvg/gFXaMLam8uNFvVlYPQIIIIAAArICVwK4XD16Zmctpl9Zc6ojgAACCCCQGgTw3t6eZRrG2+lCnumXjYEAAggggICwwCCAJ+YWXrpO1rVM/vksbE55BBBAAAEEUio22K9UioWMU16anZnm4A12BQIIIIAAArIC8W1++xNwFL6bBdfNEb6y4FRHAAEEEEDgUsD4flgtRSn8dCLv5i5f5BkBBBBAAAEEZAUM2zbfzUwWCyo6fJIHAggggAACCNyNwF83x83WCRjTfAAAAABJRU5ErkJggg==);
+    background-color: transparent;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-done {
+    background-color: transparent;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-done a, .gui-checkout .gui-progressbar ul li.gui-invalid a, .gui-checkout .gui-progressbar ul li.gui-invalid+li a, .gui-checkout .gui-progressbar ul li.gui-active+li.gui-invalid a {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAmCAYAAAD9XArwAAACA0lEQVQ4EYXUvW/TQBgG8PfOjj9J1BGEo4pAWzoBWyU6s7AhIWBDiJUJgYQEEh2ZGFiYkVClbP0LsrJBhyC1BhTaKFJFAaVN/Xn2y70gozrJ2Tf5/Pz8nO7sBPYPfqC/N7oBNYMvuC4Aw1fSsSrLjYYOrmld3d0f3auEFLZcR5biRq/X01WYU9DQNThj25fanZUHlZDClmsDaPC83+8b8/DfRgp0TbZaVttoLjyshBQ2HRsYZ8983zen8f9GCqhVnoCHhn2/ElLYolbGn3S7Xe00LjVSoMsTcC3j4pW167crIYVNxwHO4GktpLdlNhrXdr6P1gs8s3QRNG1btuKjYq6EtmmApmm3Pg8G5wgrIWMMHNPQG8y4UwkpdCx57hzu0jWL4wTpQjVGh79ABKKtXLp40JQnkJtsvRZyzoEjO1sLRZbLcvxaC1MhABL8WAnjNAWRZx+WlrxhJQyimH6a72ljSpgjgoRhOsHNShhEEeQ5vltd9X4qIcq24yBCIfA1IRpzlw6TBORuty53zu/8Y3MgtR2dBIgZbhRobiO1JanYWr7gfVLCoi0X+PI0mmkM4pjaNlc63rYSUtv4JEwRxYtpVGqchBGkqXi7vLj4TQnzPIejSTDOgvJOSw/QF35w+Bu/7A0fl4KpCU9FBpMo9OPj8ZuprDwdyj/73cHwZvnu7OwPvX3KiL+S6usAAAAASUVORK5CYII=');
+}
+
+.gui-checkout .gui-progressbar ul li.gui-active a {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAmCAYAAAD9XArwAAACD0lEQVQ4EY2UPW/TQBiA787nLxy7TVqkQpsKpJip7PwLNiRUqTsjYkcVMMEAv4CZqUL8gy5MkYIYQCJtg2rLFZ9tw+XjYvuO84EtO47denl9eh8974dPhoPg28dWw7pt6Bqoe1BIw51TMvrDOa/jALp1c+MD43x/QmdxHYmSJGPhwzNCzuusEuy02wdxzN6RyZRUWSUokzPweDgeT6qsGdjprHssjvfIlH5fZM3AJMkpeHZORkJa3kABdN0NnzP+VvQazFsLoLSC6MWQjOG8tQS6m5uHDLL9EaUneWsJlNYIPBe9RheC7o31HmPMn4XROIUXGqWV8VenhGRDVYL+UX8vjGJbfLFUWh37x8HLH7/PhpTOeKVRlo/jN2Q6nVSrcpkj/+TXSFyBWqPkIezRMAIXg4B9Fau6BMhRByvoEiDgWyrG9WB/4N9BCqJYUepBoMBtS9eNZCic20Th9b3nmRDAe5ZptJJE5dSrDO6YmvZTQf+QKiNECD5asq12WmYheHAc3BWTRqqiyP6qSkMO+e6K01hLbUksGf/bNGFs5sH5YcSg4EnLaWS9pXAB/OIF93WMVQ3jRgqkMSvd7XZVDODT1pJTsiVwZnSuXn8gfqZQXAA1teQjTA69wWDZwcbna6vNtXTBeSh5l0Yb67uOZepVkAQ/HXouQmjbvmIW1lEyGgZ+veLYTQhlF/P57PwXHP7HkkUmwaEAAAAASUVORK5CYII=');
+}
+
+.gui-checkout .gui-progressbar ul li a, .gui-checkout .gui-progressbar ul li.gui-done+li a, .gui-checkout .gui-progressbar ul li.step-details a {
+    background-color: transparent;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAmCAYAAAD9XArwAAACF0lEQVQ4EY2UzUsbQRjG35m1ljWkh/hBFYUEDCYK6SX0UPwH6kXx4EF7KUKpDRSKQnvMWYoHRVpaSnuoLeRQelEE7+LRCNbUjWRJQmztB9SQhKbOTOeNbNgkm1nnMLM7z2+feWd4diCdK2x9NXN3waVRzqqLGtWWE4mE5sICpLOFF8fZ/ENX8DCTuWlkCyfJZNLTDqYojAUC30CI912+nkUliCKrFJ8TQe4fHeW7neCaIwqhUKgIINY1D3mmBFE8I3ydAJn+Ypr9zXDdEYU7Q0MVIWC1U+t4qgRR/EnZKwA6lUyn++xwgyMK6MplrZ5r+pISRJGXii8FgVnDMG5YcIsjCpcnQBJwXZ9XgigyXl2Ttcbi8bijmWVQG2WyNmWyJvBFSXOADUrpHIIEu3YNQ9Ll6838+Q5+JYgGGGzG2JpyaQQFiANKaMQVRBibKyhDEuGCHyhrtG9G6aj7eidl8nei0YGyEpTiHOd8Q1ljyjQDMpsjH9+92a7tpl0n/8oVI5t/Yukd1oN9TKVSXnmCM/C3MmrNO9ZIPd4FIuBDMBg8t8AWx91cTqdAHpX+lW9bEI4tjj1ceyAz/vnW8PCZHWxwRDe55OMquxi3Qy2OfYLGZAg+jfr9p81g3fFypyTGSjzaDDU4arp3SRDxNhwe/OUE1hzx2gNC7pV//4g4QfW5q1yk9Ng0w/KL8f293df1L50ernrZ/wdcUcoznmYSrwAAAABJRU5ErkJggg==');
+    background-position: left center;
+    background-repeat: no-repeat;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 23px;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-active+li.gui-done a, .gui-checkout .gui-progressbar ul li.gui-invalid+li.gui-done a {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAmCAYAAAD9XArwAAACA0lEQVQ4EY2UPW/TQBiAz3aaynHS8lEV9Qdk7V9ghr/AyMLCgECCqcpI1VZirFRVYkFI+QWsLIiRMDQCp9Rq7Cb9dGL7zoq/rveaXhQ7Z6fvkLvkffy8d+/Fh84ur+kfo/8MLYpJEFD99Oyo3W4rpSxlcXEzon9PzVcLwTCK6LE5GHY6Ha0IliFRURT0oK49qT1ae1sEIigNEccx/WcNnW7XfCyCUyMkZFlGDxtaQ9GkDyJwakytSUINa0iODGMjD0+NqVWS0GqjrlaVyvs8mDFy64k1IJ1eb30WzhhnrdqS+m4WnDPyDhyzDui6vsLhOWNqZR1YqakNtKy+LAUhuVqvsU/5davV+i+DUkVx9896Dg8KS0MCol5T4SBewFwCG0xEkSQJMgYX2B7S9YoI4L/BsarLVS1aI09LS8MD1aUKkiV5cyE4tfNJ0RiEEUpo8rvUCJvxJwF2r5TvwiPkfXUwYS+e9QWqlRo94iNmLQfZC4ewPzn5+vnwW7p+XiY/XtpjVtZ8wzcpLA2bcIjvool/WAqOMUE0ivebzaZTCCbs6Meu5+PQ3+VQOubXZjse7fXNTxmIfcmskduCONrOg5mG247LLitrZw6aNcJObRe7MaYfReDUeD1yqN63toQQN0ZxjEYePic3V3tFYGq8z0UqB2GIxh7p/vr546DQBon7Xva3AOyykFCXOMcAAAAASUVORK5CYII=');
+}
+
+.gui-checkout .gui-progressbar ul li.gui-done a {
+    color: #FFF;
+    text-shadow: none;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-active a {
+    color: #333;
+    text-shadow: none;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-active a span, .gui-checkout .gui-progressbar ul li.gui-done a span {
+    text-indent: -9999px;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-invalid a {
+    color: #C80805;
+}
+
+.gui-checkout .gui-progressbar.gui-fixed {
+    top: 0;
+    z-index: 100;
+}
+
+.gui-checkout .gui-margin-fix {
+    height: 0px;
+}
+
+.gui-checkout .gui-progressbar.gui-fixed, .gui-checkout .gui-progressbar.gui-fixed ul li:last-child, .gui-checkout .gui-progressbar.gui-fixed ul li:first-child, .gui-checkout .gui-progressbar.gui-fixed a.gui-cart {
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+.gui-checkout .gui-progressbar ul li a span {
+    background-image: url('data:image/png;base64,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');
+    background-position: left top;
+    background-repeat: no-repeat;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    height: 100%;
+    margin: 0 5px 0 0;
+    text-indent: -9999px;
+    width: 18px;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-active a span {
+    background-position: right -7px;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-done a span {
+    background-position: -18px -7px;
+}
+
+.gui-checkout .gui-progressbar ul li.gui-invalid a span {
+    background-position: -36px -7px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-shipment a span {
+    background-position: left -59px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-shipment.gui-active a span {
+    background-position: right -59px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-shipment.gui-done a span {
+    background-position: -18px -59px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-shipment.gui-invalid a span {
+    background-position: -36px -59px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-payment a span {
+    background-position: left -111px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-payment.gui-active a span {
+    background-position: right -111px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-payment.gui-done a span {
+    background-position: -18px -111px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-payment.gui-invalid a span {
+    background-position: -36px -111px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-review a span {
+    background-position: left -163px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-review.gui-active a span {
+    background-position: right -163px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-review.gui-done a span {
+    background-position: -18px -163px;
+}
+
+.gui-checkout .gui-progressbar ul li.step-review.gui-invalid a span {
+    background-position: -36px -163px;
+}
+
+/* Progress */
+.gui-checkout .gui-checkout-progress .gui-block-content {
+    word-break: break-word;
+}
+
+.gui-block-highlight > .gui-table thead.gui-block-title > tr > th {
+  background: #76C61B;
+  border-radius: 0;
+}
+
+
+
+.gui-confirm-buttons .button-holder {
+  border-top: 1px solid #32B421;
+  padding:10px;
+}
+
+.gui-block-highlight .gui-confirm-buttons .button-holder a.gui-button-large {
+  width: 100%;
+  padding: 0;
+
+}
+
+.gui-block-highlight .gui-confirm-buttons .button-holder a.gui-button-large.gui-button-action {
+  background-color: #76C61B;
+  border-color: #32B421;
+}
+
+/* Loading */
+.gui-checkout-loading {
+  margin: 50px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.gui-checkout-loading p {
+  color: #abb3b3;
+}
+
+.gui-checkout-loading .gui-checkout-animated-logo {
+  margin: 0 auto 50px;
+}
+
+.gui-checkout-loading .loader-inner {
+  display: block;
+  margin: 0 auto 25px;
+}
+
+.gui-checkout-loading #gui-checkout-loading-error p, .gui-checkout-loading #gui-checkout-loading-error p a {
+  color: #fc7272;
+  line-height: 2;
+}
+
+.gui-checkout-loading #gui-checkout-loading-error p a {
+  text-decoration: underline;
+}
+
+.gui-checkout-loading-error-visual {
+
+}
+
+.gui-vantiv-payments-wrapper {
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  border: 1px solid #C9CDD7;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .05);
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.gui-vantiv-payments-wrapper__errors {
+  text-align: left;
+  padding: 20px 20px 0px 20px;
+  height: auto;
+  margin-top: 0;
+}
+
+/** Animations **/
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+
+  45% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7; }
+
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+
+  45% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7; }
+
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@-webkit-keyframes ball-grid-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0.7; }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes ball-grid-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0.7; }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+.ball-grid-pulse {
+  width: 57px; }
+.ball-grid-pulse > div:nth-child(1) {
+  -webkit-animation-delay: -0.06s;
+  animation-delay: -0.06s;
+  -webkit-animation-duration: 0.72s;
+  animation-duration: 0.72s; }
+.ball-grid-pulse > div:nth-child(2) {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+  -webkit-animation-duration: 1.02s;
+  animation-duration: 1.02s; }
+.ball-grid-pulse > div:nth-child(3) {
+  -webkit-animation-delay: -0.17s;
+  animation-delay: -0.17s;
+  -webkit-animation-duration: 1.28s;
+  animation-duration: 1.28s; }
+.ball-grid-pulse > div:nth-child(4) {
+  -webkit-animation-delay: 0.48s;
+  animation-delay: 0.48s;
+  -webkit-animation-duration: 1.42s;
+  animation-duration: 1.42s; }
+.ball-grid-pulse > div:nth-child(5) {
+  -webkit-animation-delay: 0.31s;
+  animation-delay: 0.31s;
+  -webkit-animation-duration: 1.45s;
+  animation-duration: 1.45s; }
+.ball-grid-pulse > div:nth-child(6) {
+  -webkit-animation-delay: 0.03s;
+  animation-delay: 0.03s;
+  -webkit-animation-duration: 1.18s;
+  animation-duration: 1.18s; }
+.ball-grid-pulse > div:nth-child(7) {
+  -webkit-animation-delay: 0.46s;
+  animation-delay: 0.46s;
+  -webkit-animation-duration: 0.87s;
+  animation-duration: 0.87s; }
+.ball-grid-pulse > div:nth-child(8) {
+  -webkit-animation-delay: 0.78s;
+  animation-delay: 0.78s;
+  -webkit-animation-duration: 1.45s;
+  animation-duration: 1.45s; }
+.ball-grid-pulse > div:nth-child(9) {
+  -webkit-animation-delay: 0.45s;
+  animation-delay: 0.45s;
+  -webkit-animation-duration: 1.06s;
+  animation-duration: 1.06s; }
+.ball-grid-pulse > div {
+  background-color: #EEE;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  display: inline-block;
+  float: left;
+  -webkit-animation-name: ball-grid-pulse;
+  animation-name: ball-grid-pulse;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0;
+  animation-delay: 0; }

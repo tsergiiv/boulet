@@ -1,0 +1,289 @@
+/* assets/settings.css.scss.rain */
+:root {
+	--color-primary: #BD8893;
+  --color-bg: #ffffff;
+  --color-contrast-higher: ;
+  --color-contrast-high: rgba(, .75);
+  --color-contrast-medium: rgba(, .5);
+  --color-contrast-lower: rgba(, .15);
+
+  --font-primary: Roboto;
+  --font-headings: Montserrat;
+}
+/* Font-Family Montserrat */
+.font-heading,
+.product-title,
+.owl-carousel .owl-item .hero-img .container-custom h1,
+.usp-wrapper ul li p,
+.featured-products-title,
+.featured-products-title,
+.about-us-content h1>span,
+.specialties-title,
+.banner-md-title h1,
+.banner-lg h1,
+.title-accent-color,
+.home-category-banner_title h1,
+.about-us-content h1,
+.product-card__title,
+.footer-links ul h1,
+nav > ul > li > a.active,
+nav > ul > li > a,
+.header-category li a,
+.owl-carousel .owl-item .hero-img .container-custom h2,
+.about-us-title h1,
+.about-us-page-content h1,
+.popup-cart-price_info span,
+.bredcrumb-items h1,
+.breadcrumbs__item,
+
+.in-stock p,
+.form-label,
+.form-control,
+.product-configure select, .product-configure input:not([type="checkbox"]):not([type="radio"]),
+.js .tabs__control[aria-selected="true"],
+.about-us-section,
+.contact-us-section h1,
+.reviews-title,
+.reviw-owner-name,
+.mobile-menu_top > h2,
+.mobile-menu_top span:last-child,
+.mobile-menu li a,
+.gui-page-title,
+.gui.gui-account .gui-col2-left-col2 p strong,
+.gui.gui-account .gui-col2-left-col2 p,
+.gui-block-title #gui-account-information-block-title,
+.gui-block-subtitle,
+.gui-block-subcontent,
+.gui-block .gui-block-title,
+.gui-form input,
+.gui-select select,
+.gui-field label,
+.gui-required,
+.gui-text #gui-form-message,
+.gui-table tbody tr td>.gui-nowrap,
+.gui-table tbody tr td a,
+.popu-cart_product-info > a,
+.popup-title span,
+.input-box a.forgot,
+.popup-bottom span,
+.breadcrumbs-bg-image ul > li,
+/* .filter-categories *:not i, */
+.gui-col2-right .gui-col2-right-col2.gui-div-faq-right .gui-block.gui-div-faq-form .gui-block-title,
+.gui-col2-right .gui-col2-right-col1.gui-div-faq-questions h1,
+.gui-col2-right .gui-col2-right-col2.gui-div-faq-right .gui-block.gui-div-faq-form .gui-block-title strong,
+.gui.gui-faq .gui-col2-right .gui-col2-right-col2.gui-div-faq-right .gui-block.gui-div-faq-form .gui-block-content .gui-form .gui-field label,
+.collection-filter_brands > form > p,
+.sort-form p,
+.sort-form label,
+.sort-form li > button,
+.gui a.gui-button-facebook span,
+.filter-categories > p,
+.filter-categories a,
+.collection-filter_brands .price-filter p,
+.collection-filter_brands .price-filter .price-filter-input *,
+.filter-list_item-name {
+  font-family: Montserrat;
+}
+
+/* Font-Family Roboto */
+.font-body,
+.button,
+.usp-wrapper ul li p span,
+.about-us-content p,
+.prod-card__price,
+.footer-social p,
+.footer-links ul li a,
+.newsletter-title h4,
+.copyright-title p,
+.newsletter-input input,
+.product-cart-btn-title-mobile,
+.about-us-title p,
+.about-us-page-content p,
+.product__price,
+.text-component>*:last-child,
+.product-content,
+.review-content,
+.mobile-menu_top .user_circle h1,
+.gui-table tbody tr td>.gui-button-small,
+.gui.gui-faq .gui-col2-right .gui-col2-right-col2.gui-div-faq-right .gui-block.gui-div-faq-form .gui-block-content .gui-form .gui-field .gui-input input,
+.gui-col2-right .gui-col2-right-col1.gui-div-faq-questions p,
+.gui-col2-right .gui-col2-right-col1.gui-div-faq-questions .contact-info-wrapper h3,
+.gui-col2-right .gui-col2-right-col1.gui-div-faq-questions .contact-info-wrapper h3>span,
+.collection-filter_brands > form .filter-brands label,
+.filter-resset-btn a{
+  font-family: Roboto;
+}
+.color-contrast-medium {
+	color: rgba(, .5);
+}
+
+.color-contrast-low {
+	color: rgba(, .3);
+}
+
+.bg-contrast-lower, .bones__line, .s-tabs__list::after{
+	background-color: rgba(, .15);
+}
+
+
+
+.main-header__top-section {
+	background-color: #d6d6d6;
+  color: #797979;
+}
+.main-header__top-section .main-header__link, .main-header__link:hover {
+  	color: #797979;
+  }
+.main-header__logo {
+	height: 55px;
+}
+.main-header__logo .main-header__mobile-content & {
+  height: 41.25px;
+}
+.main-header__nav::before {
+	height: calc(41.25px + (var(--space-xxs) *2));
+}
+
+.main-header--mobile .main-header__item:not(:last-child) {
+    border-bottom: 1px solid rgba(, .2);
+}
+
+.main-header--mobile .main-header__dropdown, .main-footer .border-top, .main-footer.border-top {
+	border-top: 1px solid rgba(, .2);
+}
+
+.btn--primary {
+	background-color: #BD8893;
+	color: ;
+}
+.btn--primary:hover {
+	background-color: rgba(#BD8893, .65);
+}
+.bundle__plus {
+	background-color: #BD8893;
+	color: ;
+}
+
+body {
+	background-color: #ffffff;
+}
+
+.bg {
+	background-color: #ffffff;
+}
+
+.main-header:not(.main-header--transparent), .main-footer, .coming-soon {
+	background-color: ;
+  color: ;
+  --color-bg: ;
+}
+
+.main-header__search-form.bg {
+	background-color: ;
+}
+
+@media (min-width: 64rem) {
+	.dropdown__menu, .main-header__dropdown {
+  	background-color: #ffffff;
+  }
+  .main-header__dropdown-link {
+  	color: ;
+  }
+}
+/* New settings goes here */
+body * {
+  color: #000000;
+}
+header {
+  background-color: #ffffff;
+}
+footer {
+	background-color: rgb(189 136 147 / 10%)!important;
+    margin-top: 120px;
+}
+.copyright-block {
+  background-color: #BD8893;
+}
+/* buttons settings */
+.btn-primary {
+	background-color: #BD8893;
+  color: #ffffff;
+}
+.btn-primary:hover {
+    opacity: 0.8;
+    color: #ffffff;
+}
+.btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+}
+.btn-secondary:hover {
+	background-color: #6a6a6a;
+  color: #ffffff;
+}
+.title-accent-color {
+  color: #000;
+}
+.title-secondary-color {
+  color: #999999;
+}
+.content-secondary-color {
+  color: #666666;
+}
+.footer-social ul li a i {
+  color: #999999;
+}
+.breadcrumbs-bg-color {
+    background-color: #BD8893;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+}
+.mobile-menu {
+  background-color: #fff;
+}
+.mobile-menu .mobile-menu_top a,
+.mobile-menu li a,
+.mobile-menu li i {
+  color: #000;
+}
+.mobile-menu .mobile-menu_top a,
+.mobile-menu li.active a,
+.mobile-menu li.active i,
+.mobile-category .mobile-menu-top a,
+.mobile-category .mobile-menu-top a i {
+  color: #BD8893;
+}
+.mobile-category li:not(first-child) a,
+.mobile-category li:not(first-child) a i,
+.mobile-menu li.has-subcat i {
+    color: #000;
+}
+.in-stock p {
+	color: #2ECC71;
+}
+.out-of-stock p {
+	color: #000000;
+}
+.sm-line {
+  background-color: #999999;
+}
+body .wsa-demobar {
+  background-color: #7c75fa!important;
+}
+body .wsa-demobar, body .wsa-demobar a {
+  color: #f9f9f9!important;
+}
+.pagination.pagination-pink li.active {
+ background-color: #2c8d86;
+}
+.pagination-a .pagination.pagination-pink li.active a {
+  color: #ffffff;
+}
+.home-category-banner_title h1 {
+  color: #000000;
+}
+.usp-wrapper.usp-style-3 > ul > .usp-border-color {
+    border-color: #DCBEC4;
+}
