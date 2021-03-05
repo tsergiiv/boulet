@@ -250,9 +250,7 @@
                 <a href="/account/wishlist/"> <i class="far fa-heart"></i> </a>
             </li>
             <li class="relative cart-popup-mobile">
-                <a class="cart-popup-link" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>">
-                    <?php storefront_header_cart() ?>
-                </a>
+                <?php storefront_header_cart() ?>
             </li>
             <li class="login-popup-mobile">
                 <a class="login-popup-link" href="javascript:;"><i class="fas fa-user"></i></a>
