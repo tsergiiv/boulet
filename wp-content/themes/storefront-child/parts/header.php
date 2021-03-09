@@ -250,6 +250,9 @@
                 <a href="/account/wishlist/"> <i class="far fa-heart"></i> </a>
             </li>
             <li class="relative cart-popup-mobile">
+                <a class="cart-popup-link" href="javascript:;">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
                 <?php storefront_header_cart() ?>
             </li>
             <li class="login-popup-mobile">
