@@ -75,7 +75,7 @@ foreach ($posts as $post) {
 											<label for="gui-form-email">Courriel *:     <em aria-hidden="true">*</em>
 											</label>
 											<div class="gui-input">
-												<input id="gui-form-email" class="gui-validate" type="text" name="email" value="" placeholder="Courriel" aria-required="true"/>
+												<input id="gui-form-email" type="text" name="mail" placeholder="Courriel" aria-required="true"/>
 											</div>
 										</div>
 										<div class="gui-field">

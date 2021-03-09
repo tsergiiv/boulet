@@ -144,7 +144,7 @@
                             ?>
 
                             <li class="has-subcat">
-                                <a href="/produits-capillaires/"><?= $cat->name ?><?= $sub_cats ? '<i class="fas fa-chevron-right"></i>' : '' ?></a>
+                                <a href="<?= get_category_link($category_id) ?>"><?= $cat->name ?><?= $sub_cats ? '<i class="fas fa-chevron-right"></i>' : '' ?></a>
                                 <?php
                                 if ($sub_cats) {
                                     echo '<ul class="header-subcat">';
@@ -195,31 +195,6 @@
                             }
                         }
                         ?>
-
-                        <!--						<li class="has-subcat">-->
-                        <!--							<a href="/maquillage/">Maquillage<i class="fas fa-chevron-right"></i></a>-->
-                        <!--							<ul class="header-subcat">-->
-                        <!--								<li><a href="/maquillage/visage/">Visage</a></li>-->
-                        <!--								<li><a href="/maquillage/levres/">Lèvres</a></li>-->
-                        <!--								<li class="has-subcat">-->
-                        <!--									<a href="/maquillage/yeux/">Yeux<i class="fas fa-chevron-right"></i></a>-->
-                        <!--									<ul class="header-subcat header-subsubcat">-->
-                        <!--										<li><a href="/maquillage/yeux/eyeliner/">Eyeliner</a></li>-->
-                        <!--										<li><a href="/maquillage/yeux/kajal/">Kajal</a></li>-->
-                        <!--										<li><a href="/maquillage/yeux/demaquillant-pour-les-yeux/">Démaquillant pour les yeux</a></li>-->
-                        <!--									</ul>-->
-                        <!--								</li>-->
-                        <!--							</ul>-->
-                        <!--						</li>-->
-                        <!---->
-                        <!--						<li class="has-subcat">-->
-                        <!--							<a href="/produits-pour-le-corps/">Produits pour le corps <i class="fas fa-chevron-right"></i></a>-->
-                        <!--							<ul class="header-subcat">-->
-                        <!--								<li><a href="/produits-pour-le-corps/test/">test</a></li>-->
-                        <!--							</ul>-->
-                        <!--						</li>-->
-                        <!---->
-                        <!--						<li class="has-subcat"><a href="/produits-capillaires/">Produits capillaires</a></li>-->
                     </ul>
                 </li>
                 <li>
@@ -260,7 +235,7 @@
                 <div class="login-popup popup-is-hidden popup">
                     <ul class="login-popup-container open">
                         <li class="popup-logo">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/logo.svg"
+                            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo.svg"
                                  alt="Real 1st Theme (cosmetic)">
                         </li>
                         <li class="popup-title">

@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             formData.append('Nom', jQuery('input[name="full_name"]').val());
             formData.append('Numéro de telephone', jQuery('input[name="phone"]').val());
-            formData.append('Courriel', jQuery('input[name="email"]').val());
+            formData.append('Courriel', jQuery('input[name="mail"]').val());
             formData.append('Sujet', jQuery('input[name="subject"]').val());
-            formData.append('Message', jQuery('input[name="message"]').val());
+            formData.append('Message', jQuery('textarea[name="message"]').val());
 
             try {
                 $.ajax({
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     success: function(data){
                         if (data['error'] == 0) {
                             console.log('the email was successfully sent');
-                            form.reset();
+                            jQuery(form).find('input, textarea').val('');
                             location.reload();
                         }
                     },
