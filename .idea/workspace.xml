@@ -16,18 +16,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add content-single-product.php file">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/404.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/css/my.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/archive-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/taxonomy-product-cat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="bug fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/page-contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/page-contacts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/parts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/parts/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +85,7 @@
       <workItem from="1614943612838" duration="628000" />
       <workItem from="1615288979020" duration="861000" />
       <workItem from="1615289934598" duration="30000" />
-      <workItem from="1615290333475" duration="2892000" />
+      <workItem from="1615290333475" duration="3381000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1614863083994</created>
@@ -138,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615288351483</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="bug fixes">
+      <created>1615297574421</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615297574421</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +173,8 @@
     <MESSAGE value="remove css from functions.php" />
     <MESSAGE value="remove icons.css file" />
     <MESSAGE value="add content-single-product.php file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add content-single-product.php file" />
+    <MESSAGE value="bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="95" y="82" width="1177" height="574" key="DiffContextDialog" timestamp="1615281649126">
@@ -203,11 +202,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="600" y="368" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858116918" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615288352966">
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615297576467">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1614863088987" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615288352966" />
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615297576467" />
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1614857989547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

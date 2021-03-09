@@ -299,3 +299,13 @@ function letters_email_setting_callback_function( $val ){
 }
 
 add_action('admin_menu', 'add_email_field_to_general_admin_page');
+
+function mycustom_shop_display_stock() {
+
+    global $product;
+
+    if ( !$product->get_manage_stock() && $product->is_in_stock() ) {
+        echo '<p class="stock in-stock">In Stock</p>';
+    }
+}
+add_action( 'woocommerce_single_product_summary', 'mycustom_shop_display_stock', 11 );
