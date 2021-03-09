@@ -9031,10 +9031,6 @@ h4 .bones__line:last-of-type {
     background-position: center
 }
 
-html:not(.js) .select .icon {
-    display: none
-}
-
 :root {
     --drawer-width: 400px
 }
@@ -13430,10 +13426,6 @@ h4 .bones__line:last-of-type {
     background-position: center
 }
 
-html:not(.js) .select .icon {
-    display: none
-}
-
 :root {
     --drawer-width: 400px
 }
@@ -15989,7 +15981,7 @@ html:not(.js) .main-header__nav {
     display: none;
 }
 
-.site-main {
+.archive .site-main {
     display: grid;
     grid-template-areas:
         'col sorttop'
