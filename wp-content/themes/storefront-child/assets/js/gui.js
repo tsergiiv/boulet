@@ -4,7 +4,8 @@ var gui_last_submit = 0;
 
 function gui_validator(form) {
 	$(form).submit(function () {
-        return gui_validate(this, true);
+        let validation = gui_validate(this, true);
+        console.log(validation);
 	});
 }
 

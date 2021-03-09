@@ -56,18 +56,19 @@ foreach ($posts as $post) {
 							<div class="gui-block gui-div-faq-form" aria-labelledby="faq-contact-us-title" role="form">
 								<div class="gui-block-title" id="faq-contact-us-title"><strong>Envoyez-nous un message</strong></div>
 								<div class="gui-block-content">
-									<div class="gui-form">
+									<input type="text" name="action" value="<?= admin_url('admin-ajax.php?action=send_mail') ?>" hidden>
+									<div class="gui-form" id="form">
 										<div class="gui-field">
 											<label for="gui-form-name">Nom *:     <em aria-hidden="true">*</em>
 											</label>
 											<div class="gui-input">
-												<input id="gui-form-name" class="gui-validate" type="text" name="name" value="" placeholder="Nom" aria-required="true"/>
+												<input id="gui-form-name" class="gui-validate" type="text" name="full_name" value="" placeholder="Nom" aria-required="true"/>
 											</div>
 										</div>
 										<div class="gui-field">
 											<label for="gui-form-phone">Numéro de telephone *:</label>
 											<div class="gui-input">
-												<input id="gui-form-phone" type="text" name="phone" value="" placeholder="Numéro de telephone" />
+												<input id="gui-form-phone" class="gui-validate" type="tel" name="phone" value="" placeholder="Numéro de telephone" />
 											</div>
 										</div>
 										<div class="gui-field">
@@ -85,16 +86,16 @@ foreach ($posts as $post) {
 											</div>
 										</div>
 										<div class="gui-field">
-											<label for="gui-form-message">Message:     <em aria-hidden="true">*</em>
+											<label for="gui-form-message">Message *:     <em aria-hidden="true">*</em>
 											</label>
 											<div class="gui-text">
-												<textarea id="gui-form-message" class="gui-validate" name="message" placeholder="Message" aria-required="true"></textarea>
+												<textarea id="gui-form-message" name="message" placeholder="Message"></textarea>
 											</div>
 										</div>
 										<div class="gui-required" aria-hidden="true">* Required fields</div>
 										<div class="gui-buttons gui-border">
 											<div class="gui-left"></div>
-											<div class="gui-right"><a href="javascript:;" onclick="$('#gui-form').submit();" class="gui-button-small" title="Soumettre" role="button">Soumettre</a></div>
+											<div class="gui-right"><button id="submit-btn" type="button" class="gui-button-small">Soumettre</button></div>
 											<div class="gui-clear"></div>
 										</div>
 									</div>

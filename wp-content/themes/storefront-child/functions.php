@@ -34,13 +34,16 @@ function enqueue_scripts()
     wp_register_script('owl-carousel', get_stylesheet_directory_uri() . '/assets/js/owl-carousel/owl-carousel.min.js', array(), date("h:i:s"));
     wp_enqueue_script('owl-carousel');
 
+    wp_register_script('form', get_stylesheet_directory_uri() . '/assets/js/form.js', array(), date("h:i:s"));
+    wp_enqueue_script('form');
+
     //gui
-    wp_register_script('gui', get_stylesheet_directory_uri() . '/assets/js/gui.js', array(), date("h:i:s"));
-    wp_enqueue_script('gui');
+//    wp_register_script('gui', get_stylesheet_directory_uri() . '/assets/js/gui.js', array(), date("h:i:s"));
+//    wp_enqueue_script('gui');
 
     //gui-responsive
-    wp_register_script('gui-responsive', get_stylesheet_directory_uri() . '/assets/js/gui-responsive.js', array(), date("h:i:s"));
-    wp_enqueue_script('gui-responsive');
+//    wp_register_script('gui-responsive', get_stylesheet_directory_uri() . '/assets/js/gui-responsive.js', array(), date("h:i:s"));
+//    wp_enqueue_script('gui-responsive');
 
 //    wp_register_script('app', get_template_directory_uri() . '/assets/js/app.js', array(), date("h:i:s"));
 //    wp_enqueue_script('app');
@@ -223,3 +226,79 @@ function sf_child_theme_dequeue_style() {
     wp_dequeue_style( 'storefront-icons' );
     wp_dequeue_style( 'storefront-woocommerce-style' );
 }
+
+function send_mail()
+{
+    $headers = array(
+        'From: Boulet website <root@takasho.work>',
+        'content-type: text/html',
+    );
+
+    $to = get_option('letters_email'); // place wp admin email here
+    $subject = "Form from Boulet website";
+
+    $b = [];
+    foreach ($_POST as $key => $value) {
+        $b[] = "<b>{$key}</b>: {$value}";
+    }
+
+    $body = implode('<br>', $b);
+
+    $attachments = [];
+
+    $result = wp_mail($to, $subject, $body, $headers, $attachments);
+
+    if ($result) {
+        $data = [
+            'error' => 0,
+            'message' => 'Email success sent!'
+        ];
+    } else {
+        $data = [
+            'error' => 1,
+            'message' => 'Sorry, email not sent'
+        ];
+    }
+
+    echo wp_json_encode($data);
+    die;
+}
+
+add_action('wp_ajax_send_mail', 'send_mail');
+add_action('wp_ajax_nopriv_send_mail', 'send_mail');
+
+function add_email_field_to_general_admin_page(){
+    $option_name = 'letters_email';
+
+    // регистрируем опцию
+    register_setting( 'general', $option_name );
+
+    // добавляем поле
+    add_settings_field(
+        'letters_email',
+        'Email For Letters',
+        'letters_email_setting_callback_function',
+        'general',
+        'default',
+        array(
+            'id' => 'letters_email',
+            'option_name' => 'letters_email'
+        )
+    );
+}
+
+function letters_email_setting_callback_function( $val ){
+    $id = $val['id'];
+    $option_name = $val['option_name'];
+    ?>
+	<input
+			type="email"
+			name="<? echo $option_name ?>"
+			id="<? echo $id ?>"
+			size="40"
+			value="<? echo esc_attr( get_option($option_name) ) ?>"
+	/>
+    <?
+}
+
+add_action('admin_menu', 'add_email_field_to_general_admin_page');

@@ -16,9 +16,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="remove icons.css file">
+    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="remove element in header">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/loop/orderby.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/parts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/parts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/gui.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/gui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/page-contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/page-contacts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/content-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/content-product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +34,13 @@
   <component name="ChangesViewManager" show_ignored="true" />
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +60,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/cart" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/loop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -81,7 +94,9 @@
       <workItem from="1614842484791" duration="5532000" />
       <workItem from="1614862864981" duration="862000" />
       <workItem from="1614931075287" duration="880000" />
-      <workItem from="1614943612838" duration="628000" />
+      <workItem from="1614943612838" duration="3148000" />
+      <workItem from="1614949773606" duration="4442000" />
+      <workItem from="1615274079173" duration="4730000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1614863083994</created>
@@ -118,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614943731993</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove element in header">
+      <created>1614944808876</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614944808876</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +176,8 @@
     <MESSAGE value="add cart link function" />
     <MESSAGE value="remove css from functions.php" />
     <MESSAGE value="remove icons.css file" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove icons.css file" />
+    <MESSAGE value="remove element in header" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove element in header" />
   </component>
   <component name="WindowStateProjectService">
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1614858479675">
@@ -177,11 +200,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="600" y="368" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858116918" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1614943734292">
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1614944810176">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1614863088987" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1614943734292" />
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1614944810176" />
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1614857989547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -198,5 +221,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="516" y="261" key="publish.login/0.0.1366.738@0.0.1366.738" timestamp="1614863059767" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1615277529083">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1615277529083" />
   </component>
 </project>
