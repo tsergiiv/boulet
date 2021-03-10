@@ -179,6 +179,94 @@ function register_post_types()
         'rewrite' => true,
         'query_var' => true,
     ]);
+
+    register_post_type('Instagram', [
+        'label' => null,
+        'labels' => [
+            'name' => 'Instagram', // основное название для типа записи
+            'singular_name' => 'Instagram', // название для одной записи этого типа
+            'add_new' => 'Add photo', // для добавления новой записи
+            'add_new_item' => 'Add photo', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item' => 'Edit photo', // для редактирования типа записи
+            'new_item' => 'New photo', // текст новой записи
+            'view_item' => 'View photo', // для просмотра записи этого типа.
+            'search_items' => 'Search photo', // для поиска по этим типам записи
+            'not_found' => 'Not found', // если в результате поиска ничего не было найдено
+            'not_found_in_trash' => 'Not found in trash', // если не было найдено в корзине
+            'parent_item_colon' => '', // для родителей (у древовидных типов)
+            'menu_name' => '4 - Instagram', // название меню
+        ],
+        'capability_type' => 'post',
+        'capabilities' => [
+            'create_posts' => false,
+            'delete_posts' => false,
+            'delete_published_posts' => false,
+            'delete_private_posts' => false,
+        ],
+        'map_meta_cap' => true,
+        'description' => '',
+        'public' => true,
+        'publicly_queryable' => true, // зависит от public
+        'exclude_from_search' => true, // зависит от public
+        'show_ui' => true, // зависит от public
+        'show_in_nav_menus' => true, // зависит от public
+        'show_in_menu' => true, // показывать ли в меню адмнки
+        'show_in_admin_bar' => true, // зависит от show_in_menu
+        'show_in_rest' => null, // добавить в REST API. C WP 4.7
+        'rest_base' => null, // $post_type. C WP 4.7
+        'menu_position' => 4,
+        'menu_icon' => null,
+        'hierarchical' => false,
+        'supports' => ['title'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'taxonomies' => [],
+        'has_archive' => false,
+        'rewrite' => true,
+        'query_var' => true,
+    ]);
+
+    register_post_type('Info', [
+        'label' => null,
+        'labels' => [
+            'name' => 'Info', // основное название для типа записи
+            'singular_name' => 'Info', // название для одной записи этого типа
+            'add_new' => 'Add info', // для добавления новой записи
+            'add_new_item' => 'Add info', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item' => 'Edit info', // для редактирования типа записи
+            'new_item' => 'New info', // текст новой записи
+            'view_item' => 'View info', // для просмотра записи этого типа.
+            'search_items' => 'Search info', // для поиска по этим типам записи
+            'not_found' => 'Not found', // если в результате поиска ничего не было найдено
+            'not_found_in_trash' => 'Not found in trash', // если не было найдено в корзине
+            'parent_item_colon' => '', // для родителей (у древовидных типов)
+            'menu_name' => '5 - Main Info', // название меню
+        ],
+//        'capability_type' => 'post',
+//        'capabilities' => [
+//            'create_posts' => false,
+//            'delete_posts' => false,
+//            'delete_published_posts' => false,
+//            'delete_private_posts' => false,
+//        ],
+        'map_meta_cap' => true,
+        'description' => '',
+        'public' => true,
+        'publicly_queryable' => true, // зависит от public
+        'exclude_from_search' => true, // зависит от public
+        'show_ui' => true, // зависит от public
+        'show_in_nav_menus' => true, // зависит от public
+        'show_in_menu' => true, // показывать ли в меню адмнки
+        'show_in_admin_bar' => true, // зависит от show_in_menu
+        'show_in_rest' => null, // добавить в REST API. C WP 4.7
+        'rest_base' => null, // $post_type. C WP 4.7
+        'menu_position' => 4,
+        'menu_icon' => null,
+        'hierarchical' => false,
+        'supports' => ['title'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'taxonomies' => [],
+        'has_archive' => false,
+        'rewrite' => true,
+        'query_var' => true,
+    ]);
 }
 
 add_theme_support( 'woocommerce' );

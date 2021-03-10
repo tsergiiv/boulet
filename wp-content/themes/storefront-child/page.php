@@ -302,17 +302,34 @@
 <section>
     <div class="container-custom">
         <div class="about-us-section">
-            <h1>Notre érablière,<br><span class="bold title-accent-color">Une histoire de famille</span></h1>
-            <div class="about-banner">
-                <img src="/wp-content/themes/woocommerce/assets/img/about_us_banner.jpg">
-            </div>
-            <div class="about-us-content">
-                <h1>Nous croyons en la<br><span class="bold title-accent-color">Produits naturels</span></h1>
-                <p>
-                    Notre érablière sera toujours une réussite familiale et notre endroit de rassemblement préféré, c’est pourquoi nous souhaitons vous offrir nos petits délices sucrés à la maison pour que vous aussi à votre tour puissiez vous rassembler et avoir autant de plaisir que nous à les déguster.
-                </p>
-                <a class="button btn-secondary" href="/service/about/">À propos de nous</a>
-            </div>
+            <?php
+
+            $posts = get_posts(array(
+                'post_type' => 'info',
+            ));
+
+            foreach ($posts as $post) {
+                setup_postdata($post);
+
+                ?>
+
+	            <h1>Notre érablière,<br><span class="bold title-accent-color">Une histoire de famille</span></h1>
+	            <div class="about-banner">
+		            <img src="/wp-content/themes/woocommerce/assets/img/about_us_banner.jpg">
+	            </div>
+	            <div class="about-us-content">
+		            <h1><?= the_field('title') ?><br><span class="bold title-accent-color"><?= the_field('subtitle') ?></span></h1>
+		            <p>
+                        <?= the_field('text') ?>
+		            </p>
+		            <a class="button btn-secondary" href="<?= the_field('button_link') ?>"><?= the_field('button_text') ?></a>
+	            </div>
+
+                <?php
+            }
+
+            wp_reset_postdata();
+            ?>
         </div>
     </div>
 </section>
@@ -346,10 +363,25 @@
     </h1>
     <hr class="sm-line">
     <div class="instagram-gallery">
-        <img src="/wp-content/themes/woocommerce/assets/img/insta-1.jpg">
-        <img src="/wp-content/themes/woocommerce/assets/img/insta-2.jpg">
-        <img src="/wp-content/themes/woocommerce/assets/img/insta-3.jpg">
-        <img src="/wp-content/themes/woocommerce/assets/img/insta-4.jpg">
+        <?php
+
+        $posts = get_posts(array(
+            'post_type' => 'instagram',
+	        'order'     => 'asc'
+        ));
+
+        foreach ($posts as $post) {
+            setup_postdata($post);
+
+            ?>
+
+	        <img src="<?= the_field('photo') ?>">
+
+            <?php
+        }
+
+        wp_reset_postdata();
+        ?>
     </div>
 </section>
 
