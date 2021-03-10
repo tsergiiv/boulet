@@ -14279,6 +14279,7 @@ h4 .bones__line:last-of-type {
 	border: 1px solid #ddd;
   padding: 7px;
   margin-bottom: 20px;
+    text-align: center;
 }
 .owl-carousel.owl-review .owl-nav {
 	display: none;
@@ -14344,6 +14345,12 @@ h4 .bones__line:last-of-type {
 
 .rating[data-animation="on"] .rating__icon {
     transition: .2s
+}
+
+.owl-carousel .owl-item .review .avatar {
+    max-width: 100%;
+    width: auto;
+    margin: 10px auto 15px;
 }
 
 .js .rating__select {
@@ -18870,6 +18877,7 @@ ul.page-numbers li {
 	background-color: #F2F2F2;
   border-bottom: 1px solid #ccc;
   padding: 15px 15px;
+    display: block;
 }
 .gui-block-title #gui-account-information-block-title {
   font-size: 16px;
@@ -18991,7 +18999,7 @@ ul.page-numbers li {
 .gui-input-phone-number #gui-form-details-phone-number {
   padding-left: 64px!important;
 }
-.gui-buttons .gui-button-small {
+.gui-buttons .gui-button-small, .submit {
 	height: 42px!important;
   line-height: 21px!important;
   color: #FFFFFF!important;
@@ -19093,7 +19101,7 @@ ul.page-numbers li {
   padding: 0px 0px;
   float: left;
 }
-#gui-form-review {
+#gui-form-review, .gui-validate, .gui-text textarea {
    border: 1px solid #ddd;
 }
 .gui-radio {

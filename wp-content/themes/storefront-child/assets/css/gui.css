@@ -438,7 +438,7 @@ _________________________*/
 }
 
 /* block-content */
-.gui-block-content {
+.gui-block-content, #commentform {
   padding: 15px;
 }
 .gui-block-content.gui-white {
@@ -842,7 +842,7 @@ _________________________*/
 .gui-form .gui-spacer {
   height: 15px;
 }
-.gui-form label {
+.gui-form label, .gui-field label {
   padding-right: 15px;
   line-height: 30px;
   color: #333333;

@@ -26,7 +26,7 @@ if ( ! comments_open() ) {
 ?>
 <div id="reviews" class="woocommerce-Reviews">
 	<div id="comments">
-		<h2 class="woocommerce-Reviews-title">
+		<h2 class="reviews-title is-hidden">
 			<?php
 			$count = $product->get_review_count();
 			if ( $count && wc_review_ratings_enabled() ) {
@@ -40,9 +40,9 @@ if ( ! comments_open() ) {
 		</h2>
 
 		<?php if ( have_comments() ) : ?>
-			<ol class="commentlist">
+			<div class="review-section text-component owl-carousel owl-review">
 				<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
-			</ol>
+			</div>
 
 			<?php
 			if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
@@ -66,8 +66,8 @@ if ( ! comments_open() ) {
 	</div>
 
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) : ?>
-		<div id="review_form_wrapper">
-			<div id="review_form">
+		<div id="review_form_wrapper" class="gui gui-review">
+			<div id="review_form" class="gui-block">
 				<?php
 				$commenter    = wp_get_current_commenter();
 				$comment_form = array(
@@ -75,8 +75,8 @@ if ( ! comments_open() ) {
 					'title_reply'         => have_comments() ? esc_html__( 'Add a review', 'woocommerce' ) : sprintf( esc_html__( 'Be the first to review &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
 					/* translators: %s is product title */
 					'title_reply_to'      => esc_html__( 'Leave a Reply to %s', 'woocommerce' ),
-					'title_reply_before'  => '<span id="reply-title" class="comment-reply-title">',
-					'title_reply_after'   => '</span>',
+					'title_reply_before'  => '<div id="reply-title" class="gui-block-title">',
+					'title_reply_after'   => '</div>',
 					'comment_notes_after' => '',
 					'label_submit'        => esc_html__( 'Submit', 'woocommerce' ),
 					'logged_in_as'        => '',
@@ -121,7 +121,7 @@ if ( ! comments_open() ) {
 				}
 
 				if ( wc_review_ratings_enabled() ) {
-					$comment_form['comment_field'] = '<div class="comment-form-rating"><label for="rating">' . esc_html__( 'Your rating', 'woocommerce' ) . ( wc_review_ratings_required() ? '&nbsp;<span class="required">*</span>' : '' ) . '</label><select name="rating" id="rating" required>
+					$comment_form['comment_field'] = '<div class="rating"><label for="rating">' . esc_html__( 'Your rating', 'woocommerce' ) . ( wc_review_ratings_required() ? '&nbsp;<span class="required">*</span>' : '' ) . '</label><select name="rating" id="rating" required>
 						<option value="">' . esc_html__( 'Rate&hellip;', 'woocommerce' ) . '</option>
 						<option value="5">' . esc_html__( 'Perfect', 'woocommerce' ) . '</option>
 						<option value="4">' . esc_html__( 'Good', 'woocommerce' ) . '</option>
@@ -131,7 +131,7 @@ if ( ! comments_open() ) {
 					</select></div>';
 				}
 
-				$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Your review', 'woocommerce' ) . '&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea></p>';
+				$comment_form['comment_field'] .= '<div class="gui-field"><label for="comment">' . esc_html__( 'Your review', 'woocommerce' ) . '&nbsp;<em>*</em></label><p class="gui-text"><textarea id="comment" class="gui-validate" name="comment" cols="45" rows="8" required></textarea></p></div>';
 
 				comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
 				?>
