@@ -78,7 +78,7 @@ if ( ! comments_open() ) {
 					'title_reply_before'  => '<div id="reply-title" class="gui-block-title">',
 					'title_reply_after'   => '</div>',
 					'comment_notes_after' => '',
-					'label_submit'        => esc_html__( 'Submit', 'woocommerce' ),
+					'label_submit'        => esc_html__( 'Save', 'woocommerce' ),
 					'logged_in_as'        => '',
 					'comment_field'       => '',
 				);
@@ -102,14 +102,14 @@ if ( ! comments_open() ) {
 				$comment_form['fields'] = array();
 
 				foreach ( $fields as $key => $field ) {
-					$field_html  = '<p class="comment-form-' . esc_attr( $key ) . '">';
+					$field_html  = '<div class="gui-col2-equal"><div class="gui-col2-equal-col1"><div class="gui-field comment-form-' . esc_attr( $key ) . '">';
 					$field_html .= '<label for="' . esc_attr( $key ) . '">' . esc_html( $field['label'] );
 
 					if ( $field['required'] ) {
-						$field_html .= '&nbsp;<span class="required">*</span>';
+						$field_html .= '&nbsp;<em>*</em>';
 					}
 
-					$field_html .= '</label><input id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '" type="' . esc_attr( $field['type'] ) . '" value="' . esc_attr( $field['value'] ) . '" size="30" ' . ( $field['required'] ? 'required' : '' ) . ' /></p>';
+					$field_html .= '</label><div class="gui-input"><input id="' . esc_attr( $key ) . '" name="' . esc_attr( $key ) . '" type="' . esc_attr( $field['type'] ) . '" class="gui-validate" value="' . esc_attr( $field['value'] ) . '" ' . ( $field['required'] ? 'required' : '' ) . ' /></div></div></div><div class="gui-clear"></div></div><div class="gui-spacer"></div>';
 
 					$comment_form['fields'][ $key ] = $field_html;
 				}
@@ -121,14 +121,26 @@ if ( ! comments_open() ) {
 				}
 
 				if ( wc_review_ratings_enabled() ) {
-					$comment_form['comment_field'] = '<div class="rating"><label for="rating">' . esc_html__( 'Your rating', 'woocommerce' ) . ( wc_review_ratings_required() ? '&nbsp;<span class="required">*</span>' : '' ) . '</label><select name="rating" id="rating" required>
+					$comment_form['comment_field'] = '
+                    <div class="gui-col2-equal">
+                    <div class="gui-col2-equal-col1">
+                    <div class="gui-field">
+                    <label for="rating">' . esc_html__( 'Your rating', 'woocommerce' ) . ( wc_review_ratings_required() ? '&nbsp;<em>*</em>' : '' ) . '</label>
+                    <div class="gui-select">
+                    <select name="rating" id="rating" required>
 						<option value="">' . esc_html__( 'Rate&hellip;', 'woocommerce' ) . '</option>
 						<option value="5">' . esc_html__( 'Perfect', 'woocommerce' ) . '</option>
 						<option value="4">' . esc_html__( 'Good', 'woocommerce' ) . '</option>
 						<option value="3">' . esc_html__( 'Average', 'woocommerce' ) . '</option>
 						<option value="2">' . esc_html__( 'Not that bad', 'woocommerce' ) . '</option>
 						<option value="1">' . esc_html__( 'Very poor', 'woocommerce' ) . '</option>
-					</select></div>';
+					</select>
+					</div>
+					</div>
+					</div>
+					<div class="gui-clear"></div>
+					</div>
+					<div class="gui-spacer"></div>';
 				}
 
 				$comment_form['comment_field'] .= '<div class="gui-field"><label for="comment">' . esc_html__( 'Your review', 'woocommerce' ) . '&nbsp;<em>*</em></label><p class="gui-text"><textarea id="comment" class="gui-validate" name="comment" cols="45" rows="8" required></textarea></p></div>';

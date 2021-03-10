@@ -14281,6 +14281,12 @@ h4 .bones__line:last-of-type {
   margin-bottom: 20px;
     text-align: center;
 }
+.comment-form p.stars {
+    display: none;
+}
+select#rating {
+    display: block !important;
+}
 .owl-carousel.owl-review .owl-nav {
 	display: none;
 }
@@ -18940,13 +18946,19 @@ ul.page-numbers li {
   text-align: left;
   padding: 13px 20px;
 }
-
+.comment-notes,
+.comment-form-cookies-consent {
+    display: none;
+}
+.form-submit {
+    margin: 0!important;
+}
 .gui-block-content .gui-block-linklist .gui-active a {
 	color: #fff;
   background-color: #BD8893;
   font-weight: normal;
 }
-.gui-form input {
+.gui-form input, .gui-input input {
 	font-size: 14px;
   color: #000;
   font-weight: 600;
@@ -18963,7 +18975,8 @@ ul.page-numbers li {
   height: 44px;
 }
 .gui-field {
-	position: relative;
+    position: relative;
+    clear: both;
 }
 .gui-field label {
   font-size: 14px;
