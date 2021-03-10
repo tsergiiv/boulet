@@ -113,19 +113,7 @@
 						</a>
 					</li>
 				</ul>
-				<form id="formNewsletter" action="account/newsletter/" method="post">
-					<input type="hidden" name="key" value="f8f13cb6a8173168d2855879151efbaa" />
-					<div class="newsletter-wrapper">
-						<div class="newsletter-title">
-							<h4 class="title-secondary-color">Abonnez-vous à notre infolettre</h4>
-						</div>
-						<div class="newsletter-input">
-							<i class="far fa-envelope"></i>
-							<input type="email" name="email" placeholder="Enter your email" aria-label="E-mail">
-							<button type="submit" class="button btn-pink btn-primary">S&#039;abonner</button>
-						</div>
-					</div>
-				</form>
+                <?= do_shortcode('[mc4wp_form id="225"]') ?>
 			</div>
 		</div>
 		<div class="copyright-block">
