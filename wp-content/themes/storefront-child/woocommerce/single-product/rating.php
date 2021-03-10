@@ -31,13 +31,20 @@ $average      = $product->get_average_rating();
 
 if ( $rating_count > 0 ) : ?>
 
-	<div class="woocommerce-product-rating">
-		<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
-		<?php if ( comments_open() ) : ?>
-			<?php //phpcs:disable ?>
-			<a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a>
-			<?php // phpcs:enable ?>
-		<?php endif ?>
-	</div>
+    <div class="rating flex items-center">
+        <?php //echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
+        <?php if ( comments_open() ) : ?>
+            <?php //phpcs:disable ?>
+            <div class="rate-stars flex rate-<?php echo $review_count; ?>">
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <a href="#proTabPanelReviews" class="rating__link rating-link_scroll" rel="nofollow"><?php printf( '<span class="reviews-title">' . esc_html( $review_count ) . ' Avis clients</span>' ); ?></a>
+            <?php // phpcs:enable ?>
+        <?php endif ?>
+    </div>
 
 <?php endif; ?>

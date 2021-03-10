@@ -20,4 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<p class="stock <?php echo esc_attr( $class ); ?>"><?php echo wp_kses_post( $availability ); ?></p>
+
+<div class="flex flex-column gap-xs text-sm">
+    <div class="in-stock">
+        <p class="stock <?php echo esc_attr( $class ); ?>"><?php echo wp_kses_post( $availability ); ?></p>
+    </div>
+</div>

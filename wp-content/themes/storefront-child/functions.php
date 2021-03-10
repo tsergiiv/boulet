@@ -305,7 +305,7 @@ function mycustom_shop_display_stock() {
     global $product;
 
     if ( !$product->get_manage_stock() && $product->is_in_stock() ) {
-        echo '<p class="stock in-stock">In Stock</p>';
+        echo '<div class="flex flex-column gap-xs text-sm"><div class="in-stock"><p class="stock in-stock">En Stock</div></div>';
     }
 }
 add_action( 'woocommerce_single_product_summary', 'mycustom_shop_display_stock', 11 );

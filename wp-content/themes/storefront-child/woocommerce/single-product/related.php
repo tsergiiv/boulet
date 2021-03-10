@@ -20,33 +20,57 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $related_products ) : ?>
+    <section>
+        <div class="container-custom">
+            <div class="usp-wrapper usp-on-product">
+                <ul>
+                    <li>
+                        <img src="/wp-content/themes/woocommerce/assets/img/icon-1.svg">
+                        <p>Livraison gratuite 150$+</p>
+                    </li>
+                    <li>
+                        <img src="/wp-content/themes/woocommerce/assets/img/icon-2.svg">
+                        <p>Livraison partout au QC, CAN</p>
+                    </li>
+                    <li>
+                        <img src="/wp-content/themes/woocommerce/assets/img/icon-3.svg">
+                        <p>Encouragez local</p>
+                    </li>
+                    <li>
+                        <img src="/wp-content/themes/woocommerce/assets/img/icon-4.svg">
+                        <p>Pur délice</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+	<section class="featured-product-section">
+        <div class="container-custom">
+            <?php
+            $heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
 
-	<section class="related products">
+            if ( $heading ) :
+                ?>
+                <h2 class="bold featured-products-title title-accent-color">Produits vedettes</h2>
+                <hr class="sm-line">
+            <?php endif; ?>
 
-		<?php
-		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
+            <?php woocommerce_product_loop_start(); ?>
 
-		if ( $heading ) :
-			?>
-			<h2><?php echo esc_html( $heading ); ?></h2>
-		<?php endif; ?>
-		
-		<?php woocommerce_product_loop_start(); ?>
+                <?php foreach ( $related_products as $related_product ) : ?>
 
-			<?php foreach ( $related_products as $related_product ) : ?>
+                        <?php
+                        $post_object = get_post( $related_product->get_id() );
 
-					<?php
-					$post_object = get_post( $related_product->get_id() );
+                        setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+                        wc_get_template_part( 'content', 'product' );
+                        ?>
 
-					wc_get_template_part( 'content', 'product' );
-					?>
+                <?php endforeach; ?>
 
-			<?php endforeach; ?>
-
-		<?php woocommerce_product_loop_end(); ?>
-
+            <?php woocommerce_product_loop_end(); ?>
+        </div>
 	</section>
 	<?php
 endif;

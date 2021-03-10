@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('html').addClass('js');
     $('.cart-popup-link').click(function(){
         $('.widget_shopping_cart').addClass('is-visible');
         $('body').addClass('popup-opened');
