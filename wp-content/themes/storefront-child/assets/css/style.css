@@ -18953,7 +18953,8 @@ ul.page-numbers li {
 .form-submit {
     margin: 0!important;
 }
-.gui-block-content .gui-block-linklist .gui-active a {
+.gui-block-content .gui-block-linklist .gui-active a,
+.gui-block-content .gui-block-linklist .is-active a {
 	color: #fff;
   background-color: #BD8893;
   font-weight: normal;
@@ -19946,6 +19947,9 @@ body {
 }
 .featured-product-section {
     margin: 95px 0 0;
+}
+a.added_to_cart.wc-forward {
+    display: none;
 }
 
     /* Chrome, Safari, Edge, Opera */
