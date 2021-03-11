@@ -19951,8 +19951,17 @@ body {
 a.added_to_cart.wc-forward {
     display: none;
 }
+.select2-container {
+    display: none !important;
+}
+.equaul-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+}
 
-    /* Chrome, Safari, Edge, Opera */
+/* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;

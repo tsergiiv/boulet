@@ -27,7 +27,7 @@ function woocommerce_form_field( $key, $args, $value = null ) {
 
     if ( $args['required'] ) {
         $args['class'][] = 'validate-required';
-        $required = ' <abbr class="required" title="' . esc_attr__( 'required', 'woocommerce' ) . '">*</abbr>';
+        $required = ' <em>*</em>';
     } else {
         $required = '';
     }
@@ -86,13 +86,13 @@ function woocommerce_form_field( $key, $args, $value = null ) {
 
             } else {
 
-                $field = '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="country_to_state country_select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . '>' . '<option value="">' . esc_html__( 'Select a country…', 'woocommerce' ) . '</option>';
+                $field = '<div class="gui-select"><select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="gui-validate" ' . implode( ' ', $custom_attributes ) . '>' . '<option value="">' . esc_html__( 'Select a country…', 'woocommerce' ) . '</option>';
 
                 foreach ( $countries as $ckey => $cvalue ) {
                     $field .= '<option value="' . esc_attr( $ckey ) . '" ' . selected( $value, $ckey, false ) . '>' . $cvalue . '</option>';
                 }
 
-                $field .= '</select>';
+                $field .= '</select></div>';
 
                 $field .= '<noscript><input type="submit" name="woocommerce_checkout_update_totals" value="' . esc_attr__( 'Update country', 'woocommerce' ) . '" /></noscript>';
 
@@ -114,14 +114,14 @@ function woocommerce_form_field( $key, $args, $value = null ) {
 
             } elseif ( ! is_null( $current_cc ) && is_array( $states ) ) {
 
-                $field .= '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="state_select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . ' data-placeholder="' . esc_attr( $args['placeholder'] ) . '"> 
+                $field .= '<div class="gui-select"><select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="gui-validate" ' . implode( ' ', $custom_attributes ) . ' data-placeholder="' . esc_attr( $args['placeholder'] ) . '"> 
                     <option value="">' . esc_html__( 'Select a state…', 'woocommerce' ) . '</option>';
 
                 foreach ( $states as $ckey => $cvalue ) {
                     $field .= '<option value="' . esc_attr( $ckey ) . '" ' . selected( $value, $ckey, false ) . '>' . $cvalue . '</option>';
                 }
 
-                $field .= '</select>';
+                $field .= '</select></div>';
 
             } else {
 
@@ -148,7 +148,7 @@ function woocommerce_form_field( $key, $args, $value = null ) {
         case 'tel' :
         case 'number' :
 
-            $field .= '<input type="' . esc_attr( $args['type'] ) . '" class="my-class input-text ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" placeholder="' . esc_attr( $args['placeholder'] ) . '"  value="' . esc_attr( $value ) . '" ' . implode( ' ', $custom_attributes ) . ' />';
+            $field .= '<div class="gui-input"><input type="' . esc_attr( $args['type'] ) . '" class="gui-validate" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" placeholder="' . esc_attr( $args['placeholder'] ) . '"  value="' . esc_attr( $value ) . '" ' . implode( ' ', $custom_attributes ) . ' /></div>';
 
             break;
         case 'select' :

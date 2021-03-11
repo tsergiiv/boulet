@@ -57,19 +57,22 @@ $col    = 1;
 		$oldcol  = $oldcol * -1;
 	?>
 
-	<div class="u-column<?php echo $col < 0 ? 1 : 2; ?> col-<?php echo $oldcol < 0 ? 1 : 2; ?> woocommerce-Address">
-		<header class="woocommerce-Address-title title">
-			<h3><?php echo esc_html( $address_title ); ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php echo $address ? esc_html__( 'Edit', 'woocommerce' ) : esc_html__( 'Add', 'woocommerce' ); ?></a>
-		</header>
-		<address>
-			<?php
-	            $pattern = "/<br\/>/";
-	            $replacements= '<p>';
-                $address = "<p>" . preg_replace($pattern, $replacements, $address) . "</p>";
-				echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
-			?>
-		</address>
+	<div class="gui-block gui-margin">
+        <div class="gui-block-title">
+            <strong aria-level="2" role="heading" id="gui-account-information-block-title"><?php echo esc_html( $address_title ); ?></strong>
+        </div>
+
+        <div class="gui-block-content">
+            <div class="gui-block-subtitle">
+                <a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php echo $address ? esc_html__( 'Edit', 'woocommerce' ) : esc_html__( 'Add', 'woocommerce' ); ?></a>
+            </div>
+            <?php
+            $pattern = "/<br\/>/";
+            $replacements= '<p>';
+            $address = "<p>" . preg_replace($pattern, $replacements, $address) . "</p>";
+            echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
+            ?>
+        </div>
 	</div>
 
 <?php endforeach; ?>
