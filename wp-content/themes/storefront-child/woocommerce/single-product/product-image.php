@@ -35,68 +35,34 @@ $wrapper_classes   = apply_filters(
 		'images',
 	)
 );
+
+$attachment_ids = $product->get_gallery_image_ids();
 ?>
 <div class="product-gallery">
     <div class="thumbslide js-thumbslide">
         <div class="slideshow js-product-v2__slideshow slideshow--transition-slide slideshow--ratio-1:1" data-control="hover">
             <p class="sr-only">Product image slideshow Items</p>
             <ul class="slideshow__content">
-                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="/wp-content/themes/woocommerce/assets/img/product-1.jpg" id="item-2">
-                    <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
-                        <div class="img-mag height-100%">
-                            <img class="img-mag__asset" src="/wp-content/themes/woocommerce/assets/img/product-1.jpg" alt="Brand 3 Bâton de rouge à lèvres - Copy">
-                        </div>
-                    </figure>
-                </li>
-                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="/wp-content/themes/woocommerce/assets/img/product-1.jpg" id="item-3">
-                    <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
-                        <div class="img-mag height-100%">
-                            <img class="img-mag__asset" src="/wp-content/themes/woocommerce/assets/img/product-1.jpg" alt="Brand 3 Bâton de rouge à lèvres - Copy">
-                        </div>
-                    </figure>
-                </li>
-                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="/wp-content/themes/woocommerce/assets/img/product-1.jpg" id="item-4">
-                    <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
-                        <div class="img-mag height-100%">
-                            <img class="img-mag__asset" src="/wp-content/themes/woocommerce/assets/img/product-1.jpg" alt="Brand 3 Bâton de rouge à lèvres - Copy">
-                        </div>
-                    </figure>
-                </li>
-                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="/wp-content/themes/woocommerce/assets/img/product-1.jpg" id="item-5">
-                    <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
-                        <div class="img-mag height-100%">
-                            <img class="img-mag__asset" src="/wp-content/themes/woocommerce/assets/img/product-1.jpg" alt="Brand 3 Bâton de rouge à lèvres - Copy">
-                        </div>
-                    </figure>
-                </li>
-                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="/wp-content/themes/woocommerce/assets/img/product-1.jpg" id="item-6">
-                    <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
-                        <div class="img-mag height-100%">
-                            <img class="img-mag__asset" src="/wp-content/themes/woocommerce/assets/img/product-1.jpg" alt="Brand 3 Bâton de rouge à lèvres - Copy">
-                        </div>
-                    </figure>
-                </li>
-                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="/wp-content/themes/woocommerce/assets/img/product-1.jpg" id="item-7">
-                    <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
-                        <div class="img-mag height-100%">
-                            <img class="img-mag__asset" src="/wp-content/themes/woocommerce/assets/img/product-1.jpg" alt="Brand 3 Bâton de rouge à lèvres - Copy">
-                        </div>
-                    </figure>
-                </li>
-                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="/wp-content/themes/woocommerce/assets/img/product-1.jpg" id="item-8">
-                    <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
-                        <div class="img-mag height-100%">
-                            <img class="img-mag__asset" src="/wp-content/themes/woocommerce/assets/img/product-1.jpg" alt="Brand 3 Bâton de rouge à lèvres - Copy">
-                        </div>
-                    </figure>
-                </li>
-                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="/wp-content/themes/woocommerce/assets/img/product-1.jpg" id="item-9">
-                    <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
-                        <div class="img-mag height-100%">
-                            <img class="img-mag__asset" src="/wp-content/themes/woocommerce/assets/img/product-1.jpg" alt="Brand 3 Bâton de rouge à lèvres - Copy">
-                        </div>
-                    </figure>
-                </li>
+	            <?php
+
+                foreach( $attachment_ids as $attachment_id )
+                {
+	                $image_url = wp_get_attachment_url( $attachment_id );
+
+	                $n = 1;
+                    ?>
+
+	                <li class="slideshow__item bg js-slideshow__item slideshow__item" data-thumb="<?= $image_url ?>" id="item-<?= $n++ ?>">
+		                <figure class="position-absolute height-100% width-100% top-0 left-0" data-scale="1.3">
+			                <div class="img-mag height-100%">
+				                <img class="img-mag__asset" src="<?= $image_url ?>" alt="Brand 3 Bâton de rouge à lèvres - Copy">
+			                </div>
+		                </figure>
+	                </li>
+
+	                <?php
+
+                }?>
             </ul>
         </div>
 

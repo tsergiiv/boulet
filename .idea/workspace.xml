@@ -16,27 +16,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add single-product-reviews file">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/downloads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-add-payment-method.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-edit-account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-edit-address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-lost-password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-reset-password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/lost-password-confirmation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/my-account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/my-address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/my-downloads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/my-orders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/navigation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/orders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/payment-methods.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/view-order.php" afterDir="false" />
+    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/page-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/page-about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-edit-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-edit-address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/single-product/product-image.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/single-product/product-image.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +92,8 @@
       <workItem from="1615288979020" duration="861000" />
       <workItem from="1615289934598" duration="30000" />
       <workItem from="1615290333475" duration="5609000" />
-      <workItem from="1615362592659" duration="4934000" />
+      <workItem from="1615362592659" duration="7786000" />
+      <workItem from="1615448591554" duration="1499000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1614863083994</created>
@@ -169,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615368515624</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add account files">
+      <created>1615379750788</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1615379750788</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +205,8 @@
     <MESSAGE value="bug fixes" />
     <MESSAGE value="add in stock label" />
     <MESSAGE value="add single-product-reviews file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add single-product-reviews file" />
+    <MESSAGE value="add account files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add account files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="95" y="82" width="1177" height="574" key="DiffContextDialog" timestamp="1615281649126">
@@ -237,11 +234,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="600" y="368" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858116918" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615368517257">
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615379752750">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1614863088987" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615368517257" />
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615379752750" />
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1614857989547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

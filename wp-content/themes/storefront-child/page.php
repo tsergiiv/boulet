@@ -70,171 +70,29 @@
         </h1>
         <hr class="sm-line">
         <div class="custom-item owl-carousel owl-products">
-            <div class="item">
+            <?php
 
-                <div class="prod-card" data-vid="59971786">
+            $args = array(
+                'post_type' => 'product',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'product_visibility',
+                        'field'    => 'name',
+                        'terms'    => 'featured',
+                    ),
+                ),
+            );
 
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) {
+                $loop->the_post();
+                global $product;
 
-                    <div class="prod-card__img-wrapper">
-                        <a href="/baton-de-rouge-a-levres-copy.html" class="prod-card__img-link" aria-label="Brand 3 Eye-liner">
-                            <figure class="media-wrapper media-wrapper--1:1 bg-contrast-lower">
-                                <img src="/wp-content/themes/woocommerce/assets/img/image-1.jpg">
-                            </figure>
-                        </a>
-                    </div>
+                wc_get_template_part( 'content', 'product' );
+            }
+            wp_reset_postdata();
 
-                    <div class="padding-sm text-left">
-                        <h1 class="text-base">
-                            <a href="/baton-de-rouge-a-levres-copy.html" class="bold product-card__title">
-                                Caramel à l'érable
-                            </a>
-                        </h1>
-
-                        <div class="custom-price margin-bottom-xs">
-                            <ins class="content-secondary-color prod-card__price">€52.00</ins>
-                        </div>
-                        <div class="text-right products-cart">
-                            <form action="cart/add/59971786/" data-action="cart/add/59971786/" method="post">
-                                <a class="cartpage-btn product-cart-btn-mobile" href="javascript:;" onclick="$(this).parent().submit();">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="product-cart-btn-title-mobile">Ajouter au panier</span>
-                                </a>
-                            </form>
-                            <a class="product-wishlist-button" href="/account/wishlistAdd/36542669/?variant_id=59971786" >
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-heart"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="item">
-
-
-
-                <div class="prod-card" data-vid="59971789">
-
-
-                    <div class="prod-card__img-wrapper">
-                        <a href="/baton-de-rouge-a-levres-copy-copy.html" class="prod-card__img-link" aria-label="Brand 1 Toner de beauté">
-                            <figure class="media-wrapper media-wrapper--1:1 bg-contrast-lower">
-                                <img src="/wp-content/themes/woocommerce/assets/img/image-2.jpg">
-                            </figure>
-                        </a>
-
-                    </div>
-
-                    <div class="padding-sm text-left">
-                        <h1 class="text-base">
-                            <a href="/baton-de-rouge-a-levres-copy-copy.html" class="bold product-card__title">
-                                Suçons
-                            </a>
-                        </h1>
-
-                        <div class="custom-price margin-bottom-xs">
-                            <ins class="content-secondary-color prod-card__price">€52.00</ins>
-                        </div>
-                        <div class="text-right products-cart">
-                            <form action="cart/add/59971789/" data-action="cart/add/59971789/" method="post">
-                                <a class="cartpage-btn product-cart-btn-mobile" href="javascript:;" onclick="$(this).parent().submit();">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="product-cart-btn-title-mobile">Ajouter au panier</span>
-                                </a>
-                            </form>
-                            <a class="product-wishlist-button" href="/account/wishlistAdd/36542672/?variant_id=59971789" >
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-heart"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="item">
-
-
-
-                <div class="prod-card" data-vid="59971792">
-
-
-                    <div class="prod-card__img-wrapper">
-                        <a href="/toner-de-beaute-copy.html" class="prod-card__img-link" aria-label="Brand 1 Crème fond de teint visage">
-                            <figure class="media-wrapper media-wrapper--1:1 bg-contrast-lower">
-                                <img src="/wp-content/themes/woocommerce/assets/img/image-3.jpg">
-                            </figure>
-                        </a>
-
-                    </div>
-
-                    <div class="padding-sm text-left">
-                        <h1 class="text-base">
-                            <a href="/toner-de-beaute-copy.html" class="bold product-card__title">
-                                Sac de sirop
-                            </a>
-                        </h1>
-
-                        <div class="custom-price margin-bottom-xs">
-                            <ins class="content-secondary-color prod-card__price">€52.00</ins>
-                        </div>
-                        <div class="text-right products-cart">
-                            <form action="cart/add/59971792/" data-action="cart/add/59971792/" method="post">
-                                <a class="cartpage-btn product-cart-btn-mobile" href="javascript:;" onclick="$(this).parent().submit();">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="product-cart-btn-title-mobile">Ajouter au panier</span>
-                                </a>
-                            </form>
-                            <a class="product-wishlist-button" href="/account/wishlistAdd/36542675/?variant_id=59971792" >
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-heart"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="item">
-
-
-
-                <div class="prod-card" data-vid="59971792">
-
-
-                    <div class="prod-card__img-wrapper">
-                        <a href="/toner-de-beaute-copy.html" class="prod-card__img-link" aria-label="Brand 1 Crème fond de teint visage">
-                            <figure class="media-wrapper media-wrapper--1:1 bg-contrast-lower">
-                                <img src="/wp-content/themes/woocommerce/assets/img/image-3.jpg">
-                            </figure>
-                        </a>
-
-                    </div>
-
-                    <div class="padding-sm text-left">
-                        <h1 class="text-base">
-                            <a href="/toner-de-beaute-copy.html" class="bold product-card__title">
-                                Sac de sirop
-                            </a>
-                        </h1>
-
-                        <div class="custom-price margin-bottom-xs">
-                            <ins class="content-secondary-color prod-card__price">€52.00</ins>
-                        </div>
-                        <div class="text-right products-cart">
-                            <form action="cart/add/59971792/" data-action="cart/add/59971792/" method="post">
-                                <a class="cartpage-btn product-cart-btn-mobile" href="javascript:;" onclick="$(this).parent().submit();">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="product-cart-btn-title-mobile">Ajouter au panier</span>
-                                </a>
-                            </form>
-                            <a class="product-wishlist-button" href="/account/wishlistAdd/36542675/?variant_id=59971792" >
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-heart"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            ?>
         </div>
     </div>
 </section>
@@ -245,56 +103,26 @@
         <div class="custom-item owl-carousel owl-products">
             <?php
 
-            $posts = get_posts(array(
+            $args = array(
                 'post_type' => 'product',
-            ));
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'product_cat',
+                        'field'    => 'slug',
+                        'terms'    => 'boites',
+                    ),
+                ),
+            );
 
-            foreach ($posts as $post) {
-                setup_postdata($post);
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) {
+                $loop->the_post();
+                global $product;
 
                 wc_get_template_part( 'content', 'product' );
-                ?>
-
-<!--                <div class="item">-->
-<!--                    <div class="prod-card" data-vid="60978761">-->
-<!--                        <div class="prod-card__img-wrapper">-->
-<!--                            <a href="--><?//= $product->get_permalink() ?><!--" class="prod-card__img-link" aria-label="Brand 2 Bâton de rouge à lèvres 2 - Copy">-->
-<!--                                <figure class="media-wrapper media-wrapper--1:1 bg-contrast-lower">-->
-<!--                                    --><?//= $product->get_image() ?>
-<!--                                </figure>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!---->
-<!--                        <div class="padding-sm text-left">-->
-<!--                            <h1 class="text-base">-->
-<!--                                <a href="/baton-de-rouge-a-levres-2-copy.html" class="bold product-card__title">-->
-<!--                                    --><?//= $product->get_title() ?>
-<!--                                </a>-->
-<!--                            </h1>-->
-<!---->
-<!--                            <div class="custom-price margin-bottom-xs">-->
-<!--                                <ins class="content-secondary-color prod-card__price">--><?//= $product->get_price_html() ?><!--</ins>-->
-<!--                            </div>-->
-<!--                            <div class="text-right products-cart">-->
-<!--                                <form action="cart/add/60978761/" data-action="cart/add/60978761/" method="post">-->
-<!--                                    <a class="cartpage-btn product-cart-btn-mobile" href="javascript:;" onclick="$(this).parent().submit();">-->
-<!--                                        <i class="fas fa-shopping-cart"></i>-->
-<!--                                        <span class="product-cart-btn-title-mobile">Ajouter au panier</span>-->
-<!--                                    </a>-->
-<!--                                </form>-->
-<!--                                <a class="product-wishlist-button" href="/account/wishlistAdd/37147346/?variant_id=60978761" >-->
-<!--                                    <i class="far fa-heart"></i>-->
-<!--                                    <i class="fas fa-heart"></i>-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-                <?php
             }
-
             wp_reset_postdata();
+
             ?>
         </div>
     </div>
@@ -364,7 +192,6 @@
     <hr class="sm-line">
     <div class="instagram-gallery">
         <?php
-
         $posts = get_posts(array(
             'post_type' => 'instagram',
 	        'order'     => 'asc'

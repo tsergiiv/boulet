@@ -16,7 +16,23 @@
 		<div class="container-custom custom-footer-wrapper">
 			<div class="footer-social">
 				<img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo.svg">
-				<p>Lorem ipsum dolor sit amet, consectetur adipi scing elit. Aliquam accumsan fermentum lacus. vel varius ligula finibus eget</p>
+                <?php
+                $posts = get_posts(array(
+                    'post_type' => 'info',
+                ));
+
+                foreach ($posts as $post) {
+                    setup_postdata($post);
+
+                    ?>
+
+	                <p><?= the_field('footer_text') ?></p>
+
+                    <?php
+                }
+
+                wp_reset_postdata();
+                ?>
 				<ul>
 	                <?php
 	                $posts = get_posts(array(
@@ -119,7 +135,23 @@
 		<div class="copyright-block">
 			<div class="container-custom">
 				<div class="copyright-title">
-					<p class=""> Copyright © 2020. Nom de la société Tous droits réservés. </p>
+                    <?php
+                    $posts = get_posts(array(
+                        'post_type' => 'info',
+                    ));
+
+                    foreach ($posts as $post) {
+                        setup_postdata($post);
+
+                        ?>
+
+                        <?= the_field('copyright') ?>
+
+                        <?php
+                    }
+
+                    wp_reset_postdata();
+                    ?>
 				</div>
 				<div class="payment-method-icons">
 					<i class="fab fa-cc-mastercard"></i>

@@ -24,7 +24,7 @@
 
     <div class="container-custom contact-us-section">
         <h1>Vous avez des questions?</h1>
-        <a href="service/" class="button btn-primary">Nous contacter</a>
+        <a href="/contacts" class="button btn-primary">Nous contacter</a>
     </div>
 </section>
 

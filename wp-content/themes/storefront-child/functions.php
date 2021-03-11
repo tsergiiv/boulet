@@ -240,6 +240,50 @@ function register_post_types()
             'parent_item_colon' => '', // для родителей (у древовидных типов)
             'menu_name' => '5 - Main Info', // название меню
         ],
+        'capability_type' => 'post',
+        'capabilities' => [
+            'create_posts' => false,
+            'delete_posts' => false,
+            'delete_published_posts' => false,
+            'delete_private_posts' => false,
+        ],
+        'map_meta_cap' => true,
+        'description' => '',
+        'public' => true,
+        'publicly_queryable' => true, // зависит от public
+        'exclude_from_search' => true, // зависит от public
+        'show_ui' => true, // зависит от public
+        'show_in_nav_menus' => true, // зависит от public
+        'show_in_menu' => true, // показывать ли в меню адмнки
+        'show_in_admin_bar' => true, // зависит от show_in_menu
+        'show_in_rest' => null, // добавить в REST API. C WP 4.7
+        'rest_base' => null, // $post_type. C WP 4.7
+        'menu_position' => 4,
+        'menu_icon' => null,
+        'hierarchical' => false,
+        'supports' => ['title'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'taxonomies' => [],
+        'has_archive' => false,
+        'rewrite' => true,
+        'query_var' => true,
+    ]);
+
+    register_post_type('Meta', [
+        'label' => null,
+        'labels' => [
+            'name' => 'Meta', // основное название для типа записи
+            'singular_name' => 'Meta', // название для одной записи этого типа
+            'add_new' => 'Add meta', // для добавления новой записи
+            'add_new_item' => 'Add meta', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item' => 'Edit meta', // для редактирования типа записи
+            'new_item' => 'New meta', // текст новой записи
+            'view_item' => 'View meta', // для просмотра записи этого типа.
+            'search_items' => 'Search meta', // для поиска по этим типам записи
+            'not_found' => 'Not found', // если в результате поиска ничего не было найдено
+            'not_found_in_trash' => 'Not found in trash', // если не было найдено в корзине
+            'parent_item_colon' => '', // для родителей (у древовидных типов)
+            'menu_name' => '6 - Meta Tags', // название меню
+        ],
 //        'capability_type' => 'post',
 //        'capabilities' => [
 //            'create_posts' => false,
@@ -285,6 +329,12 @@ function lw_loop_shop_per_page( $products ) {
     return $products;
 }
 
+function year_shortcode () {
+    $year = date_i18n ('Y');
+    return $year;
+}
+add_shortcode ('year', 'year_shortcode');
+
 // Remove the product rating display on product loops
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 
@@ -295,9 +345,9 @@ function action_function_name_5655(){
 
 function storefront_cart_link() {
     ?>
-    <a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+    <span class="cart-contents">
         <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) );?></span>
-    </a>
+    </span>
     <?php
 }
 
