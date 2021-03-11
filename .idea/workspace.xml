@@ -16,15 +16,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="">
+    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add div in form-edit-address file">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/inc/woocommerce_form_field.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/page-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/page-about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-edit-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-edit-address.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/single-product/product-image.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/single-product/product-image.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +88,7 @@
       <workItem from="1615289934598" duration="30000" />
       <workItem from="1615290333475" duration="5609000" />
       <workItem from="1615362592659" duration="7786000" />
-      <workItem from="1615448591554" duration="1499000" />
+      <workItem from="1615448591554" duration="2292000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1614863083994</created>
@@ -165,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615379750788</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add div in form-edit-address file">
+      <created>1615450626597</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615450626597</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +208,8 @@
     <MESSAGE value="add in stock label" />
     <MESSAGE value="add single-product-reviews file" />
     <MESSAGE value="add account files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add account files" />
+    <MESSAGE value="add div in form-edit-address file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add div in form-edit-address file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="95" y="82" width="1177" height="574" key="DiffContextDialog" timestamp="1615281649126">
@@ -218,10 +221,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1615281492076" />
-    <state x="540" y="377" key="NewPhpFileDialog" timestamp="1615295905787">
+    <state x="540" y="377" key="NewPhpFileDialog" timestamp="1615451714750">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="540" y="377" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1615295905787" />
+    <state x="540" y="377" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1615451714750" />
     <state x="228" y="156" key="RollbackChangesDialog" timestamp="1614858347363">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -234,20 +237,20 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="600" y="368" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858116918" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615379752750">
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615450643410">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1614863088987" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615379752750" />
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615450643410" />
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1614857989547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1440.900@0.0.1440.900" timestamp="1614857989547" />
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615379189497">
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615450633383">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="494" y="302" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1615281452822" />
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1615379189497" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1615450633383" />
     <state x="421" y="176" width="789" height="548" key="find.popup" timestamp="1614345115778">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

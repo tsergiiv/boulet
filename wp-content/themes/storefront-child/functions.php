@@ -447,3 +447,5 @@ function mycustom_shop_display_stock() {
     }
 }
 add_action( 'woocommerce_single_product_summary', 'mycustom_shop_display_stock', 11 );
+
+include_once( get_stylesheet_directory() .'/inc/woocommerce_form_field.php');
