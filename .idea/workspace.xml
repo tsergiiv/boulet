@@ -16,12 +16,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add wishlist file">
+    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="commit with bugs">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/cart-errors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/form-billing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/form-checkout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/form-coupon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/form-login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/form-pay.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/form-shipping.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/order-receipt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/payment-method.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/review-order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/terms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/checkout/thankyou.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/content-single-product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/search.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/content-single-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/content-single-product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/taxonomy-product-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/taxonomy-product-cat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-login.php" afterDir="false" />
+    </list>
+    <list id="a93bbe9d-f247-425f-9997-1dae5e2cc06a" name="Revert &quot;account ~20%&quot;" comment="Revert &quot;account ~20%&quot;&#10;&#10;This reverts commit 4b843bfe">
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-edit-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/form-edit-account.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +81,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce" />
+      <recent name="$PROJECT_DIR$/wp-content/themes" />
+      <recent name="$PROJECT_DIR$/wp-content/plugins" />
       <recent name="$PROJECT_DIR$/wp-content/themes/storefront-child" />
       <recent name="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/cart" />
-      <recent name="$PROJECT_DIR$/wp-content/themes" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -92,7 +107,7 @@
       <workItem from="1615289934598" duration="30000" />
       <workItem from="1615290333475" duration="5609000" />
       <workItem from="1615362592659" duration="7786000" />
-      <workItem from="1615448591554" duration="13905000" />
+      <workItem from="1615448591554" duration="20527000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1614863083994</created>
@@ -192,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615462983652</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="commit with bugs">
+      <created>1615468089738</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1615468089738</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,18 +259,24 @@
     <MESSAGE value="add woocommerce_form_field file" />
     <MESSAGE value="add p tags to address" />
     <MESSAGE value="add wishlist file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add wishlist file" />
+    <MESSAGE value="commit with bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit with bugs" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="180" y="25" width="1079" height="802" key="CommitChangelistDialog2" timestamp="1615468963154">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="180" y="25" width="1079" height="802" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1615468963154" />
     <state x="95" y="82" width="1177" height="574" key="DiffContextDialog" timestamp="1615281649126">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="95" y="82" width="1177" height="574" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1615281649126" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858479675" />
-    <state x="129" y="56" key="MergeDialog" timestamp="1615281492076">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="136" y="68" key="MergeDialog" timestamp="1615470024047">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1615281492076" />
+    <state x="136" y="68" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1615470024047" />
     <state x="540" y="377" key="NewPhpFileDialog" timestamp="1615461882789">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -265,20 +293,20 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="600" y="368" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858116918" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615462984900">
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615468105636">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1614863088987" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615462984900" />
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615468105636" />
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1614857989547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1440.900@0.0.1440.900" timestamp="1614857989547" />
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615462608536">
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615483899428">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="494" y="302" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1615281452822" />
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1615462608536" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1615483899428" />
     <state x="421" y="176" width="789" height="548" key="find.popup" timestamp="1614345115778">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
