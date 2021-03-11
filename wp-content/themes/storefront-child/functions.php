@@ -313,7 +313,11 @@ function register_post_types()
     ]);
 }
 
-add_theme_support( 'woocommerce' );
+function my_custom_wc_theme_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'my_custom_wc_theme_support' );
 
 remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
 add_action('woocommerce_shop_loop_item_title', 'change_product_title', 10 );

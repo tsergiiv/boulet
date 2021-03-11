@@ -59,6 +59,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 
+			<?= do_shortcode('[nextend_social_login provider="google"]') ?>
+
 		</form>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
