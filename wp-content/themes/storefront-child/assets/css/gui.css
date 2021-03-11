@@ -266,8 +266,8 @@ _________________________*/
 }
 
 /* Buttons */
-.gui a.gui-button-large,
-.gui a.gui-button-small {
+.gui .gui-button-large,
+.gui .gui-button-small {
   display: inline-block;
   background-color: #F8F8F8;
   color: #333333;
@@ -276,44 +276,44 @@ _________________________*/
   border: 1px solid #CCCCCC;
   text-decoration: none;
 }
-.gui a.gui-button-large.gui-button-action {
+.gui .gui-button-large.gui-button-action {
   color: white;
   background-color: #1AD600;
   border-color: #32B421;
 }
-.gui a.gui-button-large.gui-button-action:active {
+.gui .gui-button-large.gui-button-action:active {
   background-color: #31C41D;
   border-color: #2EA41F;
 }
-.gui a.gui-button-large {
+.gui .gui-button-large {
   line-height: 40px;
   padding: 0 15px;
 }
-.gui a.gui-button-small {
+.gui .gui-button-small {
   line-height: 26px;
   padding: 3px 15px;
 }
-.gui .gui-table a.gui-button-small {
+.gui .gui-table .gui-button-small {
   font-size: inherit;
 }
-.gui a.gui-button-large.gui-button-disabled,
-.gui a.gui-button-small.gui-button-disabled {
+.gui .gui-button-large.gui-button-disabled,
+.gui .gui-button-small.gui-button-disabled {
   color: #666666;
   cursor: default;
   background-color: #FFFFFF;
   border: 1px solid #8D8D8D;
   opacity: 0.5;
 }
-.gui a.gui-button-large:active,
-.gui a.gui-button-small:active {
+.gui .gui-button-large:active,
+.gui .gui-button-small:active {
   background-color: #E4E4E4;
   border-color: #B3B3B3;
 }
-.gui a.gui-button-large:hover,
-.gui a.gui-button-small:hover {
+.gui .gui-button-large:hover,
+.gui .gui-button-small:hover {
   text-decoration: none;
 }
-.gui a.gui-button-link {
+.gui .gui-button-link {
   display: inline-block;
   line-height: 28px;
 }
