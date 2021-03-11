@@ -449,3 +449,10 @@ function mycustom_shop_display_stock() {
 add_action( 'woocommerce_single_product_summary', 'mycustom_shop_display_stock', 11 );
 
 include_once( get_stylesheet_directory() .'/inc/woocommerce_form_field.php');
+
+add_filter( 'woocommerce_my_account_my_address_formatted_address', 'filter_function_name_4500', 10, 3 );
+function filter_function_name_4500( $address, $customer_id, $address_type ){
+    // filter...
+
+    return $address;
+}

@@ -214,10 +214,11 @@
                 <a href="javascript:;" class="search-link"><i class="fas fa-search"></i></a>
                 <a href="javascript:;" class="search-input-close"><i class="fas fa-times"></i></a>
                 <div class="search close">
-                    <form action="search/" method="get" role="search">
+                    <form action="/" method="get" role="search" id="search-form">
+	                    <input type="text" name="post_type" value="product" hidden>
                         <label class="sr-only" for="searchInputMobile">Search</label>
                         <input class="header-v3__nav-form-control form-control width-100% search-input-box" value=""
-                               autocomplete="off" type="search" name="q" id="searchInputMobile" placeholder="Chercher">
+                               autocomplete="off" type="search" name="s" onsearch="searchFunction()" id="searchInputMobile" placeholder="Chercher">
                     </form>
                 </div>
             </li>

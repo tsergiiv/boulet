@@ -13,7 +13,6 @@
         setup_postdata($post);
         ?>
 
-	    <title><?= the_field('title') ?></title>
 	    <meta name="description" content="<?= the_field('description') ?>">
 	    <meta name="keywords" content="<?= the_field('keywords') ?>">
 

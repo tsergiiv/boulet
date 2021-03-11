@@ -64,6 +64,9 @@ $col    = 1;
 		</header>
 		<address>
 			<?php
+	            $pattern = "/<br\/>/";
+	            $replacements= '<p>';
+                $address = "<p>" . preg_replace($pattern, $replacements, $address) . "</p>";
 				echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
 			?>
 		</address>
