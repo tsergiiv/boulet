@@ -27,8 +27,7 @@ $allowed_html = array(
 	),
 );
 ?>
-
-<p>
+<p class="is-hidden">
 	<?php
 	printf(
 		/* translators: 1: user display name 2: logout url */
@@ -39,7 +38,7 @@ $allowed_html = array(
 	?>
 </p>
 
-<p>
+<p class="is-hidden">
 	<?php
 	/* translators: 1: Orders URL 2: Address URL 3: Account URL. */
 	$dashboard_desc = __( 'From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">billing address</a>, and <a href="%3$s">edit your password and account details</a>.', 'woocommerce' );
@@ -55,6 +54,67 @@ $allowed_html = array(
 	);
 	?>
 </p>
+
+        <div class="gui-page-title" aria-level="1" role="heading">Tableau de bord de compte</div>
+        <p>
+            <strong>Bonjour, Adam Clark!</strong><br>
+            À partir de votre tableau de bord Mon compte, vous pouvez afficher un instantané de l'activité récente de votre compte et mettre à jour les informations de votre compte. Choisissez un lien ci-dessous pour afficher ou modifier les informations.
+        </p>
+        <div class="gui-block gui-margin" role="region" aria-labelledby="gui-account-information-block-title">
+            <div class="gui-block-title">
+                <strong aria-level="2" role="heading" id="gui-account-information-block-title">Information sur le compte</strong>
+            </div>
+            <div class="gui-block-content">
+                <div class="gui-col2-equal">
+                    <div class="gui-col2-equal-col1" role="group" aria-label="Contact information">
+                        <div class="gui-block-subtitle">Informations de contact
+                            <a href="/account/information.html" title="Edit" aria-label="Edit contact information">Edit</a>
+                        </div>
+                        <div class="gui-block-subcontent">
+                            John Smith<br>johnsmithrules@mail.com<br>
+                            +232 99999999999
+                            / 222000000000
+                            <br>
+                            <a href="https://real-1st-theme-cosmetic.shoplightspeed.com/account/information/?password_change=1" class="gui-small" title="Change password">Change password</a>
+                        </div>
+                    </div>
+                    <div class="gui-col2-equal-col2" role="group" aria-label="Newsletters">
+                        <div class="gui-block-subtitle">Bulletins
+                            <a href="/account/newsletters.html" title="Edit" aria-label="Manage newsletter settings">Edit</a>
+                        </div>
+                        <div class="gui-block-subcontent">
+                            Vous n'êtes actuellement pas abonné à notre newsletter
+                        </div>
+                    </div>
+                    <div class="gui-clear"></div>
+                </div>
+                <div class="gui-spacer"></div>
+                <div class="gui-col2-equal">
+                    <div class="gui-col2-equal-col1" role="group" aria-label="Billing address">
+                        <div class="gui-block-subtitle">Adresse de facturation
+                            <a href="/account/billing-address.html" title="Edit" aria-label="Edit billing address">Edit</a>
+                        </div>
+                        <div class="gui-block-subcontent">
+                            John Smith<br>Street 99 1-2<br>01001 Bukharest<br>Ancash<br>Peru
+                        </div>
+                    </div>
+                    <div class="gui-col2-equal-col2" role="group" aria-label="Shipping address">
+                        <div class="gui-block-subtitle">Adresse de livraison
+                            <a href="/account/shipping-address.html" title="Edit" aria-label="Edit shipping address">Edit</a>
+                        </div>
+                        <div class="gui-block-subcontent">
+                            John Smith<br>Street 99 1-2<br>01001 Bukharest<br>Ancash<br>Peru
+                        </div>
+                    </div>
+                    <div class="gui-clear"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="gui-buttons" role="region" aria-label="Actions">
+            <div class="gui-clear"></div>
+        </div>
 
 <?php
 	/**
