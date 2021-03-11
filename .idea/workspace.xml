@@ -16,9 +16,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add p tags to address">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/ti-wishlist.php" afterDir="false" />
+    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add wishlist file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/content-single-product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/search.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/content-single-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/content-single-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/taxonomy-product-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/taxonomy-product-cat.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +92,7 @@
       <workItem from="1615289934598" duration="30000" />
       <workItem from="1615290333475" duration="5609000" />
       <workItem from="1615362592659" duration="7786000" />
-      <workItem from="1615448591554" duration="10436000" />
+      <workItem from="1615448591554" duration="13905000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1614863083994</created>
@@ -182,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615462508820</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add wishlist file">
+      <created>1615462983652</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1615462983652</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +236,8 @@
     <MESSAGE value="add div in form-edit-address file" />
     <MESSAGE value="add woocommerce_form_field file" />
     <MESSAGE value="add p tags to address" />
-    <option name="LAST_COMMIT_MESSAGE" value="add p tags to address" />
+    <MESSAGE value="add wishlist file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add wishlist file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="95" y="82" width="1177" height="574" key="DiffContextDialog" timestamp="1615281649126">
@@ -254,11 +265,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="600" y="368" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858116918" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615462803759">
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615462984900">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1614863088987" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615462803759" />
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615462984900" />
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1614857989547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
