@@ -16,15 +16,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add woocommerce_form_field file">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/search.php" afterDir="false" />
+    <list default="true" id="68719427-f47d-4776-b10d-7e091c905be7" name="Default Changelist" comment="add p tags to address">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/ti-wishlist.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/assets/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/header-other.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/header-other.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/parts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/parts/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/my-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/myaccount/my-address.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +49,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/storefront-child" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -69,8 +63,8 @@
       <recent name="$PROJECT_DIR$/wp-content/themes/storefront-child" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wp-content/themes/storefront-child" />
       <recent name="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/storefront-child" />
       <recent name="$PROJECT_DIR$/wp-content/themes/storefront-child/woocommerce/cart" />
       <recent name="$PROJECT_DIR$/wp-content/themes" />
     </key>
@@ -95,7 +89,7 @@
       <workItem from="1615289934598" duration="30000" />
       <workItem from="1615290333475" duration="5609000" />
       <workItem from="1615362592659" duration="7786000" />
-      <workItem from="1615448591554" duration="9984000" />
+      <workItem from="1615448591554" duration="10436000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1614863083994</created>
@@ -181,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615451861457</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add p tags to address">
+      <created>1615462508820</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1615462508820</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +225,8 @@
     <MESSAGE value="add account files" />
     <MESSAGE value="add div in form-edit-address file" />
     <MESSAGE value="add woocommerce_form_field file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add woocommerce_form_field file" />
+    <MESSAGE value="add p tags to address" />
+    <option name="LAST_COMMIT_MESSAGE" value="add p tags to address" />
   </component>
   <component name="WindowStateProjectService">
     <state x="95" y="82" width="1177" height="574" key="DiffContextDialog" timestamp="1615281649126">
@@ -252,20 +254,20 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="600" y="368" key="VCS.EditChangelistDialog/0.0.1440.900@0.0.1440.900" timestamp="1614858116918" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615451876514">
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2" timestamp="1615462803759">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1614863088987" />
-    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615451876514" />
+    <state x="290" y="124" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1615462803759" />
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1614857989547">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="468" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1440.900@0.0.1440.900" timestamp="1614857989547" />
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615450633383">
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615462608536">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="494" y="302" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1615281452822" />
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1615450633383" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1615462608536" />
     <state x="421" y="176" width="789" height="548" key="find.popup" timestamp="1614345115778">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
