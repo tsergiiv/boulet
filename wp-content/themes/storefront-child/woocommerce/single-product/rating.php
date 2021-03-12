@@ -35,7 +35,7 @@ if ( $rating_count > 0 ) : ?>
         <?php //echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
         <?php if ( comments_open() ) : ?>
             <?php //phpcs:disable ?>
-            <div class="rate-stars flex rate-<?php echo $review_count; ?>">
+            <div class="rate-stars flex rate-<?php echo round($average); ?>">
                 <i class="fa fa-star-o"></i>
                 <i class="fa fa-star-o"></i>
                 <i class="fa fa-star-o"></i>

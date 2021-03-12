@@ -39,61 +39,99 @@
 					<i class="mobile-collection-arrow  fas fa-chevron-right"></i>
 				</li>
 				<ul class="mobile-category close">
-					<li class="mobile-menu-top">
-						<a href="javascript:;" class="mobile-collection">
-							<i class="mobile-collection-arrow  fas fa-chevron-left"></i>
-							Boutique</a>
-					</li>
-					<li class="has-subcat">
-						<a href="/maquillage/">Maquillage</a>
-						<i class="fas fa-chevron-right "></i>
-						<ul class="header-subcat_mobile close">
-							<li class="mobile-menu-top">
-								<a href="javascript:;" class="mobile-menu-top_subcat"><i
-											class="fas fa-chevron-left"></i> Maquillage </a>
-							</li>
-							<li class=" ">
-								<a href="/maquillage/visage/">Visage</a>
-							</li>
-							<li class=" ">
-								<a href="/maquillage/levres/">Lèvres</a>
-							</li>
-							<li class="  has-subcat ">
-								<a href="/maquillage/yeux/">Yeux</a>
-								<i class="fas fa-chevron-right"></i>
+                    <?php
+                    function getMobSubcategories($cat)
+                    {
+                        $category_id = $cat->term_id;
+
+                        $args = array(
+                            'taxonomy' => 'product_cat',
+                            'child_of' => 0,
+                            'parent' => $category_id,
+                            'show_count' => 0,
+                            'pad_counts' => 0,
+                            'hierarchical' => 1,
+                            'title_li' => '',
+                            'hide_empty' => 0
+                        );
+
+                        $sub_cats = get_categories($args);
+
+                        ?>
+
+						<li class="has-subcat">
+							<a href="<?= get_category_link($category_id) ?>"><?= $cat->name ?></a><?= $sub_cats ? '<i class="fas fa-chevron-right"></i>' : '' ?>
+                            <?php
+                            if ($sub_cats) {
+                            ?>
 								<ul class="header-subcat_mobile close">
 									<li class="mobile-menu-top">
-										<a href="javascript:;" class="mobile-menu-top_subcat"><i
-													class="fas fa-chevron-left"></i> Yeux</a>
+										<a href="javascript:;" class="mobile-collection">
+											<i class="mobile-collection-arrow fas fa-chevron-left"></i>
+                                            <?= $cat->name ?>
+										</a>
 									</li>
-									<li class=" ">
-										<a href="/maquillage/yeux/eyeliner/">Eyeliner</a>
-									</li>
-									<li class=" ">
-										<a href="/maquillage/yeux/kajal/">Kajal</a>
-									</li>
-									<li class=" ">
-										<a href="/maquillage/yeux/demaquillant-pour-les-yeux/">Démaquillant pour les
-											yeux</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
 
-					<li class="  has-subcat ">
-						<a href="/produits-pour-le-corps/">Produits pour le corps</a>
-						<i class="fas fa-chevron-right "></i>
-						<ul class="header-subcat_mobile close">
-							<li class="mobile-menu-top">
-								<a href="javascript:;" class="mobile-menu-top_subcat"><i
-											class="fas fa-chevron-left"></i> Produits pour le corps</a>
-							</li>
-							<li class=" ">
-								<a href="/produits-pour-le-corps/test/">test</a>
-							</li>
-						</ul>
-					<li class=" ">
-						<a href="/produits-capillaires/">Produits capillaires</a>
+                                    <?php getMobCategories($category_id); ?>
+								</ul>
+							<?php
+                            }
+                            ?>
+						</li>
+
+                        <?php
+                    }
+
+                    function getMobCategories($category_id)
+                    {
+                        $args = array(
+                            'taxonomy' => 'product_cat',
+                            'child_of' => 0,
+                            'parent' => $category_id,
+                            'show_count' => 0,
+                            'pad_counts' => 0,
+                            'hierarchical' => 1,
+                            'title_li' => '',
+                            'hide_empty' => 0
+                        );
+
+                        $sub_cats = get_categories($args);
+
+                        foreach ($sub_cats as $cat) {
+                            getMobSubcategories($cat);
+                        }
+                    }
+
+                    ?>
+
+                    <?php
+                    $args = array(
+                        'taxonomy' => 'product_cat',
+                        'show_count' => 0,
+                        'pad_counts' => 0,
+                        'hierarchical' => 1,
+                        'title_li' => '',
+                        'hide_empty' => 0
+                    );
+
+                    $all_categories = get_categories($args);
+
+                    ?>
+
+					<li class="mobile-menu-top">
+						<a href="javascript:;" class="mobile-collection">
+							<i class="mobile-collection-arrow fas fa-chevron-left"></i>
+							Boutique</a>
+					</li>
+
+					<?php
+
+                    foreach ($all_categories as $cat) {
+                        if ($cat->category_parent == 0) {
+                            getMobSubcategories($cat);
+                        }
+                    }
+                    ?>
 				</ul>
 				<li class="mobile-menu-links">
 					<a href="/about" class=""

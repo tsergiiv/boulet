@@ -43,22 +43,39 @@
     <div class="container-custom">
         <div class="usp-wrapper">
             <ul>
-                <li>
-                    <img src="/wp-content/themes/woocommerce/assets/img/icon-1.svg">
-                    <p>Livraison gratuite</p>
-                </li>
-                <li>
-                    <img src="/wp-content/themes/woocommerce/assets/img/icon-2.svg">
-                    <p>Livraison partout au QC, CAN</p>
-                </li>
-                <li>
-                    <img src="/wp-content/themes/woocommerce/assets/img/icon-3.svg">
-                    <p>Encouragez local</p>
-                </li>
-                <li>
-                    <img src="/wp-content/themes/woocommerce/assets/img/icon-4.svg">
-                    <p>Pur délice</p>
-                </li>
+                <?php
+
+                $posts = get_posts(array(
+                    'post_type' => 'info',
+                ));
+
+                foreach ($posts as $post) {
+                    setup_postdata($post);
+
+                    ?>
+
+	                <li>
+		                <img src="/wp-content/themes/woocommerce/assets/img/icon-1.svg">
+		                <p><?= the_field('advantage_1') ?></p>
+	                </li>
+	                <li>
+		                <img src="/wp-content/themes/woocommerce/assets/img/icon-2.svg">
+		                <p><?= the_field('advantage_2') ?></p>
+	                </li>
+	                <li>
+		                <img src="/wp-content/themes/woocommerce/assets/img/icon-3.svg">
+		                <p><?= the_field('advantage_3') ?></p>
+	                </li>
+	                <li>
+		                <img src="/wp-content/themes/woocommerce/assets/img/icon-4.svg">
+		                <p><?= the_field('advantage_4') ?></p>
+	                </li>
+
+                    <?php
+                }
+
+                wp_reset_postdata();
+                ?>
             </ul>
         </div>
     </div>
@@ -165,22 +182,39 @@
     <div class="container-custom">
         <div class="usp-wrapper usp-style-3 icons-wrapper">
             <ul>
-                <li class="usp-border-color">
-                    <img src="/wp-content/themes/woocommerce/assets/img/icon-l-1.svg">
-                    <p>Qualité supérieur</p>
-                </li>
-                <li class="usp-border-color">
-                    <img src="/wp-content/themes/woocommerce/assets/img/icon-l-2.svg">
-                    <p>Goût distinctif</p>
-                </li>
-                <li class="usp-border-color">
-                    <img src="/wp-content/themes/woocommerce/assets/img/icon-l-3.svg">
-                    <p>Producteurs passionnés</p>
-                </li>
-                <li class="usp-border-color">
-                    <img src="/wp-content/themes/woocommerce/assets/img/icon-l-4.svg">
-                    <p>Entreprise d’ici</p>
-                </li>
+                <?php
+
+                $posts = get_posts(array(
+                    'post_type' => 'info',
+                ));
+
+                foreach ($posts as $post) {
+                    setup_postdata($post);
+
+                    ?>
+
+	                <li class="usp-border-color">
+		                <img src="/wp-content/themes/woocommerce/assets/img/icon-l-1.svg">
+		                <p><?= the_field('advantage_5') ?></p>
+	                </li>
+	                <li class="usp-border-color">
+		                <img src="/wp-content/themes/woocommerce/assets/img/icon-l-2.svg">
+		                <p><?= the_field('advantage_6') ?></p>
+	                </li>
+	                <li class="usp-border-color">
+		                <img src="/wp-content/themes/woocommerce/assets/img/icon-l-3.svg">
+		                <p><?= the_field('advantage_7') ?></p>
+	                </li>
+	                <li class="usp-border-color">
+		                <img src="/wp-content/themes/woocommerce/assets/img/icon-l-4.svg">
+		                <p><?= the_field('advantage_8') ?></p>
+	                </li>
+
+                    <?php
+                }
+
+                wp_reset_postdata();
+                ?>
             </ul>
         </div>
     </div>
