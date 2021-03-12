@@ -3,6 +3,9 @@ function searchFunction() {
 }
 
 $(document).ready(function () {
+    setTimeout(function(){
+        $('.woocommerce-notices-wrapper').fadeOut(300);
+    }, 3000);
     $('html').addClass('js');
     $('.cart-popup-link').click(function () {
         $('.widget_shopping_cart').addClass('is-visible');

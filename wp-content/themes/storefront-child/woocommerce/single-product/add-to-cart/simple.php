@@ -59,15 +59,8 @@ if ( $product->is_in_stock() ) : ?>
             </div>
         </div>
 
-        <div class="margin-bottom-md">
-            <div class="product-buttons">
-                <a class="button btn-secondary btn--quick-checkout js-quick-checkout-trigger" type="submit" data-checkout-url="/checkout/" data-clear-url="/">Acheter maintenant</a>
-                <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="cartpage-btn add-tocart-button button btn-primary"><i class="fas fa-shopping-cart"></i>Ajouter au panier</button>
-                <a class="product-wishlist-button" href="<?php echo esc_attr( $product->get_id() ); ?>" >
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
-                </a>
-            </div>
+        <div class="product-buttons">
+            <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="cartpage-btn add-tocart-button button btn-primary"><i class="fas fa-shopping-cart"></i>Ajouter au panier</button>
         </div>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>

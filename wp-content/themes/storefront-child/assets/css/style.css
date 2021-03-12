@@ -18673,14 +18673,16 @@ ul.page-numbers li {
 	color: #FFFFFF;
   margin-right: 10px;
 }
-.product-buttons .product-wishlist-button {
+.product-buttons .product-wishlist-button,
+form.cart .tinv-wraper.tinv-wishlist a {
   outline: none;
   background-color: transparent;
   border: 1px solid #999;
-  height: 42px;
+  width: 42px!important;
+  height: 42px!important;
   line-height: 21px;
   color: #FFFFFF;
-  padding: 12px 12.5px;
+  padding: 9px;
   font-size: 15px;
   cursor: pointer;
 }
@@ -19735,7 +19737,9 @@ body {
     flex-direction: column;
 }
 .product-buttons {
-	display: flex;
+    display: flex;
+    float: left;
+    margin-right: 15px;
 }
 .product-buttons a:not(:last-child), .product-buttons button:not(:last-child) {
 	margin-right: 20px;
@@ -19981,6 +19985,23 @@ td.product-date, td.product-stock {
     display: none;
 }
 .tinvwl-to-right.look_in button:first-child {
+    display: none;
+}
+.woocommerce-form-coupon-toggle {
+    display: none;
+}
+.woocommerce-notices-wrapper {
+    position: fixed;
+    top: 50px;
+    background: #BD8893;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.woocommerce-message {
+    color: #fff;
+    padding: 15px;
+}
+.woocommerce-message a {
     display: none;
 }
 /* Chrome, Safari, Edge, Opera */
