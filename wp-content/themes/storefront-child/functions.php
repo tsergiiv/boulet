@@ -305,9 +305,9 @@ function action_function_name_5655(){
 
 function storefront_cart_link() {
     ?>
-    <span class="cart-contents">
+    <a class="cart-contents">
         <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) );?></span>
-    </span>
+    </a>
     <?php
 }
 
@@ -485,4 +485,22 @@ function filter_function_name_4500( $address, $customer_id, $address_type ){
     // filter...
 
     return $address;
+}
+
+add_action('wp_logout','logout_redirect');
+
+function logout_redirect(){
+
+    wp_redirect( home_url() );
+
+    exit;
+
+}
+
+add_filter('woocommerce_login_redirect', 'login_redirect');
+
+function login_redirect($redirect_to) {
+
+    return home_url() . '/my-account';
+
 }

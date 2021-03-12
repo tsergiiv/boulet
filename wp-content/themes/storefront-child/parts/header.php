@@ -235,24 +235,27 @@
 				</a>
                 <?php storefront_header_cart() ?>
 			</li>
-			<li class="login-popup-mobile">
-				<a class="login-popup-link" href="javascript:;"><i class="fas fa-user"></i></a>
-				<div class="login-popup popup-is-hidden popup">
-					<ul class="login-popup-container open">
-						<li class="popup-logo">
-							<img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo.svg"
-							     alt="Real 1st Theme (cosmetic)">
-						</li>
-						<li class="popup-title">
-							<h1 class="bold title-accent-color">S'identifier</h1>
-							<span class="content-secondary-color">Connectez-vous à votre compte</span>
-						</li>
-						<li class="popup-login-form">
-							<form class="woocommerce-form woocommerce-form-login login" method="post">
+            <?php if (is_user_logged_in()): ?>
+				<a class="login-popup-link" href="/my-account"><i class="fas fa-user"></i></a>
+            <?php else: ?>
+	            <li class="login-popup-mobile">
+		            <a class="login-popup-link" href="javascript:;"><i class="fas fa-user"></i></a>
+		            <div class="login-popup popup-is-hidden popup">
+			            <ul class="login-popup-container open">
+				            <li class="popup-logo">
+					            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo.svg"
+					                 alt="Real 1st Theme (cosmetic)">
+				            </li>
+				            <li class="popup-title">
+					            <h1 class="bold title-accent-color">S'identifier</h1>
+					            <span class="content-secondary-color">Connectez-vous à votre compte</span>
+				            </li>
+				            <li class="popup-login-form">
+					            <form class="woocommerce-form woocommerce-form-login login" method="post">
 
-                                <?php do_action('woocommerce_login_form_start'); ?>
+                                    <?php do_action('woocommerce_login_form_start'); ?>
 
-								<div class="grid center input-box">
+						            <div class="grid center input-box">
 
 									<span class="input-group">
                                         <i class="fas fa-user"></i>
@@ -261,85 +264,77 @@
                                                value="<?php echo (!empty($_POST['username'])) ? esc_attr(wp_unslash($_POST['username'])) : ''; ?>"/><?php // @codingStandardsIgnoreLine ?>
                                     </span>
 
-									<span class="input-group">
+							            <span class="input-group">
                                         <i class="fas fa-lock"></i>
                           	            <input class="input input-icon woocommerce-Input woocommerce-Input--text input-text"
                                                type="password" id="password" name="password" placeholder="Mot de passe" autocomplete="current-password">
                                     </span>
 
-	                                <?php do_action('woocommerce_login_form'); ?>
+                                        <?php do_action('woocommerce_login_form'); ?>
 
-									<a href="<?php echo esc_url(wp_lostpassword_url()); ?>" class="forgot">Mot de passe oublié?</a>
+							            <a href="<?php echo esc_url(wp_lostpassword_url()); ?>" class="forgot">Mot de passe oublié?</a>
 
 
-									<p class="form-row">
-	                                    <?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
-									</p>
+							            <p class="form-row">
+                                            <?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
+							            </p>
 
-									<button type="submit" class="button btn-pink roboto woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>">S&#039;identifier</button>
+							            <button type="submit" class="button btn-pink roboto woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>">S&#039;identifier</button>
 
-									<?php do_action('woocommerce_login_form_end'); ?>
-								</div>
-							</form>
+                                        <?php do_action('woocommerce_login_form_end'); ?>
+						            </div>
+					            </form>
 
-							<div class="popup-bottom">
-								<span class="content-secondary-color">OU Connectez-vous avec</span>
-								<div class="social-group">
-									<a href="<?= get_home_url() ?>/wp-login.php?loginSocial=google" data-plugin="nsl" data-action="connect"
-									   data-redirect="current" data-provider="google" data-popupwidth="600" data-popupheight="600"
-									   class="button btn-transparant roboto google">
-										<i class="fab fa-google"></i> Google
-									</a>
-									<a href="<?= get_home_url() ?>/wp-login.php?loginSocial=facebook"
-									   data-plugin="nsl" data-action="connect" data-redirect="current" data-provider="facebook" data-popupwidth="475"
-									   data-popupheight="175" class="button btn-transparant roboto">
-										<i class="fab fa-facebook-f"></i> Facebook
-									</a>
-								</div>
-								<a class="button btn-transparant btn-pink-border roboto registration"
-								   href="javascript:;" tabindex=5>S&#039;inscrire</a>
-							</div>
-						</li>
-					</ul>
-					<ul class="registration-popup-container close">
-						<li class="popup-logo">
-							<img src="<?php bloginfo('template_url'); ?>/assets/img/logo.svg"
-							     alt="Real 1st Theme (cosmetic)">
-						</li>
-						<li class="popup-title">
-							<h1 class="bold title-accent-color">S'inscrire</h1>
-							<span class="content-secondary-color">Inscrivez-vous à votre compte</span>
-						</li>
-						<li class="popup-registration-form">
-							<form method="post" id="form-register" action="account/registerPost/">
-								<div class="grid center input-box">
-									<input class="input" type="text" name="name" placeholder="Prénom" tabindex=1
-									       required>
-									<input class="input" type="text" name="lastName" placeholder="Nom de famille"
-									       tabindex=1 required>
-									<input class="input" type="text" name="telephone" placeholder="numéro de téléphone"
-									       tabindex=1 required>
-									<input class="input" type="email" name="email" placeholder="Email" required>
-									<input class="input" type="password" name="password" placeholder="Mot de passe"
-									       required>
-									<input class="input" type="password" name="confirmPassword"
-									       placeholder="Confirmez le mot de passe" required>
-									<input type="hidden" name="key" value="f8f13cb6a8173168d2855879151efbaa"/>
-									<button type="submit" onclick="$('#form-register').submit(); return false;"
-									        class="button btn-pink roboto" tabindex=3>Commencer
-									</button>
-								</div>
-							</form>
-							<div class="popup-bottom">
-								<span class="content-secondary-color">Vous avez déjà un compte?</span>
-								<a class="button btn-transparant btn-pink-border roboto login-button"
-								   href="javascript:;" tabindex=5>Se connecter</a>
-							</div>
-						</li>
-					</ul>
-					<a href="javascript:;" class="btn-close close-popup"><i class="fas fa-times"></i></a>
-				</div>
-			</li>
+					            <div class="popup-bottom">
+						            <span class="content-secondary-color">OU Connectez-vous avec</span>
+						            <div class="social-group">
+							            <a href="<?= get_home_url() ?>/wp-login.php?loginSocial=google" data-plugin="nsl" data-action="connect"
+							               data-redirect="current" data-provider="google" data-popupwidth="600" data-popupheight="600"
+							               class="button btn-transparant roboto google">
+								            <i class="fab fa-google"></i> Google
+							            </a>
+							            <a href="<?= get_home_url() ?>/wp-login.php?loginSocial=facebook"
+							               data-plugin="nsl" data-action="connect" data-redirect="current" data-provider="facebook" data-popupwidth="475"
+							               data-popupheight="175" class="button btn-transparant roboto">
+								            <i class="fab fa-facebook-f"></i> Facebook
+							            </a>
+						            </div>
+						            <a class="button btn-transparant btn-pink-border roboto registration"
+						               href="javascript:;" tabindex=5>S&#039;inscrire</a>
+					            </div>
+				            </li>
+			            </ul>
+			            <ul class="registration-popup-container close">
+				            <li class="popup-logo">
+					            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo.svg"
+					                 alt="Real 1st Theme (cosmetic)">
+				            </li>
+				            <li class="popup-title">
+					            <h1 class="bold title-accent-color">S'inscrire</h1>
+					            <span class="content-secondary-color">Inscrivez-vous à votre compte</span>
+				            </li>
+				            <li class="popup-registration-form">
+					            <form method="post" id="form-register" action="account/registerPost/">
+						            <div class="grid center input-box">
+							            <input type="text" class="input woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username" placeholder="Prénom" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+							            <input type="email" class="input woocommerce-Input woocommerce-Input--text input-text" name="email" placeholder="Email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+							            <input type="password" class="input woocommerce-Input woocommerce-Input--text input-text" name="password" placeholder="Mot de passe" id="reg_password" autocomplete="new-password" />
+
+                                        <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
+							            <button type="submit" class="button btn-pink roboto woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>">Commencer</button>
+						            </div>
+					            </form>
+					            <div class="popup-bottom">
+						            <span class="content-secondary-color">Vous avez déjà un compte?</span>
+						            <a class="button btn-transparant btn-pink-border roboto login-button"
+						               href="javascript:;" tabindex=5>Se connecter</a>
+					            </div>
+				            </li>
+			            </ul>
+			            <a href="javascript:;" class="btn-close close-popup"><i class="fas fa-times"></i></a>
+		            </div>
+	            </li>
+            <?php endif; ?>
 		</ul>
 	</div>
 </header>
