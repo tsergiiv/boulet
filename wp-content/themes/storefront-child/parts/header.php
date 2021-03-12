@@ -66,8 +66,8 @@
                             ?>
 								<ul class="header-subcat_mobile close">
 									<li class="mobile-menu-top">
-										<a href="javascript:;" class="mobile-collection">
-											<i class="mobile-collection-arrow fas fa-chevron-left"></i>
+										<a href="javascript:;" class="mobile-menu-top_subcat">
+											<i class="fas fa-chevron-left"></i>
                                             <?= $cat->name ?>
 										</a>
 									</li>
