@@ -267,50 +267,6 @@ function register_post_types()
         'rewrite' => true,
         'query_var' => true,
     ]);
-
-    register_post_type('Meta', [
-        'label' => null,
-        'labels' => [
-            'name' => 'Meta', // основное название для типа записи
-            'singular_name' => 'Meta', // название для одной записи этого типа
-            'add_new' => 'Add meta', // для добавления новой записи
-            'add_new_item' => 'Add meta', // заголовка у вновь создаваемой записи в админ-панели.
-            'edit_item' => 'Edit meta', // для редактирования типа записи
-            'new_item' => 'New meta', // текст новой записи
-            'view_item' => 'View meta', // для просмотра записи этого типа.
-            'search_items' => 'Search meta', // для поиска по этим типам записи
-            'not_found' => 'Not found', // если в результате поиска ничего не было найдено
-            'not_found_in_trash' => 'Not found in trash', // если не было найдено в корзине
-            'parent_item_colon' => '', // для родителей (у древовидных типов)
-            'menu_name' => '6 - Meta Tags', // название меню
-        ],
-//        'capability_type' => 'post',
-//        'capabilities' => [
-//            'create_posts' => false,
-//            'delete_posts' => false,
-//            'delete_published_posts' => false,
-//            'delete_private_posts' => false,
-//        ],
-        'map_meta_cap' => true,
-        'description' => '',
-        'public' => true,
-        'publicly_queryable' => true, // зависит от public
-        'exclude_from_search' => true, // зависит от public
-        'show_ui' => true, // зависит от public
-        'show_in_nav_menus' => true, // зависит от public
-        'show_in_menu' => true, // показывать ли в меню адмнки
-        'show_in_admin_bar' => true, // зависит от show_in_menu
-        'show_in_rest' => null, // добавить в REST API. C WP 4.7
-        'rest_base' => null, // $post_type. C WP 4.7
-        'menu_position' => 4,
-        'menu_icon' => null,
-        'hierarchical' => false,
-        'supports' => ['title'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-        'taxonomies' => [],
-        'has_archive' => false,
-        'rewrite' => true,
-        'query_var' => true,
-    ]);
 }
 
 function my_custom_wc_theme_support() {
@@ -441,6 +397,76 @@ function letters_email_setting_callback_function( $val ){
 }
 
 add_action('admin_menu', 'add_email_field_to_general_admin_page');
+
+function add_description_field_to_general_admin_page(){
+    $option_name = 'description';
+
+    // регистрируем опцию
+    register_setting( 'general', $option_name );
+
+    // добавляем поле
+    add_settings_field(
+        'description',
+        'Meta Description',
+        'description_setting_callback_function',
+        'general',
+        'default',
+        array(
+            'id' => 'description',
+            'option_name' => 'description'
+        )
+    );
+}
+
+function description_setting_callback_function( $val ){
+    $id = $val['id'];
+    $option_name = $val['option_name'];
+    ?>
+	<textarea
+			rows="4" cols="40"
+			name="<? echo $option_name ?>"
+			id="<? echo $id ?>"
+	/><? echo esc_attr( get_option($option_name) ) ?></textarea>
+    <?
+}
+
+add_action('admin_menu', 'add_description_field_to_general_admin_page');
+
+function add_keywords_field_to_general_admin_page(){
+    $option_name = 'keywords';
+
+    // регистрируем опцию
+    register_setting( 'general', $option_name );
+
+    // добавляем поле
+    add_settings_field(
+        'keywords',
+        'Meta Keywords',
+        'keywords_setting_callback_function',
+        'general',
+        'default',
+        array(
+            'id' => 'keywords',
+            'option_name' => 'keywords'
+        )
+    );
+}
+
+function keywords_setting_callback_function( $val ){
+    $id = $val['id'];
+    $option_name = $val['option_name'];
+    ?>
+	<input
+			type="text"
+			name="<? echo $option_name ?>"
+			id="<? echo $id ?>"
+			size="40"
+			value="<? echo esc_attr( get_option($option_name) ) ?>"
+	/>
+    <?
+}
+
+add_action('admin_menu', 'add_keywords_field_to_general_admin_page');
 
 function mycustom_shop_display_stock() {
 
