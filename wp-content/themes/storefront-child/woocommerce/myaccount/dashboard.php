@@ -97,7 +97,10 @@ $allowed_html = array(
                             <a href="/my-account/edit-address/billing" title="Edit" aria-label="Edit billing address">Edit</a>
                         </div>
                         <div class="gui-block-subcontent">
-                            John Smith<br>Street 99 1-2<br>01001 Bukharest<br>Ancash<br>Peru
+	                        <?= get_user_meta( $current_user->ID, 'billing_first_name', true ); ?>
+                            <?= get_user_meta( $current_user->ID, 'billing_last_name', true ); ?><br>
+                            <?= get_user_meta( $current_user->ID, 'billing_address_1', true ); ?><br>
+                            <?= get_user_meta( $current_user->ID, 'billing_city', true ); ?> <?= get_user_meta( $current_user->ID, 'billing_postcode', true ); ?><br>
                         </div>
                     </div>
                     <div class="gui-col2-equal-col2" role="group" aria-label="Shipping address">
@@ -105,7 +108,10 @@ $allowed_html = array(
                             <a href="/my-account/edit-address/shipping" title="Edit" aria-label="Edit shipping address">Edit</a>
                         </div>
                         <div class="gui-block-subcontent">
-                            John Smith<br>Street 99 1-2<br>01001 Bukharest<br>Ancash<br>Peru
+                            <?= get_user_meta( $current_user->ID, 'shipping_first_name', true ); ?>
+                            <?= get_user_meta( $current_user->ID, 'shipping_last_name', true ); ?><br>
+                            <?= get_user_meta( $current_user->ID, 'shipping_address_1', true ); ?><br>
+                            <?= get_user_meta( $current_user->ID, 'shipping_city', true ); ?> <?= get_user_meta( $current_user->ID, 'shipping_postcode', true ); ?><br>
                         </div>
                     </div>
                     <div class="gui-clear"></div>
