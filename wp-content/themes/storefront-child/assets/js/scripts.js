@@ -17,11 +17,13 @@ $(document).ready(function () {
             $(this).remove();
         });
     });
+
     $('.qty-plus').on('click', function () {
         var qtyVal = $(this).parent().children('input').val();
         $(this).parent().children('input').val(Math.max(parseInt(qtyVal) + 1));
         $(this).parent().children('input').trigger('change');
     });
+
     $('.qty-minus').on('click', function () {
         var qtyVal = $(this).parent().children('input').val();
         if (qtyVal > 1) {

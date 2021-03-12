@@ -49,6 +49,10 @@ function enqueue_scripts()
 
 //    wp_register_script('app', get_template_directory_uri() . '/assets/js/app.js', array(), date("h:i:s"));
 //    wp_enqueue_script('app');
+
+    wp_dequeue_script('wc-add-to-cart-js-extra');
+    wp_enqueue_script('wc-add-to-cart-js-extra', get_bloginfo( 'stylesheet_directory' ). '/assets/js/add-to-cart.js' , array( 'jquery' ), WC_VERSION, TRUE);
+
 }
 
 add_theme_support( 'menus' );
