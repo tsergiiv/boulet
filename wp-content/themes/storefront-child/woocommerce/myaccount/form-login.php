@@ -60,6 +60,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 			<?= do_shortcode('[nextend_social_login provider="google"]') ?>
+            <?= do_shortcode('[nextend_social_login provider="facebook"]') ?>
 
 		</form>
 
