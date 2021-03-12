@@ -129,7 +129,15 @@
 						</a>
 					</li>
 				</ul>
-                <?= do_shortcode('[mc4wp_form id="225"]') ?>
+
+				<div class="newsletter-wrapper">
+					<div class="newsletter-title">
+						<h4 class="title-secondary-color">Abonnez-vous à notre infolettre</h4>
+					</div>
+					<div class="newsletter-input">
+                        <?= do_shortcode('[email-subscribers-form id="1"]') ?>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="copyright-block">

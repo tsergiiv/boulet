@@ -3,7 +3,9 @@ function searchFunction() {
 }
 
 $(document).ready(function () {
-    setTimeout(function(){
+    $('.es_subscription_form_submit').removeClass().addClass('button btn-pink btn-primary');
+
+    setTimeout(function() {
         $('.woocommerce-notices-wrapper').fadeOut(300);
     }, 3000);
     $('html').addClass('js');

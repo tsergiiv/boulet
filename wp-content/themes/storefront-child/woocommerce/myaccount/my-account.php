@@ -56,35 +56,6 @@
                 ?>
             </div>
             <div class="gui-col2-left-col2">
-                <div class="gui-block gui-margin" role="region" aria-labelledby="gui-account-information-block-title">
-                    <div class="gui-block-title">
-                        <strong aria-level="2" role="heading" id="gui-account-information-block-title">Progression de la récompense</strong>
-                    </div>
-                    <div class="gui-block-content">
-                        <div class="gui-col2-leftm">
-                            <div class="gui-col2-leftm-col1" role="group" aria-label="Contact information">
-                                <div class="gui-block-subtitle">Solde de points</div>
-                                <div class="gui-block-subcontent points">
-                                    10<span>pts</span>
-                                </div>
-                            </div>
-                            <div class="gui-col2-leftm-col2" role="group" aria-label="Newsletters">
-                                <div class="gui-block-subtitle">Récompense suivante</div>
-                                <div class="gui-block-subcontent points-block">
-                                    Beurre d'érable
-                                    <div class="progress-bar-wrap"><div class="progress-bar" style="width: 67%"></div></div>10pts
-                                </div>
-                                <div class="gui-block-subcontent">
-                                    Que diriez-vous d'un beurre d'érable sur nous!
-                                </div>
-                            </div>
-                            <div class="gui-clear"></div>
-                        </div>
-                        <div class="gui-spacer"></div>
-                    </div>
-                </div>
-
-
                 <div class="gui-buttons" role="region" aria-label="Actions">
                     <div class="gui-clear"></div>
                 </div>

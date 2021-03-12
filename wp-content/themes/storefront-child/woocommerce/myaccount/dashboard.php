@@ -55,9 +55,11 @@ $allowed_html = array(
 	?>
 </p>
 
+		<?php $current_user = wp_get_current_user(); ?>
+
         <div class="gui-page-title" aria-level="1" role="heading">Tableau de bord de compte</div>
         <p>
-            <strong>Bonjour, Adam Clark!</strong><br>
+            <strong>Bonjour, <?= $current_user->user_firstname ?> <?= $current_user->user_lastname ?>!</strong><br>
             À partir de votre tableau de bord Mon compte, vous pouvez afficher un instantané de l'activité récente de votre compte et mettre à jour les informations de votre compte. Choisissez un lien ci-dessous pour afficher ou modifier les informations.
         </p>
         <div class="gui-block gui-margin" role="region" aria-labelledby="gui-account-information-block-title">
@@ -68,14 +70,14 @@ $allowed_html = array(
                 <div class="gui-col2-equal">
                     <div class="gui-col2-equal-col1" role="group" aria-label="Contact information">
                         <div class="gui-block-subtitle">Informations de contact
-                            <a href="/account/information.html" title="Edit" aria-label="Edit contact information">Edit</a>
+                            <a href="/my-account/edit-account" title="Edit" aria-label="Edit contact information">Edit</a>
                         </div>
                         <div class="gui-block-subcontent">
-                            John Smith<br>johnsmithrules@mail.com<br>
-                            +232 99999999999
-                            / 222000000000
+	                        <?php $current_user = wp_get_current_user(); ?>
+                            <?= $current_user->user_firstname ?> <?= $current_user->user_lastname ?>
+	                        <br><?= $current_user->user_email ?><br>
                             <br>
-                            <a href="https://real-1st-theme-cosmetic.shoplightspeed.com/account/information/?password_change=1" class="gui-small" title="Change password">Change password</a>
+                            <a href="/my-account/edit-account" class="gui-small" title="Change password">Change password</a>
                         </div>
                     </div>
                     <div class="gui-col2-equal-col2" role="group" aria-label="Newsletters">
@@ -92,7 +94,7 @@ $allowed_html = array(
                 <div class="gui-col2-equal">
                     <div class="gui-col2-equal-col1" role="group" aria-label="Billing address">
                         <div class="gui-block-subtitle">Adresse de facturation
-                            <a href="/account/billing-address.html" title="Edit" aria-label="Edit billing address">Edit</a>
+                            <a href="/my-account/edit-address/billing" title="Edit" aria-label="Edit billing address">Edit</a>
                         </div>
                         <div class="gui-block-subcontent">
                             John Smith<br>Street 99 1-2<br>01001 Bukharest<br>Ancash<br>Peru
@@ -100,7 +102,7 @@ $allowed_html = array(
                     </div>
                     <div class="gui-col2-equal-col2" role="group" aria-label="Shipping address">
                         <div class="gui-block-subtitle">Adresse de livraison
-                            <a href="/account/shipping-address.html" title="Edit" aria-label="Edit shipping address">Edit</a>
+                            <a href="/my-account/edit-address/shipping" title="Edit" aria-label="Edit shipping address">Edit</a>
                         </div>
                         <div class="gui-block-subcontent">
                             John Smith<br>Street 99 1-2<br>01001 Bukharest<br>Ancash<br>Peru
