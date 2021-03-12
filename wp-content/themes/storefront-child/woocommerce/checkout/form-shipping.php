@@ -18,8 +18,8 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="woocommerce-shipping-fields">
 	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
+<div class="gui-block">
 
 		<h3 id="ship-to-different-address">
 			<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
@@ -45,22 +45,26 @@ defined( 'ABSPATH' ) || exit;
 
 		</div>
 
-	<?php endif; ?>
 </div>
-<div class="woocommerce-additional-fields">
+	<?php endif; ?>
+<div class="gui-block">
 	<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 
 	<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>
 
 		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
 
-			<h3><?php esc_html_e( 'Additional information', 'woocommerce' ); ?></h3>
+            <div class="gui-block-title">
+                <strong aria-level="2" role="heading" id="gui-account-information-block-title"><?php esc_html_e( 'Additional information', 'woocommerce' ); ?></strong>
+            </div>
 
 		<?php endif; ?>
 
-		<div class="woocommerce-additional-fields__field-wrapper">
+		<div class="gui-block-content">
 			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
-				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
+                <div class="gui-field">
+                    <?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
+                </div>
 			<?php endforeach; ?>
 		</div>
 

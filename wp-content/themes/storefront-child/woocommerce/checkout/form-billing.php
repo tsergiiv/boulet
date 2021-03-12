@@ -18,32 +18,36 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="woocommerce-billing-fields">
+<div class="gui-block gui-margin">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
-
-		<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
-
+        <div class="gui-block-title">
+            <strong aria-level="2" role="heading" id="gui-account-information-block-title"><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></strong>
+        </div>
 	<?php else : ?>
-
-		<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
-
+        <div class="gui-block-title">
+            <strong aria-level="2" role="heading" id="gui-account-information-block-title"><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></strong>
+        </div>
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
-	<div class="woocommerce-billing-fields__field-wrapper">
-		<?php
-		$fields = $checkout->get_checkout_fields( 'billing' );
-
-		foreach ( $fields as $key => $field ) {
-			woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
-		}
-		?>
+	<div class="gui-block-content">
+        <div class="gui-form equaul-fields">
+            <?php
+                $fields = $checkout->get_checkout_fields( 'billing' );
+                foreach ( $fields as $key => $field ) {
+            ?>
+                <div class="gui-field">
+                    <?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
+                </div>
+            <?php
+                }
+            ?>
+        </div>
 	</div>
 
 	<?php do_action( 'woocommerce_after_checkout_billing_form', $checkout ); ?>
 </div>
-
 <?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() ) : ?>
 	<div class="woocommerce-account-fields">
 		<?php if ( ! $checkout->is_registration_required() ) : ?>

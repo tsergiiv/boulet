@@ -7,14 +7,10 @@ $(document).ready(function () {
         $('.woocommerce-notices-wrapper').fadeOut(300);
     }, 3000);
     $('html').addClass('js');
-    $('.cart-popup-link').click(function () {
-        $('.widget_shopping_cart').addClass('is-visible');
-        $('body').addClass('popup-opened');
-        $('<span class="shadow shadow-active"></span>').hide().prependTo('body').fadeIn(300);
-    });
     $('body').on('click', '.shadow-active', function () {
         $('body').removeClass('popup-opened');
         $('.widget_shopping_cart').addClass('.is-hidden').removeClass('is-visible');
+        $('.login-popup').addClass('popup-is-hidden').removeClass('popup-is-visible');
         $('.shadow-active').fadeOut(300, function () {
             $(this).remove();
         });
@@ -161,18 +157,23 @@ $(document).ready(function () {
 
 //   popups
     $('.close-popup').click(function () {
-        alert();
         $('.widget_shopping_cart').addClass('is-hidden').removeClass('is-visible');
         $('.login-popup').addClass('popup-is-hidden').removeClass('popup-is-visible');
         $('.shadow').removeClass('shadow-active');
+        $('body').removeClass('popup-opened');
+        $('.shadow-active').fadeOut(300, function () {
+            $(this).remove();
+        });
     });
     $('.login-popup-link').click(function () {
         $('.login-popup').addClass('popup-is-visible').removeClass('popup-is-hidden');
-        $('.shadow').addClass('shadow-active');
+        $('body').addClass('popup-opened');
+        $('<span class="shadow shadow-active"></span>').hide().prependTo('body').fadeIn(300);
     });
     $('.cart-popup-link').click(function () {
-        $('.cart-popup').addClass('popup-is-visible').removeClass('popup-is-hidden');
-        $('.shadow').addClass('shadow-active');
+        $('.widget_shopping_cart').addClass('is-visible').removeClass('is-hidden');
+        $('body').addClass('popup-opened');
+        $('<span class="shadow shadow-active"></span>').hide().prependTo('body').fadeIn(300);
     });
     $('.shadow').click(function () {
         $(this).removeClass('shadow-active');
