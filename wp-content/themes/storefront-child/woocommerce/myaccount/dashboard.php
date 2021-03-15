@@ -67,6 +67,34 @@ $allowed_html = array(
                 <strong aria-level="2" role="heading" id="gui-account-information-block-title">Information sur le compte</strong>
             </div>
             <div class="gui-block-content">
+	            <div class="gui-col2-equal">
+		            <div class="gui-col2-equal-col1" role="group" aria-label="Billing address">
+			            <div class="gui-block-subtitle">Adresse de facturation
+				            <a href="/my-account/edit-address/billing" title="Edit" aria-label="Edit billing address">Edit</a>
+			            </div>
+			            <div class="gui-block-subcontent">
+                            <?= get_user_meta( $current_user->ID, 'billing_first_name', true ); ?>
+                            <?= get_user_meta( $current_user->ID, 'billing_last_name', true ); ?><br>
+                            <?= get_user_meta( $current_user->ID, 'billing_address_1', true ); ?><br>
+                            <?= get_user_meta( $current_user->ID, 'billing_city', true ); ?> <?= get_user_meta( $current_user->ID, 'billing_postcode', true ); ?><br>
+			            </div>
+		            </div>
+		            <div class="gui-col2-equal-col2" role="group" aria-label="Shipping address">
+			            <div class="gui-block-subtitle">Adresse de livraison
+				            <a href="/my-account/edit-address/shipping" title="Edit" aria-label="Edit shipping address">Edit</a>
+			            </div>
+			            <div class="gui-block-subcontent">
+                            <?= get_user_meta( $current_user->ID, 'shipping_first_name', true ); ?>
+                            <?= get_user_meta( $current_user->ID, 'shipping_last_name', true ); ?><br>
+                            <?= get_user_meta( $current_user->ID, 'shipping_address_1', true ); ?><br>
+                            <?= get_user_meta( $current_user->ID, 'shipping_city', true ); ?> <?= get_user_meta( $current_user->ID, 'shipping_postcode', true ); ?><br>
+			            </div>
+		            </div>
+		            <div class="gui-clear"></div>
+	            </div>
+
+	            <div class="gui-spacer"></div>
+
                 <div class="gui-col2-equal">
                     <div class="gui-col2-equal-col1" role="group" aria-label="Contact information">
                         <div class="gui-block-subtitle">Informations de contact
@@ -78,40 +106,6 @@ $allowed_html = array(
 	                        <br><?= $current_user->user_email ?><br>
                             <br>
                             <a href="/my-account/edit-account" class="gui-small" title="Change password">Change password</a>
-                        </div>
-                    </div>
-                    <div class="gui-col2-equal-col2" role="group" aria-label="Newsletters">
-                        <div class="gui-block-subtitle">Bulletins
-                            <a href="/account/newsletters.html" title="Edit" aria-label="Manage newsletter settings">Edit</a>
-                        </div>
-                        <div class="gui-block-subcontent">
-                            Vous n'êtes actuellement pas abonné à notre newsletter
-                        </div>
-                    </div>
-                    <div class="gui-clear"></div>
-                </div>
-                <div class="gui-spacer"></div>
-                <div class="gui-col2-equal">
-                    <div class="gui-col2-equal-col1" role="group" aria-label="Billing address">
-                        <div class="gui-block-subtitle">Adresse de facturation
-                            <a href="/my-account/edit-address/billing" title="Edit" aria-label="Edit billing address">Edit</a>
-                        </div>
-                        <div class="gui-block-subcontent">
-	                        <?= get_user_meta( $current_user->ID, 'billing_first_name', true ); ?>
-                            <?= get_user_meta( $current_user->ID, 'billing_last_name', true ); ?><br>
-                            <?= get_user_meta( $current_user->ID, 'billing_address_1', true ); ?><br>
-                            <?= get_user_meta( $current_user->ID, 'billing_city', true ); ?> <?= get_user_meta( $current_user->ID, 'billing_postcode', true ); ?><br>
-                        </div>
-                    </div>
-                    <div class="gui-col2-equal-col2" role="group" aria-label="Shipping address">
-                        <div class="gui-block-subtitle">Adresse de livraison
-                            <a href="/my-account/edit-address/shipping" title="Edit" aria-label="Edit shipping address">Edit</a>
-                        </div>
-                        <div class="gui-block-subcontent">
-                            <?= get_user_meta( $current_user->ID, 'shipping_first_name', true ); ?>
-                            <?= get_user_meta( $current_user->ID, 'shipping_last_name', true ); ?><br>
-                            <?= get_user_meta( $current_user->ID, 'shipping_address_1', true ); ?><br>
-                            <?= get_user_meta( $current_user->ID, 'shipping_city', true ); ?> <?= get_user_meta( $current_user->ID, 'shipping_postcode', true ); ?><br>
                         </div>
                     </div>
                     <div class="gui-clear"></div>

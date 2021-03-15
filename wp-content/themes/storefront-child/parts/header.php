@@ -153,12 +153,12 @@
 		<nav class="desktop-nav">
 			<ul>
 				<li>
-					<a href="/" class=" active " title="Real 1st Theme (cosmetic)">
+					<a href="/" class="<?= get_the_title() == 'Homepage' ? 'active' : '' ?>" title="Real 1st Theme (cosmetic)">
 						Accueil
 					</a>
 				</li>
 				<li id="collection-link" class="collection">
-					<a href="/shop" class="" title="Real 1st Theme (cosmetic)">
+					<a href="/shop" class="<?= get_the_title() == 'New Product' ? 'active' : '' ?>"" title="Real 1st Theme (cosmetic)">
 						Boutique
 					</a>
 					<ul class="header-category">
@@ -239,12 +239,12 @@
 					</ul>
 				</li>
 				<li>
-					<a href="/about" class="" title="Real 1st Theme (cosmetic)">
+					<a href="/about" class="<?= get_the_title() == 'About' ? 'active' : '' ?>" title="Real 1st Theme (cosmetic)">
 						À propos
 					</a>
 				</li>
 				<li>
-					<a href="/contacts" class="" title="Real 1st Theme (cosmetic)">
+					<a href="/contacts" class="<?= get_the_title() == 'Contacts' ? 'active' : '' ?>" title="Real 1st Theme (cosmetic)">
 						Contact
 					</a>
 				</li>

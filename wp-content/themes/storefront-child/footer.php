@@ -114,11 +114,6 @@
 				<ul>
 					<li><h1>Intimité</h1></li>
 					<li>
-						<a class="content-secondary-color" href="/" title="FAQ">
-							FAQ
-						</a>
-					</li>
-					<li>
 						<a class="content-secondary-color" href="/" title="Politique de confidentialité">
 							Politique de confidentialité
 						</a>
