@@ -31,7 +31,7 @@
 					</a>
 				</li>
 				<li class="mobile-menu-links">
-					<a href="/catalog"
+					<a href="/shop"
 					   class="mobile-collection "
 					   title="Real 1st Theme (cosmetic)">
 						Boutique

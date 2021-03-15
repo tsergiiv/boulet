@@ -59,6 +59,7 @@ jQuery( function( $ ) {
 	 */
 	AddToCartHandler.prototype.onAddToCart = function( e ) {
 		var $thisbutton = $( this );
+		$('html, body').animate({scrollTop:0}, '300');
 
 		if ( $thisbutton.is( '.ajax_add_to_cart' ) ) {
 			if ( ! $thisbutton.attr( 'data-product_id' ) ) {
@@ -71,7 +72,7 @@ jQuery( function( $ ) {
 			$thisbutton.addClass( 'loading' );
 
 			// Allow 3rd parties to validate and quit early.
-			if ( false === $( document.body ).triggerHandler( 'should_send_ajax_request.adding_to_cart', [ $thisbutton ] ) ) { 
+			if ( false === $( document.body ).triggerHandler( 'should_send_ajax_request.adding_to_cart', [ $thisbutton ] ) ) {
 				$( document.body ).trigger( 'ajax_request_not_sent.adding_to_cart', [ false, false, $thisbutton ] );
 				return true;
 			}
@@ -147,7 +148,6 @@ jQuery( function( $ ) {
 					window.location = $thisbutton.attr( 'href' );
 					return;
 				}
-
 				$( document.body ).trigger( 'removed_from_cart', [ response.fragments, response.cart_hash, $thisbutton ] );
 			},
 			error: function() {
@@ -166,7 +166,7 @@ jQuery( function( $ ) {
 
 		if ( $button ) {
 			$button.removeClass( 'loading' );
-			
+
 			if ( fragments ) {
 				$button.addClass( 'added' );
 			}

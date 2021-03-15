@@ -60,7 +60,7 @@ if ( $product->is_in_stock() ) : ?>
         </div>
 
         <div class="product-buttons">
-            <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="cartpage-btn add-tocart-button button btn-primary"><i class="fas fa-shopping-cart"></i>Ajouter au panier</button>
+            <a href="?add-to-cart=<?php echo esc_attr( $product->get_id() ); ?>" data-quantity="1" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" class="cartpage-btn add-tocart-button button btn-primary button product_type_simple add_to_cart_button ajax_add_to_cart"><i class="fas fa-shopping-cart"></i>Ajouter au panier</a>
         </div>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>

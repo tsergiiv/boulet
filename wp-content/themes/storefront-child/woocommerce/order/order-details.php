@@ -39,12 +39,16 @@ if ( $show_downloads ) {
 	);
 }
 ?>
-<section class="woocommerce-order-details">
+
+<div class="gui-col2-equal-col2">
+<section class="gui-block gui-margin">
+    <div class="gui-block-title">
+        <strong aria-level="2" role="heading" id="gui-account-information-block-title"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></strong>
+    </div>
+        <div class="gui-block-content">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
-	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
-
-	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
+	<table class="woocommerce-table woocommerce-table--order-details shop_table gui-table order_details">
 
 		<thead>
 			<tr>
@@ -98,8 +102,9 @@ if ( $show_downloads ) {
 	</table>
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
+        </div>
 </section>
-
+</div>
 <?php
 /**
  * Action hook fired after the order details.

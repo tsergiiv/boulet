@@ -149,6 +149,9 @@
   .add-tocart-button {
     margin: 0px 10px;
   }
+  .product-buttons .add-tocart-button {
+    margin: 0;
+  }
 }
 @media all and (max-width: 1080px) {
   .about-us-page-content {
@@ -438,7 +441,7 @@
   nav.mobile-nav {
   	order: 1;
     position: relative;
-    flex: 0 0 33.3333%;
+    flex: 0 0 20%;
   }
   .logo-wrap {
   	order: 2;
@@ -467,11 +470,8 @@
   }
   .header-icons {
   	order: 3;
-    flex: 0 0 33.3333%;
+    flex: 0 0 40%;
     text-align: right;
-  }
-  .header-icons li:nth-child(3) {
-  	margin-right: 0px!important;
   }
   .login-popup-mobile {
   	position:absolute;
@@ -603,14 +603,34 @@
       margin-bottom: 11px;
   }
     .container-custom.custom-product-wraper {
-        padding-top: 40px;
+        padding: 40px 0 0;
     }
 
     .product-gallery {
         min-width: 100% !important;
         margin: 0 0 24px;
-        padding: 0 40px;
+        padding: 0;
     }
+  .single-product-page {
+    grid-template-areas:
+        'img'
+        'info'
+        'tabs';
+    grid-template-columns: 100%;
+  }
+  .product-buttons .btn-secondary, .product-buttons .btn-primary {
+    margin: 0;
+    width: 100%;
+  }
+  .featured-product-section ul.products.columns-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .storefront-sorting:nth-child(2) {
+    flex-direction: column;
+  }
+  .container.max-width-lg.padding-y-xl.tabs-wrapper {
+    max-width: 100% !important;
+  }
     .product__price {
         font-size: 20px;
         margin-bottom: 5px;
@@ -940,6 +960,7 @@
     }
     .instagram-gallery img {
         max-width: 100%;
+      width: 100%;
     }
     .qty-input {
         position: absolute;
@@ -1039,6 +1060,17 @@
   }
   .featured-product-section {
     margin: 30px 0 0;
+  }
+  .equaul-fields {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 0;
+  }
+  .equaul-fields .gui-input, .equaul-fields .gui-text, .equaul-fields .gui-select, .equaul-fields .gui-number {
+    margin: 30px 0px 0;
+  }
+  .equaul-fields .gui-field label {
+    top: 0;
+    left: 0;
   }
 }
 @media all and (max-width: 700px) {

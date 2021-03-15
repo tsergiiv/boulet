@@ -6,12 +6,12 @@ $(document).ready(function () {
     $('.es_subscription_form_submit').removeClass().addClass('button btn-pink btn-primary');
 
     setTimeout(function() {
-        $('.woocommerce-notices-wrapper').fadeOut(300);
+        $('.woocommerce-notices-wrapper, .mc4wp-response').fadeOut(300);
     }, 3000);
     $('html').addClass('js');
     $('body').on('click', '.shadow-active', function () {
         $('body').removeClass('popup-opened');
-        $('.widget_shopping_cart').addClass('.is-hidden').removeClass('is-visible');
+        $('.widget_shopping_cart').addClass('is-hidden').removeClass('is-visible');
         $('.login-popup').addClass('popup-is-hidden').removeClass('popup-is-visible');
         $('.shadow-active').fadeOut(300, function () {
             $(this).remove();
@@ -19,16 +19,20 @@ $(document).ready(function () {
     });
 
     $('.qty-plus').on('click', function () {
-        var qtyVal = $(this).parent().children('input').val();
-        $(this).parent().children('input').val(Math.max(parseInt(qtyVal) + 1));
-        $(this).parent().children('input').trigger('change');
+        var qtyVal = $(this).parent().find('input').val();
+        var btnVal = $(this).parents('form').find('.add-tocart-button').attr('data-quantity');
+        $(this).parents('form').find('.add-tocart-button').attr('data-quantity', (Math.max(parseInt(btnVal) + 1)));
+        $(this).parent().find('input').val(Math.max(parseInt(qtyVal) + 1));
+        $(this).parent().find('input').trigger('change');
     });
 
     $('.qty-minus').on('click', function () {
-        var qtyVal = $(this).parent().children('input').val();
+        var qtyVal = $(this).parent().find('input').val();
+        var btnVal = $(this).parents('form').find('.add-tocart-button').attr('data-quantity');
         if (qtyVal > 1) {
-            $(this).parent().children('input').val(Math.max(parseInt(qtyVal) - 1));
-            $(this).parent().children('input').trigger('change');
+            $(this).parents('form').find('.add-tocart-button').attr('data-quantity', (Math.max(parseInt(btnVal) - 1)));
+            $(this).parent().find('input').val(Math.max(parseInt(qtyVal) - 1));
+            $(this).parent().find('input').trigger('change');
         }
     });
     $('#qtyInput').on('change', function () {
@@ -211,7 +215,7 @@ $(document).ready(function () {
     });
 
     if ($(window).width() < 800) {
-        $('.gui-active a').click(function (e) {
+        $('.gui-block-linklist .is-active a').click(function (e) {
             $(this).parents('.gui-block-linklist').addClass('list-open');
             $('body').addClass('overflow-hidden').append('<div class="list-backdrop"></div>');
             e.preventDefault();

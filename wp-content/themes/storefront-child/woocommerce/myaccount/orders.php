@@ -23,7 +23,13 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 <?php if ( $has_orders ) : ?>
 
-	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
+<div class="gui-block">
+    <div class="gui-block-title" role="heading" aria-level="2" id="gui-account-billing-info-title">
+        <strong>Orders</strong>
+    </div>
+    <div class="gui-block-content">
+    <div class="gui-table">
+	<table class="orders-table">
 		<thead>
 			<tr>
 				<?php foreach ( wc_get_account_orders_columns() as $column_id => $column_name ) : ?>
@@ -80,7 +86,9 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 			?>
 		</tbody>
 	</table>
-
+</div>
+</div>
+</div>
 	<?php do_action( 'woocommerce_before_account_orders_pagination' ); ?>
 
 	<?php if ( 1 < $customer_orders->max_num_pages ) : ?>

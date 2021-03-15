@@ -9,7 +9,22 @@ foreach ($posts as $post) {
     setup_postdata($post);
 
         ?>
-
+    <div class="breadcrumbs-bg-color">
+        <div class="bredcrumb-items container-custom">
+            <h1> Contact</h1>
+            <nav class="breadcrumbs text-sm" aria-label="Breadcrumbs">
+                <ol class="flex flex-wrap gap-xxs">
+                    <li class="breadcrumbs__item">
+                        <a href="" class="color-inherit text-underline-hover"><i class="fas fa-home"></i></a>
+                        <span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
+                    </li>
+                    <li class="breadcrumbs__item" aria-current="page">
+                        Contact
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
 		<div class="container max-width-lg padding-y-xl">
 			<link rel="stylesheet" type="text/css" href="/wp-content/themes/woocommerce/assets/gui-core.css" />
 			<form id="gui-form" action="https://real-1st-theme-cosmetic.shoplightspeed.com/service/contactPost/" method="post">
