@@ -327,12 +327,12 @@
 						            <span class="content-secondary-color">OU Connectez-vous avec</span>
 						            <div class="social-group">
 							            <a href="<?= get_home_url() ?>/wp-login.php?loginSocial=google" data-plugin="nsl" data-action="connect"
-							               data-redirect="current" data-provider="google" data-popupwidth="600" data-popupheight="600"
+							               data-redirect="<?= get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" data-provider="google" data-popupwidth="600" data-popupheight="600"
 							               class="button btn-transparant roboto google">
 								            <i class="fab fa-google"></i> Google
 							            </a>
 							            <a href="<?= get_home_url() ?>/wp-login.php?loginSocial=facebook"
-							               data-plugin="nsl" data-action="connect" data-redirect="current" data-provider="facebook" data-popupwidth="475"
+							               data-plugin="nsl" data-action="connect" data-redirect="<?= get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" data-provider="facebook" data-popupwidth="475"
 							               data-popupheight="175" class="button btn-transparant roboto">
 								            <i class="fab fa-facebook-f"></i> Facebook
 							            </a>

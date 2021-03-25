@@ -105,7 +105,8 @@ $allowed_html = array(
                             <?= $current_user->user_firstname ?> <?= $current_user->user_lastname ?>
 	                        <br><?= $current_user->user_email ?><br>
                             <br>
-                            <a href="/my-account/edit-account" class="gui-small" title="Change password">Change password</a>
+                            <a href="/my-account/edit-account" class="gui-small" title="Changement de mot de passe">Changement de mot de passe
+                            </a>
                         </div>
                     </div>
                     <div class="gui-clear"></div>

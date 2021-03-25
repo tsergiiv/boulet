@@ -50,8 +50,8 @@ function enqueue_scripts()
 //    wp_register_script('app', get_template_directory_uri() . '/assets/js/app.js', array(), date("h:i:s"));
 //    wp_enqueue_script('app');
 
-    wp_dequeue_script('wc-add-to-cart-js-extra');
-    wp_enqueue_script('wc-add-to-cart-js-extra', get_bloginfo( 'stylesheet_directory' ). '/assets/js/add-to-cart.js' , array( 'jquery' ), WC_VERSION, TRUE);
+//    wp_dequeue_script('wc-add-to-cart-js-extra');
+//    wp_enqueue_script('wc-add-to-cart-js-extra', get_bloginfo( 'stylesheet_directory' ). '/assets/js/add-to-cart.js' , array( 'jquery' ), WC_VERSION, TRUE);
 }
 
 add_theme_support( 'menus' );
@@ -183,50 +183,6 @@ function register_post_types()
         'query_var' => true,
     ]);
 
-    register_post_type('Instagram', [
-        'label' => null,
-        'labels' => [
-            'name' => 'Instagram', // основное название для типа записи
-            'singular_name' => 'Instagram', // название для одной записи этого типа
-            'add_new' => 'Add photo', // для добавления новой записи
-            'add_new_item' => 'Add photo', // заголовка у вновь создаваемой записи в админ-панели.
-            'edit_item' => 'Edit photo', // для редактирования типа записи
-            'new_item' => 'New photo', // текст новой записи
-            'view_item' => 'View photo', // для просмотра записи этого типа.
-            'search_items' => 'Search photo', // для поиска по этим типам записи
-            'not_found' => 'Not found', // если в результате поиска ничего не было найдено
-            'not_found_in_trash' => 'Not found in trash', // если не было найдено в корзине
-            'parent_item_colon' => '', // для родителей (у древовидных типов)
-            'menu_name' => '4 - Instagram', // название меню
-        ],
-        'capability_type' => 'post',
-        'capabilities' => [
-            'create_posts' => false,
-            'delete_posts' => false,
-            'delete_published_posts' => false,
-            'delete_private_posts' => false,
-        ],
-        'map_meta_cap' => true,
-        'description' => '',
-        'public' => true,
-        'publicly_queryable' => true, // зависит от public
-        'exclude_from_search' => true, // зависит от public
-        'show_ui' => true, // зависит от public
-        'show_in_nav_menus' => true, // зависит от public
-        'show_in_menu' => true, // показывать ли в меню адмнки
-        'show_in_admin_bar' => true, // зависит от show_in_menu
-        'show_in_rest' => null, // добавить в REST API. C WP 4.7
-        'rest_base' => null, // $post_type. C WP 4.7
-        'menu_position' => 4,
-        'menu_icon' => null,
-        'hierarchical' => false,
-        'supports' => ['title'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-        'taxonomies' => [],
-        'has_archive' => false,
-        'rewrite' => true,
-        'query_var' => true,
-    ]);
-
     register_post_type('Info', [
         'label' => null,
         'labels' => [
@@ -301,10 +257,10 @@ add_shortcode ('year', 'year_shortcode');
 // Remove the product rating display on product loops
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 
-add_action( 'woocommerce_before_main_content', 'action_function_name_5655' );
-function action_function_name_5655(){
-   get_template_part('parts/title');
-}
+//add_action( 'woocommerce_before_main_content', 'action_function_name_5655' );
+//function action_function_name_5655() {
+//   get_template_part('parts/title');
+//}
 
 function storefront_cart_link() {
     ?>
@@ -494,10 +450,11 @@ add_action('wp_logout','logout_redirect');
 
 function logout_redirect(){
 
+    global $woocommerce;
+    $woocommerce->cart->empty_cart();
+
     wp_redirect( home_url() );
-
     exit;
-
 }
 
 add_filter('woocommerce_login_redirect', 'login_redirect');
@@ -506,4 +463,12 @@ function login_redirect($redirect_to) {
 
     return home_url() . '/my-account';
 
+}
+
+add_action( 'template_redirect', 'wc_redirect_non_logged_to_login_access');
+function wc_redirect_non_logged_to_login_access() {
+    if ( !is_user_logged_in() && ( $_SERVER["REQUEST_URI"] == '/my-account/' ) ) {
+        wp_redirect( home_url() );
+        exit();
+    }
 }

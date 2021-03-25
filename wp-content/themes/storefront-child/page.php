@@ -1,7 +1,7 @@
 <?php get_header('other'); ?>
 
 <section>
-    <div class="owl-carousel owl-hero  owl-hero-autoplay_none  ">
+    <div class="owl-carousel owl-hero owl-hero-autoplay_none">
         <?php
         $posts = get_posts(array(
             'post_type' => 'slide',
@@ -225,24 +225,8 @@
     </h1>
     <hr class="sm-line">
     <div class="instagram-gallery">
-        <?php
-        $posts = get_posts(array(
-            'post_type' => 'instagram',
-	        'order'     => 'asc'
-        ));
 
-        foreach ($posts as $post) {
-            setup_postdata($post);
-
-            ?>
-
-	        <img src="<?= the_field('photo') ?>">
-
-            <?php
-        }
-
-        wp_reset_postdata();
-        ?>
+	    <?= do_shortcode('[instagram-feed]') ?>
     </div>
 </section>
 
