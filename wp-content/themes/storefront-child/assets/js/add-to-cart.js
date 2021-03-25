@@ -59,7 +59,6 @@ jQuery( function( $ ) {
 	 */
 	AddToCartHandler.prototype.onAddToCart = function( e ) {
 		var $thisbutton = $( this );
-		$('html, body').animate({scrollTop:0}, '300');
 
 		if ( $thisbutton.is( '.ajax_add_to_cart' ) ) {
 			if ( ! $thisbutton.attr( 'data-product_id' ) ) {

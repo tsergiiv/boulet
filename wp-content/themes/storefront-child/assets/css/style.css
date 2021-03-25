@@ -17847,7 +17847,7 @@ nav.desktop-nav > ul > li > a:hover:before {
     background: #BD8893;
     display: block;
     position: absolute;
-    top: -14px;
+    top: -8px;
     right: -12px;
     color: #fff!important;
     font-size: 13px;
@@ -19269,9 +19269,9 @@ form.cart .tinv-wraper.tinv-wishlist a {
   padding-top: 7px;
 }
 .gui-col2-right .gui-col2-right-col1.gui-div-faq-questions .contact-info-wrapper div>i {
-	color: #2C8D86;
+	color: #BD8893;
   font-size: 11px;
-  border: 1px solid #2C8D86;
+  border: 1px solid #BD8893;
   padding: 9px;
   margin-right: 15px;
 }
@@ -20039,7 +20039,59 @@ td.product-date, td.product-stock {
     display: none;
 }
 .woocommerce-form-coupon-toggle {
-    display: none;
+    margin-top: 30px;
+    margin-bottom: 0;
+    background-color: #BD8893;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    color: #fff;
+    clear: both;
+    border-left: .6180469716em solid rgba(0,0,0,.15);
+    padding: 1em 2em 1em 3.5em;
+    position: relative;
+    list-style: none outside;
+    max-width: 1200px;
+    font-family: 'Montserrat';
+}
+form.checkout_coupon.woocommerce-form-coupon {
+    margin: 30px auto 0;
+    font-family: 'Montserrat';
+    max-width: 1200px;
+}
+.woocommerce-form-coupon-toggle .woocommerce-info, .woocommerce-form-coupon-toggle .woocommerce-info a {
+    color: #fff;
+}
+.woocommerce-form-coupon-toggle:before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f06a";
+    display: inline-block;
+    position: absolute;
+    top: 1.05em;
+    left: 1.5em;
+    color: #fff;
+}
+.woocommerce-form-coupon-toggle + .woocommerce-error {
+    margin: 30px auto 0;
+    font-family: 'Montserrat';
+    max-width: 1200px;
+}
+.coupon-input-wrap {
+    max-width: 400px;
+    margin-bottom: 15px;
+}
+li.relative.cart-popup-mobile {
+    width: 16px;
+    height: 21px;
+}
+a.cart-popup-link {
+    position: absolute;
+    bottom: -3px;
+    width: 28px;
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
 }
 .woocommerce-notices-wrapper, .mc4wp-response {
     position: fixed;
@@ -20177,9 +20229,96 @@ a.woocommerce-button.button.view {
 table .order span.woocommerce-Price-amount.amount .woocommerce-Price-currencySymbol {
     display: inline-block !important;
 }
-
-.berocket_single_filter_widget {
-    display: none;
+.categories-grid {
+    display: grid;
+    max-width: 1100px;
+    grid-column-gap: 30px;
+    margin: 0 auto 60px;
+    grid-template-columns: 263px auto;
+}
+.categories-grid div#primary {
+    grid-column: 2 / 2;
+}
+.categories-grid div#secondary {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+.collection-page_top {
+    margin-bottom: 90px;
+    grid-column: 1 / -1;
+}
+.bapf_body input[type="checkbox"],
+.bapf_hascolarr {
+    display: none !important;
+}
+.bapf_sfilter .bapf_button, .bapf_sfilter label {
+    cursor: pointer;
+    display: inline-block!important;
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-family: 'Montserrat';
+}
+.bapf_sfilter ul li {
+    display: block;
+}
+.bapf_sfilter .bapf_cchild, .bapf_sfilter .bapf_ochild {
+    float: right;
+}
+.bapf_ochild.fa-plus:before, .bapf_cchild.fa-minus:before {
+    content: "\f107";
+    color: #BD8893;
+}
+.irs--flat .irs-handle {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #2C8D86;
+}
+.irs--flat .irs-handle>i, .irs--flat .irs-line {
+    display: none!important;
+}
+.irs--flat .irs-bar {
+    top: 27px;
+    height: 5px;
+    background-color: #BD8893;
+}
+.bapf_head h3 {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+}
+.irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
+    background-color: #bd8893;
+    font-family: 'Montserrat';
+}
+.irs--flat .irs-from:before, .irs--flat .irs-single:before, .irs--flat .irs-to:before {
+    border-top-color: #bd8893;
+}
+.reset-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #999999;
+    font-family: Montserrat;
+    margin: 0 0 30px;
+}
+.gui.gui-reset {
+    max-width: 1100px;
+    margin: 60px auto 0;
+}
+.reset-field {
+    margin: 0 0 30px;
+    max-width: 400px;
+}
+.woocommerce-password-strength, .woocommerce-password-hint {
+    font-size: 12px;
+    color: #999999!important;
+    margin: 10px 0 0;
 }
 
 /* Chrome, Safari, Edge, Opera */

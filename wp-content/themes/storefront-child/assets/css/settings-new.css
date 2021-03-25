@@ -277,7 +277,7 @@ body .wsa-demobar, body .wsa-demobar a {
 }
 .pagination.pagination-pink li.active,
 ul.page-numbers li span.current {
- background-color: #2c8d86;
+ background-color: #BD8893;
 }
 .pagination-a .pagination.pagination-pink li.active a,
 ul.page-numbers li span.current {
@@ -297,7 +297,7 @@ ul.page-numbers .prev::before {
     bottom: 0;
     left: 0;
     right: 0;
-    color: #999;
+    color: #BD8893;
     display: flex;
     font-weight: 900;
     align-items: center;

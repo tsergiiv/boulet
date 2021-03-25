@@ -889,10 +889,6 @@ _________________________*/
   height: 32px;
   background-color: transparent;
 }
-.gui-input input:focus,
-.gui-text textarea:focus {
-  border: 0px;
-}
 .gui-input.gui-focus,
 .gui-text.gui-focus {
   border-color: #8D8D8D;

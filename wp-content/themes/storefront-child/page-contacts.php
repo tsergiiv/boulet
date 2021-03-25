@@ -107,7 +107,7 @@ foreach ($posts as $post) {
 												<textarea id="gui-form-message" name="message" placeholder="Message"></textarea>
 											</div>
 										</div>
-										<div class="gui-required" aria-hidden="true">* Required fields</div>
+										<div class="gui-required" aria-hidden="true">* Champs obligatoires</div>
 										<div class="gui-buttons gui-border">
 											<div class="gui-left"></div>
 											<div class="gui-right"><button id="submit-btn" type="button" class="gui-button-small">Soumettre</button></div>
