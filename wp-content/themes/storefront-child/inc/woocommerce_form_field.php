@@ -82,7 +82,7 @@ function woocommerce_form_field( $key, $args, $value = null ) {
 
                 $field .= '<strong>' . current( array_values( $countries ) ) . '</strong>';
 
-                $field .= '<input type="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="' . current( array_keys( $countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' class="country_to_state" />';
+                $field .= '<div class="gui-input"><input type="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="' . current( array_keys( $countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' class="country_to_state" /></div>';
 
             } else {
 
@@ -110,7 +110,7 @@ function woocommerce_form_field( $key, $args, $value = null ) {
 
                 $field_container = '<p class="form-row %1$s" id="%2$s" style="display: none">%3$s</p>';
 
-                $field .= '<input type="hidden" class="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="" ' . implode( ' ', $custom_attributes ) . ' placeholder="' . esc_attr( $args['placeholder'] ) . '" />';
+                $field .= '<div class="gui-input"><input type="hidden" class="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="" ' . implode( ' ', $custom_attributes ) . ' placeholder="' . esc_attr( $args['placeholder'] ) . '" /></div>';
 
             } elseif ( ! is_null( $current_cc ) && is_array( $states ) ) {
 
@@ -167,7 +167,7 @@ function woocommerce_form_field( $key, $args, $value = null ) {
                     $options .= '<option value="' . esc_attr( $option_key ) . '" ' . selected( $value, $option_key, false ) . '>' . esc_attr( $option_text ) . '</option>';
                 }
 
-                $field .= '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . ' data-placeholder="' . esc_attr( $args['placeholder'] ) . '"> 
+                $field .= '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="gui-validate" ' . implode( ' ', $custom_attributes ) . ' data-placeholder="' . esc_attr( $args['placeholder'] ) . '"> 
                         ' . $options . ' 
                     </select>';
             }

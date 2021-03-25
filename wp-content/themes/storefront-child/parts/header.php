@@ -2,7 +2,7 @@
 	<div class="container-custom">
 		<div class="logo-wrap">
 			<a href="/" class="logo-wrap_link" title="Real 1st Theme (cosmetic)">
-				<img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.svg" alt="Real 1st Theme (cosmetic)">
+				<img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.svg" alt="Boulet">
 			</a>
 		</div>
 		<nav class="mobile-nav">
@@ -25,7 +25,7 @@
 				</div>
 				<li class="mobile-menu-links">
 					<a href="/" class=" active "
-					   title="Real 1st Theme (cosmetic)">
+					   title="Accueil">
 						Accueil
 						<i class="  active  fas fa-chevron-right"></i>
 					</a>
@@ -33,7 +33,7 @@
 				<li class="mobile-menu-links">
 					<a href="/shop"
 					   class="mobile-collection "
-					   title="Real 1st Theme (cosmetic)">
+					   title="Boutique">
 						Boutique
 					</a>
 					<i class="mobile-collection-arrow  fas fa-chevron-right"></i>
@@ -135,14 +135,14 @@
 				</ul>
 				<li class="mobile-menu-links">
 					<a href="/about" class=""
-					   title="Real 1st Theme (cosmetic)">
+					   title="À propos">
 						À propos
 						<i class=" fas fa-chevron-right"></i>
 					</a>
 				</li>
 				<li class="mobile-menu-links">
 					<a href="/contacts" class=""
-					   title="Real 1st Theme (cosmetic)">
+					   title="Contact">
 						Contact
 						<i class=" fas fa-chevron-right"></i>
 					</a>
@@ -153,12 +153,12 @@
 		<nav class="desktop-nav">
 			<ul>
 				<li>
-					<a href="/" class="<?= get_the_title() == 'Homepage' ? 'active' : '' ?>" title="Real 1st Theme (cosmetic)">
+					<a href="/" class="<?= get_the_title() == 'Homepage' ? 'active' : '' ?>" title="Accueil">
 						Accueil
 					</a>
 				</li>
 				<li id="collection-link" class="collection">
-					<a href="/shop" class="<?= get_the_title() == 'New Product' ? 'active' : '' ?>"" title="Real 1st Theme (cosmetic)">
+					<a href="/shop" class="<?= get_the_title() == 'New Product' ? 'active' : '' ?>"" title="Boutique">
 						Boutique
 					</a>
 					<ul class="header-category">
@@ -239,12 +239,12 @@
 					</ul>
 				</li>
 				<li>
-					<a href="/about" class="<?= get_the_title() == 'About' ? 'active' : '' ?>" title="Real 1st Theme (cosmetic)">
+					<a href="/about" class="<?= get_the_title() == 'About' ? 'active' : '' ?>" title="À propos">
 						À propos
 					</a>
 				</li>
 				<li>
-					<a href="/contacts" class="<?= get_the_title() == 'Contacts' ? 'active' : '' ?>" title="Real 1st Theme (cosmetic)">
+					<a href="/contacts" class="<?= get_the_title() == 'Contacts' ? 'active' : '' ?>" title="Contact">
 						Contact
 					</a>
 				</li>
@@ -282,7 +282,7 @@
 			            <ul class="login-popup-container open">
 				            <li class="popup-logo">
 					            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo.svg"
-					                 alt="Real 1st Theme (cosmetic)">
+					                 alt="Boulet">
 				            </li>
 				            <li class="popup-title">
 					            <h1 class="bold title-accent-color">S'identifier</h1>
@@ -345,7 +345,7 @@
 			            <ul class="registration-popup-container close">
 				            <li class="popup-logo">
 					            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo.svg"
-					                 alt="Real 1st Theme (cosmetic)">
+					                 alt="Boulet">
 				            </li>
 				            <li class="popup-title">
 					            <h1 class="bold title-accent-color">S'inscrire</h1>

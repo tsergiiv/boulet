@@ -297,7 +297,7 @@ ul.page-numbers .prev::before {
     bottom: 0;
     left: 0;
     right: 0;
-    color: #BD8893;
+    color: #999;
     display: flex;
     font-weight: 900;
     align-items: center;

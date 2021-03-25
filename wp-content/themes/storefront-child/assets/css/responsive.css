@@ -975,7 +975,7 @@
     }
     .instagram-gallery {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
     .instagram-gallery img {
         max-width: 100%;
@@ -1092,10 +1092,25 @@
   .equaul-fields .gui-input, .equaul-fields .gui-text, .equaul-fields .gui-select, .equaul-fields .gui-number {
     margin: 30px 0px 0;
   }
+  
+p#shipping_country_field, p#billing_country_field {
+    margin: 30px 0px 0;
+}
   .equaul-fields .gui-field label {
     top: 0;
     left: 0;
   }
+  .woocommerce-checkout #payment ul.payment_methods li img.stripe-icon:first-child {
+    margin-left: 100%;
+}
+
+  .popup.popup-is-visible,
+  .widget_shopping_cart.is-visible {
+    width:320px;
+  }
+  .cart-popup-container ol, .cart-popup-container {
+    height: calc(100vh - 200px);
+}
 }
 @media all and (max-width: 700px) {
   .gui-wishlist .gui-block-content .gui-table tbody > tr > td:nth-child(4) a.gui-button-small  {

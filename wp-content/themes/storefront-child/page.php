@@ -1,7 +1,7 @@
 <?php get_header('other'); ?>
 
 <section>
-    <div class="owl-carousel owl-hero owl-hero-autoplay_none">
+    <div class="owl-carousel owl-hero  owl-hero-autoplay_none  ">
         <?php
         $posts = get_posts(array(
             'post_type' => 'slide',

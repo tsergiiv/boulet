@@ -12,7 +12,7 @@ $(document).ready(function () {
     }, 3000);
     $('html').addClass('js');
     $('body').on('click', '.shadow-active', function () {
-        $('body').removeClass('popup-opened');
+        $('html').removeClass('popup-opened');
         $('.widget_shopping_cart').addClass('is-hidden').removeClass('is-visible');
         $('.login-popup').addClass('popup-is-hidden').removeClass('popup-is-visible');
         $('.shadow-active').remove();
@@ -126,10 +126,12 @@ $(document).ready(function () {
 
     //     MOBILE MENUE
     $('.hamburger').click(function () {
+        $('html').addClass('popup-opened');
         $('.mobile-menu').addClass('visible');
         $('.shadow').addClass('shadow-active');
     });
     $('.close-menu').click(function () {
+        $('html').removeClass('popup-opened');
         $('.mobile-menu').removeClass('visible');
         $('.shadow').removeClass('shadow-active');
     });
@@ -164,21 +166,21 @@ $(document).ready(function () {
     });
 
 //   popups
-    $('.close-popup').click(function () {
+    $('.cart-popup-link, .cart-popup-mobile .cart-contents').click(function () {
+        $('.widget_shopping_cart').addClass('is-visible').removeClass('is-hidden');
+        $('html').addClass('popup-opened');
+        $('<span class="shadow shadow-active"></span>').prependTo('body');
+    });
+    $('body').on('click', '.close-popup', function () {
         $('.widget_shopping_cart').addClass('is-hidden').removeClass('is-visible');
         $('.login-popup').addClass('popup-is-hidden').removeClass('popup-is-visible');
         $('.shadow').removeClass('shadow-active');
-        $('body').removeClass('popup-opened');
+        $('html').removeClass('popup-opened');
         $('.shadow-active').remove();
     });
     $('.login-popup-link').click(function () {
         $('.login-popup').addClass('popup-is-visible').removeClass('popup-is-hidden');
-        $('body').addClass('popup-opened');
-        $('<span class="shadow shadow-active"></span>').prependTo('body');
-    });
-    $('.cart-popup-link, .cart-popup-mobile .cart-contents').click(function () {
-        $('.widget_shopping_cart').addClass('is-visible').removeClass('is-hidden');
-        $('body').addClass('popup-opened');
+        $('html').addClass('popup-opened');
         $('<span class="shadow shadow-active"></span>').prependTo('body');
     });
     $('.shadow').click(function () {

@@ -467,8 +467,25 @@ function login_redirect($redirect_to) {
 
 add_action( 'template_redirect', 'wc_redirect_non_logged_to_login_access');
 function wc_redirect_non_logged_to_login_access() {
-    if ( !is_user_logged_in() && ( $_SERVER["REQUEST_URI"] == '/my-account/' ) ) {
+    if ( !is_user_logged_in() && ( $_SERVER["REQUEST_URI"] == '/my-account/' || $_SERVER["REQUEST_URI"] == '/my-account/orders/' || $_SERVER["REQUEST_URI"] == '/my-account/edit-address/' ) ) {
         wp_redirect( home_url() );
         exit();
     }
+}
+
+add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
+	return array(
+		'width'  => 1000,
+		'height' => 1000,
+		'crop'   => 1,
+	);
+} );
+
+add_filter('woocommerce_account_menu_items', 'webtoffee_remove_my_account_links');
+
+function webtoffee_remove_my_account_links($menu_links) {
+
+    unset($menu_links['payment-methods']); // Payment methods
+
+    return $menu_links;
 }
