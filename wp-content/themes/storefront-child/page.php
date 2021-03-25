@@ -195,21 +195,30 @@
         <h1 class="bold newest-products-title title-accent-color">Nos spécialités</h1>
         <hr class="sm-line">
         <div class="home-categories">
-            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category1.jpg) center / cover no-repeat">
-                <div class="home-category__title">
-                    Sirop d'érable
-                </div>
-            </div>
-            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category2.jpg) center / cover no-repeat">
-                <div class="home-category__title">
-                    Cève de boulot
-                </div>
-            </div>
-            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category3.jpg) center / cover no-repeat">
-                <div class="home-category__title">
-                    Repas à emporter
-                </div>
-            </div>
+            <?php
+
+            $posts = get_posts(array(
+                'post_type' => 'specialities',
+	            'order_by'  => 'date',
+	            'order'     => 'asc',
+            ));
+
+            foreach ($posts as $post) {
+                setup_postdata($post);
+
+                ?>
+
+	            <div class="home-category" style="background: url(<?= the_field('image') ?>) center / cover no-repeat">
+		            <div class="home-category__title">
+			            <?= the_field('title') ?>
+		            </div>
+	            </div>
+
+                <?php
+            }
+
+            wp_reset_postdata();
+            ?>
         </div>
     </div>
 </section>
