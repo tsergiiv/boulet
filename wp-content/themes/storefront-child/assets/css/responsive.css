@@ -6,7 +6,7 @@
 }
 @media all and (max-width: 1400px) {
   .container-custom, .content-area {
-  	max-width:1100px;
+  	max-width:1140px;
   }
   .container {
     max-width:1200px!important;
@@ -1092,7 +1092,7 @@
   .equaul-fields .gui-input, .equaul-fields .gui-text, .equaul-fields .gui-select, .equaul-fields .gui-number {
     margin: 30px 0px 0;
   }
-  
+
 p#shipping_country_field, p#billing_country_field {
     margin: 30px 0px 0;
 }

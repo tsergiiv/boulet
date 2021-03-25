@@ -42,7 +42,7 @@
 <section>
     <div class="container-custom">
         <div class="usp-wrapper">
-            <ul>
+            <ul class="adv-icons">
                 <?php
 
                 $posts = get_posts(array(
@@ -55,20 +55,32 @@
                     ?>
 
 	                <li>
-		                <img src="/wp-content/themes/woocommerce/assets/img/icon-1.svg">
-		                <p><?= the_field('advantage_1') ?></p>
+		                <img src="/wp-content/themes/storefront-child/assets/img/new/delivery.svg">
+		                <p>
+                            <?= the_field('advantage_1') ?>
+                            <span>Livraison gratuite sur toute commande</span>
+                        </p>
 	                </li>
 	                <li>
-		                <img src="/wp-content/themes/woocommerce/assets/img/icon-2.svg">
-		                <p><?= the_field('advantage_2') ?></p>
+		                <img src="/wp-content/themes/storefront-child/assets/img/new/assistance.svg">
+		                <p>
+                            <?= the_field('advantage_2') ?>
+                            <span>Assistance 24 heures sur 24</span>
+                        </p>
 	                </li>
 	                <li>
-		                <img src="/wp-content/themes/woocommerce/assets/img/icon-3.svg">
-		                <p><?= the_field('advantage_3') ?></p>
+		                <img src="/wp-content/themes/storefront-child/assets/img/new/money-back.svg">
+		                <p>
+                            <?= the_field('advantage_3') ?>
+                            <span>30 jours pour un retour gratuit</span>
+                        </p>
 	                </li>
 	                <li>
-		                <img src="/wp-content/themes/woocommerce/assets/img/icon-4.svg">
-		                <p><?= the_field('advantage_4') ?></p>
+		                <img src="/wp-content/themes/storefront-child/assets/img/new/payment.svg">
+		                <p>
+                            <?= the_field('advantage_4') ?>
+                            <span>Nous assurons un paiement sécurisé</span>
+                        </p>
 	                </li>
 
                     <?php
@@ -160,7 +172,7 @@
 
 	            <h1>Notre érablière,<br><span class="bold title-accent-color">Une histoire de famille</span></h1>
 	            <div class="about-banner">
-		            <img src="/wp-content/themes/woocommerce/assets/img/about_us_banner.jpg">
+		            <img src="/wp-content/themes/storefront-child/assets/img/new/quality-product.jpg">
 	            </div>
 	            <div class="about-us-content">
 		            <h1><?= the_field('title') ?><br><span class="bold title-accent-color"><?= the_field('subtitle') ?></span></h1>
@@ -180,7 +192,26 @@
 </section>
 <section>
     <div class="container-custom">
-        <div class="usp-wrapper usp-style-3 icons-wrapper">
+        <h1 class="bold newest-products-title title-accent-color">Nos spécialités</h1>
+        <hr class="sm-line">
+        <div class="home-categories">
+            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category1.jpg) center / cover no-repeat">
+                <div class="home-category__title">
+                    Sirop d'érable
+                </div>
+            </div>
+            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category2.jpg) center / cover no-repeat">
+                <div class="home-category__title">
+                    Cève de boulot
+                </div>
+            </div>
+            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category3.jpg) center / cover no-repeat">
+                <div class="home-category__title">
+                    Repas à emporter
+                </div>
+            </div>
+        </div>
+        <div class="usp-wrapper usp-style-3 icons-wrapper" style="display: none">
             <ul>
                 <?php
 
@@ -221,12 +252,15 @@
 </section>
 <section class="instagram-section">
     <h1 class="bold brands-title title-accent-color">
-        Suivez-nous sur Instagram!
+        Suivez-nous sur les réseaux sociaux!
     </h1>
     <hr class="sm-line">
-    <div class="instagram-gallery">
+    <div class="social-gallery">
+        <a href="#"><img src="/wp-content/themes/storefront-child/assets/img/new/facebook.svg"></a>
+        <a href="#"><img src="/wp-content/themes/storefront-child/assets/img/new/instagram.svg"></a>
+        <a href="#"><img src="/wp-content/themes/storefront-child/assets/img/new/tiktok.svg"></a>
 
-	    <?= do_shortcode('[instagram-feed]') ?>
+	    <!-- <?= do_shortcode('[instagram-feed]') ?> -->
     </div>
 </section>
 

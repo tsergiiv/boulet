@@ -2,7 +2,7 @@
 	<div class="container-custom">
 		<div class="logo-wrap">
 			<a href="/" class="logo-wrap_link" title="Real 1st Theme (cosmetic)">
-				<img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.svg" alt="Boulet">
+				<img src="<?= get_stylesheet_directory_uri() ?>/assets/img/new/logo.png" alt="Boulet">
 			</a>
 		</div>
 		<nav class="mobile-nav">

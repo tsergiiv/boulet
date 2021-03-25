@@ -15,7 +15,7 @@
 	<footer>
 		<div class="container-custom custom-footer-wrapper">
 			<div class="footer-social">
-				<img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo_f.svg">
+				<img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/logo.png">
                 <?php
                 $posts = get_posts(array(
                     'post_type' => 'info',
