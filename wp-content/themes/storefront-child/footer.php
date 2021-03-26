@@ -78,17 +78,17 @@
 				<ul>
 					<li><h1>Liens rapides</h1></li>
 					<li>
-						<a class="content-secondary-color" href="/service/about/" title="À propos de nous">
+						<a class="content-secondary-color" href="/about/" title="À propos de nous">
 							À propos de nous
 						</a>
 					</li>
 					<li>
-						<a class="content-secondary-color" href="/" title="Boutique">
+						<a class="content-secondary-color" href="/shop" title="Boutique">
 							Boutique
 						</a>
 					</li>
 					<li>
-						<a class="content-secondary-color" href="/" title="Nous contacter">
+						<a class="content-secondary-color" href="/contacts" title="Nous contacter">
 							Nous contacter
 						</a>
 					</li>

@@ -55,31 +55,31 @@
                     ?>
 
 	                <li>
-		                <img src="/wp-content/themes/storefront-child/assets/img/new/delivery.svg">
+		                <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/delivery.svg">
 		                <p>
                             <?= the_field('advantage_1') ?>
-                            <span>Livraison gratuite sur toute commande</span>
+                            <span><?= the_field('text_1') ?></span>
                         </p>
 	                </li>
 	                <li>
-		                <img src="/wp-content/themes/storefront-child/assets/img/new/assistance.svg">
+		                <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/assistance.svg">
 		                <p>
                             <?= the_field('advantage_2') ?>
-                            <span>Assistance 24 heures sur 24</span>
+                            <span><?= the_field('text_2') ?></span>
                         </p>
 	                </li>
 	                <li>
-		                <img src="/wp-content/themes/storefront-child/assets/img/new/money-back.svg">
+		                <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/money-back.svg">
 		                <p>
                             <?= the_field('advantage_3') ?>
-                            <span>30 jours pour un retour gratuit</span>
+                            <span><?= the_field('text_3') ?>t</span>
                         </p>
 	                </li>
 	                <li>
-		                <img src="/wp-content/themes/storefront-child/assets/img/new/payment.svg">
+		                <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/payment.svg">
 		                <p>
                             <?= the_field('advantage_4') ?>
-                            <span>Nous assurons un paiement sécurisé</span>
+                            <span><?= the_field('text_4') ?></span>
                         </p>
 	                </li>
 
@@ -195,58 +195,30 @@
         <h1 class="bold newest-products-title title-accent-color">Nos spécialités</h1>
         <hr class="sm-line">
         <div class="home-categories">
-            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category1.jpg) center / cover no-repeat">
-                <div class="home-category__title">
-                    Sirop d'érable
-                </div>
-            </div>
-            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category2.jpg) center / cover no-repeat">
-                <div class="home-category__title">
-                    Cève de boulot
-                </div>
-            </div>
-            <div class="home-category" style="background: url(/wp-content/themes/storefront-child/assets/img/new/category3.jpg) center / cover no-repeat">
-                <div class="home-category__title">
-                    Repas à emporter
-                </div>
-            </div>
-        </div>
-        <div class="usp-wrapper usp-style-3 icons-wrapper" style="display: none">
-            <ul>
-                <?php
+            <?php
 
-                $posts = get_posts(array(
-                    'post_type' => 'info',
-                ));
+            $posts = get_posts(array(
+                'post_type' => 'specialities',
+	            'order_by'  => 'date',
+	            'order'     => 'asc',
+            ));
 
-                foreach ($posts as $post) {
-                    setup_postdata($post);
+            foreach ($posts as $post) {
+                setup_postdata($post);
 
-                    ?>
-
-	                <li class="usp-border-color">
-		                <img src="/wp-content/themes/woocommerce/assets/img/icon-l-1.svg">
-		                <p><?= the_field('advantage_5') ?></p>
-	                </li>
-	                <li class="usp-border-color">
-		                <img src="/wp-content/themes/woocommerce/assets/img/icon-l-2.svg">
-		                <p><?= the_field('advantage_6') ?></p>
-	                </li>
-	                <li class="usp-border-color">
-		                <img src="/wp-content/themes/woocommerce/assets/img/icon-l-3.svg">
-		                <p><?= the_field('advantage_7') ?></p>
-	                </li>
-	                <li class="usp-border-color">
-		                <img src="/wp-content/themes/woocommerce/assets/img/icon-l-4.svg">
-		                <p><?= the_field('advantage_8') ?></p>
-	                </li>
-
-                    <?php
-                }
-
-                wp_reset_postdata();
                 ?>
-            </ul>
+
+	            <div class="home-category" style="background: url(<?= the_field('image') ?>) center / cover no-repeat">
+		            <div class="home-category__title">
+			            <?= the_field('title') ?>
+		            </div>
+	            </div>
+
+                <?php
+            }
+
+            wp_reset_postdata();
+            ?>
         </div>
     </div>
 </section>
@@ -256,11 +228,32 @@
     </h1>
     <hr class="sm-line">
     <div class="social-gallery">
-        <a href="#"><img src="/wp-content/themes/storefront-child/assets/img/new/facebook.svg"></a>
-        <a href="#"><img src="/wp-content/themes/storefront-child/assets/img/new/instagram.svg"></a>
-        <a href="#"><img src="/wp-content/themes/storefront-child/assets/img/new/tiktok.svg"></a>
+        <?php
+        $posts = get_posts(array(
+            'post_type' => 'socials',
+        ));
 
-	    <!-- <?= do_shortcode('[instagram-feed]') ?> -->
+        foreach ($posts as $post) {
+            setup_postdata($post);
+            ?>
+
+            <?php if (get_field('facebook')): ?>
+		        <a href="<?= the_field('facebook') ?>"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/facebook.svg"></a>
+            <?php endif; ?>
+
+            <?php if (get_field('instagram')): ?>
+		        <a href="<?= the_field('instagram') ?>"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/instagram.svg"></a>
+            <?php endif; ?>
+
+            <?php if (get_field('tik_tok')): ?>
+		        <a href="<?= the_field('tik_tok') ?>"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/tiktok.svg"></a>
+            <?php endif; ?>
+
+            <?php
+        }
+
+        wp_reset_postdata();
+        ?>
     </div>
 </section>
 
