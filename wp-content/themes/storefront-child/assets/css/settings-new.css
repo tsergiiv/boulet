@@ -1,6 +1,6 @@
 /* assets/settings.css.scss.rain */
 :root {
-	--color-primary: #BD8893;
+	--color-primary: #AE6059;
   --color-bg: #ffffff;
   --color-contrast-higher: ;
   --color-contrast-high: rgba(, .75);
@@ -153,14 +153,14 @@ nav > ul > li > a,
 }
 
 .btn--primary {
-	background-color: #BD8893;
+	background-color: #AE6059;
 	color: ;
 }
 .btn--primary:hover {
-	background-color: rgba(#BD8893, .65);
+	background-color: rgba(#AE6059, .65);
 }
 .bundle__plus {
-	background-color: #BD8893;
+	background-color: #AE6059;
 	color: ;
 }
 
@@ -198,15 +198,15 @@ header {
   background-color: #ffffff;
 }
 footer {
-	background-color: rgb(189 136 147 / 10%)!important;
+	background-color: #F2F2F2;
     margin-top: 120px;
 }
 .copyright-block {
-  background-color: #BD8893;
+  background-color: #AE6059;
 }
 /* buttons settings */
 .btn-primary {
-	background-color: #BD8893;
+	background-color: #AE6059;
   color: #ffffff;
 }
 .btn-primary:hover {
@@ -214,27 +214,27 @@ footer {
     color: #ffffff;
 }
 .btn-secondary {
-  background-color: #000000;
+  background-color: #AE6059;
   color: #ffffff;
 }
 .btn-secondary:hover {
-	background-color: #6a6a6a;
+	background-color: #AE6059;
   color: #ffffff;
 }
 .title-accent-color {
-  color: #000;
+  color: #AE6059;
 }
 .title-secondary-color {
   color: #999999;
 }
 .content-secondary-color {
-  color: #666666;
-}
-.footer-social ul li a i {
   color: #999999;
 }
+.footer-social ul li a i {
+  color: #AE6059;
+}
 .breadcrumbs-bg-color {
-    background-color: #BD8893;
+    background-color: #AE6059;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -253,7 +253,7 @@ footer {
 .mobile-menu li.active i,
 .mobile-category .mobile-menu-top a,
 .mobile-category .mobile-menu-top a i {
-  color: #BD8893;
+  color: #AE6059;
 }
 .mobile-category li:not(first-child) a,
 .mobile-category li:not(first-child) a i,
@@ -267,7 +267,7 @@ footer {
 	color: #000000;
 }
 .sm-line {
-  background-color: #999999;
+  background-color: #AE6059;
 }
 body .wsa-demobar {
   background-color: #7c75fa!important;
@@ -277,7 +277,7 @@ body .wsa-demobar, body .wsa-demobar a {
 }
 .pagination.pagination-pink li.active,
 ul.page-numbers li span.current {
- background-color: #BD8893;
+ background-color: #AE6059;
 }
 .pagination-a .pagination.pagination-pink li.active a,
 ul.page-numbers li span.current {

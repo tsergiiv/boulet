@@ -103,8 +103,12 @@
 }
 
 .gui-table thead tr th {
-  border-color: #cbcbcb;
-  background-color: #f9f9f9;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.gui-table thead tr th span {
+  color: #999999;
 }
 
 .gui-table tbody tr td {
