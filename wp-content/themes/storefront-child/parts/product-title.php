@@ -1,7 +1,7 @@
 <section class="collection-page_top">
     <div class="breadcrumbs-bg-color">
         <div class="bredcrumb-items container-custom">
-            <h1><?= get_the_title(); ?></h1>
+            <h1>Détail du produit</h1>
             <nav class="breadcrumbs text-sm" aria-label="Breadcrumbs">
                 <ol class="flex flex-wrap gap-xxs">
                     <li class="breadcrumbs__item">
@@ -9,7 +9,7 @@
                         <span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
                     </li>
                     <li class="breadcrumbs__item" aria-current="page">
-                        <?= get_the_title(); ?>
+	                    Détail du produit
                     </li>
                 </ol>
             </nav>

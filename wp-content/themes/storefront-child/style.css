@@ -27,3 +27,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+.breadcrumbs-bg-color .breadcrumbs__item i, .breadcrumbs-bg-color .breadcrumbs__item span {
+    color: #fff !important;
+}

@@ -127,20 +127,16 @@
 </section>
 <section>
     <div class="container-custom">
-        <h1 class="bold newest-products-title title-accent-color">Boîtes</h1>
+        <h1 class="bold newest-products-title title-accent-color">Nouveautés</h1>
         <hr class="sm-line">
         <div class="custom-item owl-carousel owl-products">
             <?php
 
             $args = array(
                 'post_type' => 'product',
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'product_cat',
-                        'field'    => 'slug',
-                        'terms'    => 'boites',
-                    ),
-                ),
+                'orderby'   => 'date',
+                'order'     => 'DESC',
+	            'posts_per_page' => '5',
             );
 
             $loop = new WP_Query( $args );
@@ -208,9 +204,17 @@
 
                 ?>
 
-	            <div class="home-category" style="background: url(<?= the_field('image') ?>) center / cover no-repeat">
+	            <div
+		            <?php if (get_field('link')): ?>
+                         <?php if (!get_field('blank')):?>
+                            onclick="window.location = '<?= the_field('link') ?>'"
+                        <?php else: ?>
+                            onclick="window.open('<?= the_field('link') ?>', '_blank')"
+                        <?php endif; ?>
+                    <?php endif; ?>
+		            class="home-category" style="cursor: pointer; background: url(<?= the_field('image') ?>) center / cover no-repeat">
 		            <div class="home-category__title">
-			            <?= the_field('title') ?>
+                        <?= the_field('title') ?>
 		            </div>
 	            </div>
 

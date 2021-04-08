@@ -27,7 +27,7 @@ foreach ($posts as $post) {
     </div>
 		<div class="container max-width-lg padding-y-xl">
 			<link rel="stylesheet" type="text/css" href="/wp-content/themes/woocommerce/assets/gui-core.css" />
-			<form id="gui-form" action="https://real-1st-theme-cosmetic.shoplightspeed.com/service/contactPost/" method="post">
+			<form id="gui-form" method="post">
 				<input type="hidden" name="key" value="87b8e54b8c7f8d771ec105bcf35a52ce" />
 				<input type="text" name="url" value="" placeholder="URL" class="gui-hide" />
 				<div id="gui-wrapper" class="gui gui-faq">
@@ -73,6 +73,7 @@ foreach ($posts as $post) {
 								<div class="gui-block-content">
 									<input type="text" name="action" value="<?= admin_url('admin-ajax.php?action=send_mail') ?>" hidden>
 									<div class="gui-form" id="form">
+                                        <?= do_shortcode('[contact-form-7 id="365" title="Contact form 1"]') ?>
 										<div class="gui-field">
 											<label for="gui-form-name">Nom *:     <em aria-hidden="true">*</em>
 											</label>
