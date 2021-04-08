@@ -22,24 +22,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $related_products ) : ?>
     <section>
         <div class="container-custom">
-            <div class="usp-wrapper usp-on-product">
-                <ul>
+            <div class="usp-wrapper">
+                <ul class="adv-icons">
+
                     <li>
-                        <img src="/wp-content/themes/woocommerce/assets/img/icon-1.svg">
-                        <p>Livraison gratuite 150$+</p>
+                        <img src="https://woocommerce.takasho.work/wp-content/themes/storefront-child/assets/img/new/delivery.svg">
+                        <p>
+                            Livraison gratuite
+                            <span>Livraison gratuite sur toute commande</span>
+                        </p>
                     </li>
                     <li>
-                        <img src="/wp-content/themes/woocommerce/assets/img/icon-2.svg">
-                        <p>Livraison partout au QC, CAN</p>
+                        <img src="https://woocommerce.takasho.work/wp-content/themes/storefront-child/assets/img/new/assistance.svg">
+                        <p>
+                            Livraison partout au QC, CAN
+                            <span>Assistance 24 heures sur 24</span>
+                        </p>
                     </li>
                     <li>
-                        <img src="/wp-content/themes/woocommerce/assets/img/icon-3.svg">
-                        <p>Encouragez local</p>
+                        <img src="https://woocommerce.takasho.work/wp-content/themes/storefront-child/assets/img/new/money-back.svg">
+                        <p>
+                            Encouragez local
+                            <span>30 jours pour un retour gratuitt</span>
+                        </p>
                     </li>
                     <li>
-                        <img src="/wp-content/themes/woocommerce/assets/img/icon-4.svg">
-                        <p>Pur délice</p>
+                        <img src="https://woocommerce.takasho.work/wp-content/themes/storefront-child/assets/img/new/payment.svg">
+                        <p>
+                            Pur délice
+                            <span>Nous assurons un paiement sécurisé</span>
+                        </p>
                     </li>
+
                 </ul>
             </div>
         </div>

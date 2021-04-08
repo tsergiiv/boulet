@@ -281,7 +281,7 @@
 		            <div class="login-popup popup-is-hidden popup">
 			            <ul class="login-popup-container open">
 				            <li class="popup-logo">
-					            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/logo.svg"
+					            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/new/logo.png"
 					                 alt="Boulet">
 				            </li>
 				            <li class="popup-title">
@@ -326,16 +326,16 @@
 					            <div class="popup-bottom">
 						            <span class="content-secondary-color">OU Connectez-vous avec</span>
 						            <div class="social-group">
-							            <a href="<?= get_home_url() ?>/wp-login.php?loginSocial=google" data-plugin="nsl" data-action="connect"
-							               data-redirect="<?= get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" data-provider="google" data-popupwidth="600" data-popupheight="600"
-							               class="button btn-transparant roboto google">
-								            <i class="fab fa-google"></i> Google
-							            </a>
 							            <a href="<?= get_home_url() ?>/wp-login.php?loginSocial=facebook"
 							               data-plugin="nsl" data-action="connect" data-redirect="<?= get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" data-provider="facebook" data-popupwidth="475"
 							               data-popupheight="175" class="button btn-transparant roboto">
 								            <i class="fab fa-facebook-f"></i> Facebook
 							            </a>
+                                        <a href="<?= get_home_url() ?>/wp-login.php?loginSocial=google" data-plugin="nsl" data-action="connect"
+                                           data-redirect="<?= get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" data-provider="google" data-popupwidth="600" data-popupheight="600"
+                                           class="button btn-transparant roboto google">
+                                            <i class="fab fa-google-plus"></i> Google
+                                        </a>
 						            </div>
 						            <a class="button btn-transparant btn-pink-border roboto registration"
 						               href="javascript:;" tabindex=5>S&#039;inscrire</a>

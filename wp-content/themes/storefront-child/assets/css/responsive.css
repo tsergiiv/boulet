@@ -11,6 +11,9 @@
   .container {
     max-width:1200px!important;
   }
+  .about-us-title.container {
+    max-width: 1140px!important;
+  }
   .owl-hero .owl-nav .owl-prev {
     left: 13px;
   }
@@ -230,7 +233,7 @@
     padding: 15px 20px 0 15px;
 }
 .popup-logo img {
-    width: 80px;
+    width: 63px;
     height: auto;
     margin-bottom: 10px;
   }
@@ -449,7 +452,7 @@
     text-align: center;
   }
   .logo-wrap img {
-    width: 94px;
+    width: 63px;
     height: auto;
 }
     .breadcrumbs-bg-color {
@@ -1111,6 +1114,20 @@ p#shipping_country_field, p#billing_country_field {
   .cart-popup-container ol, .cart-popup-container {
     height: calc(100vh - 200px);
 }
+  .home-categories {
+    display: grid;
+    grid-template-areas:
+        'first first'
+        'second second'
+        'third third';
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-us-title .wp-block-columns {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 40px;
+  }
 }
 @media all and (max-width: 700px) {
   .gui-wishlist .gui-block-content .gui-table tbody > tr > td:nth-child(4) a.gui-button-small  {
@@ -1371,7 +1388,7 @@ p#shipping_country_field, p#billing_country_field {
     padding-right: 0px;
    }
    .footer-social img {
-   	width: 160px;
+   	width: 63px;
    }
    .footer-links ul {
    	flex: 1 1 100%;

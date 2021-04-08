@@ -4,7 +4,7 @@ function searchFunction() {
 
 $(document).ready(function () {
     $('.es_subscription_form_submit').removeClass().addClass('button btn-pink btn-primary');
-    $('.ajax_add_to_cart').click(function(){
+    $('body').on('click', '.ajax_add_to_cart', function(){
         $('html, body').animate({scrollTop:0}, '300');
     });
     setTimeout(function() {
